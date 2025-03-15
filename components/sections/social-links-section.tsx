@@ -51,7 +51,7 @@ export function SocialLinksSection() {
           </Link>
 
           <Link
-            href="https://github.com/antonio-rodriguez"
+            href="https://github.com/antoniwan"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: "0.4s" }}
             target="_blank"
@@ -62,7 +62,7 @@ export function SocialLinksSection() {
           </Link>
 
           <Link
-            href="https://codepen.io/antonio-rodriguez"
+            href="https://codepen.io/antoniwan"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: "0.5s" }}
             target="_blank"
@@ -73,7 +73,7 @@ export function SocialLinksSection() {
           </Link>
 
           <Link
-            href="mailto:contact@antonio.builds.software"
+            href="mailto:antonio@builds.software"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: "0.6s" }}
           >
@@ -85,7 +85,7 @@ export function SocialLinksSection() {
         {/* Second tier - Content and interests */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-3 md:mt-4 social-links-grid">
           <Link
-            href="https://medium.com/@antonio.builds.software"
+            href="https://wizards777.medium.com"
             className="flex items-center justify-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: "0.7s" }}
             target="_blank"
@@ -96,7 +96,7 @@ export function SocialLinksSection() {
           </Link>
 
           <Link
-            href="https://goodreads.com/antonio-rodriguez"
+            href="https://www.goodreads.com/antoniwan"
             className="flex items-center justify-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: "0.8s" }}
             target="_blank"

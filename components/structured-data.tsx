@@ -14,11 +14,11 @@ export function StructuredData() {
         url: "https://antonio.builds.software",
         sameAs: [
           "https://www.linkedin.com/in/antoniwan/",
-          "https://github.com/antonio-rodriguez",
-          "https://medium.com/@antonio.builds.software",
+          "https://github.com/antoniwan",
+          "https://wizards777.medium.com",
           "https://www.facebook.com/antoniwan777",
           "https://www.threads.net/@antoniwan777",
-          "https://codepen.io/antonio-rodriguez",
+          "https://codepen.io/antoniwan",
         ],
         knowsAbout: [
           "Web Development",
