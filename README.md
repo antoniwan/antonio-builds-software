@@ -1,27 +1,36 @@
 # Personal Portfolio Website
 
-A modern, accessible, and performant portfolio website built with Next.js, TypeScript, and Tailwind CSS. This project demonstrates best practices in web development, combining technical excellence with user-centered design.
+A modern, accessible, and performant portfolio website showcasing professional experience and personal journey. Built with Next.js 15, React 19, and Tailwind CSS, this project demonstrates best practices in web development while maintaining excellent user experience.
 
 ## 🚀 Features
 
-- **Modern Stack**: Built with Next.js 15, React 19, and TypeScript 5
-- **Responsive Design**: Fully responsive layout optimized for all devices
-- **Dark Mode**: System-based theme detection with manual override (next-themes)
-- **SEO Optimization**: Structured data and meta tags implementation
-- **Accessibility**: WCAG compliance and a11y best practices with Radix UI
-- **Performance**: Optimized Core Web Vitals and loading performance with Turbopack
-- **Interactive UI**: Smooth animations and transitions with Tailwind CSS 3.4
+- **Modern Tech Stack**: Built with Next.js 15.1.0 and React 19
+- **Type Safety**: Full TypeScript implementation
+- **Responsive Design**: Mobile-first approach with fluid layouts
+- **Dark Mode**: Automatic and manual theme switching with next-themes
+- **Component Library**: Custom UI components built on Radix UI primitives
+- **Geometric Backgrounds**: Custom geometric patterns for visual interest
+- **Animations**: Smooth fade-ins and transitions for better UX
+- **Social Integration**: Connected with LinkedIn, GitHub, Facebook, and more
+- **Contact Options**: Direct email and professional networking links
+- **Performance**: Turbopack for fast development experience
 
 ## 🛠️ Tech Stack
 
 - **Framework**: [Next.js 15.1.0](https://nextjs.org/)
-- **Runtime**: [React 19](https://react.dev/)
+- **Runtime**: [React 19.0.0](https://react.dev/)
 - **Language**: [TypeScript 5](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS 3.4](https://tailwindcss.com/)
-- **UI Components**: [Radix UI](https://www.radix-ui.com/) primitives
+- **Styling**: [Tailwind CSS 3.4.17](https://tailwindcss.com/)
 - **Icons**: [Lucide React 0.482.0](https://lucide.dev/)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/)
+  - Dialog: ^1.1.6
+  - Slot: ^1.1.2
 - **Theme Switching**: [next-themes 0.4.6](https://github.com/pacocoursey/next-themes)
-- **Development**: Turbopack for fast refresh
+- **Utilities**: 
+  - class-variance-authority: ^0.7.1
+  - clsx: ^2.1.1
+  - tailwind-merge: ^3.0.2
+- **Development**: Turbopack enabled
 - **Deployment**: [Vercel](https://vercel.com)
 
 ## 🏃‍♂️ Getting Started
@@ -40,7 +49,7 @@ A modern, accessible, and performant portfolio website built with Next.js, TypeS
    pnpm install
    ```
 
-3. Start the development server:
+3. Start the development server with Turbopack:
    ```bash
    npm run dev
    # or
@@ -54,13 +63,25 @@ A modern, accessible, and performant portfolio website built with Next.js, TypeS
 ## 📝 Project Structure
 
 ```
-├── app/              # Next.js app directory
+├── app/              # Next.js app directory and pages
 ├── components/       # React components
-├── lib/             # Utility functions and configurations
+│   ├── sections/    # Main content sections
+│   ├── ui/          # Reusable UI components
+│   └── icons/       # Custom icon components
+├── lib/             # Utility functions
 ├── public/          # Static assets
-├── styles/          # Global styles and Tailwind configurations
-└── types/           # TypeScript type definitions
+├── styles/          # Global styles
+└── types/           # TypeScript definitions
 ```
+
+## 🎨 Design Features
+
+- Geometric background patterns
+- Responsive grid layouts
+- Smooth animations and transitions
+- Accessible color schemes
+- Dark mode support
+- Modern typography with system fonts
 
 ## 🤝 Contributing
 
