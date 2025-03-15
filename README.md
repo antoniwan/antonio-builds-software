@@ -4,22 +4,24 @@ A modern, accessible, and performant portfolio website built with Next.js, TypeS
 
 ## 🚀 Features
 
-- **Modern Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
+- **Modern Stack**: Built with Next.js 15, React 19, and TypeScript 5
 - **Responsive Design**: Fully responsive layout optimized for all devices
-- **Dark Mode**: System-based theme detection with manual override
+- **Dark Mode**: System-based theme detection with manual override (next-themes)
 - **SEO Optimization**: Structured data and meta tags implementation
-- **Accessibility**: WCAG compliance and a11y best practices
-- **Performance**: Optimized Core Web Vitals and loading performance
-- **Interactive UI**: Smooth animations and transitions
+- **Accessibility**: WCAG compliance and a11y best practices with Radix UI
+- **Performance**: Optimized Core Web Vitals and loading performance with Turbopack
+- **Interactive UI**: Smooth animations and transitions with Tailwind CSS 3.4
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components**: Custom components built with [Radix UI](https://www.radix-ui.com/)
-- **Icons**: [Lucide Icons](https://lucide.dev/)
-- **Animations**: CSS animations with Tailwind
+- **Framework**: [Next.js 15.1.0](https://nextjs.org/)
+- **Runtime**: [React 19](https://react.dev/)
+- **Language**: [TypeScript 5](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 3.4](https://tailwindcss.com/)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/) primitives
+- **Icons**: [Lucide React 0.482.0](https://lucide.dev/)
+- **Theme Switching**: [next-themes 0.4.6](https://github.com/pacocoursey/next-themes)
+- **Development**: Turbopack for fast refresh
 - **Deployment**: [Vercel](https://vercel.com)
 
 ## 🏃‍♂️ Getting Started
