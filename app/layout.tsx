@@ -93,21 +93,17 @@ export const metadata = {
   icons: {
     icon: "/images/favicon.ico",
     shortcut: "/images/favicon.ico",
-    apple: "/images/apple-touch-icon.png",
+    apple: "/images/apple-touch-icon.jpeg",
     other: [
-      {
-        rel: "apple-touch-icon-precomposed",
-        url: "/images/apple-touch-icon-precomposed.png",
-      },
       {
         rel: "icon",
         sizes: "16x16",
-        url: "/images/favicon-16x16.png",
+        url: "/images/favicon-16by16.ico",
       },
       {
         rel: "icon",
         sizes: "32x32",
-        url: "/images/favicon-32x32.png",
+        url: "/images/favicon-32by32.ico",
       },
     ],
   },
