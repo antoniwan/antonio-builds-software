@@ -10,45 +10,45 @@ export function AboutSection() {
         </div>
         <div className="max-w-[800px] mx-auto text-muted-foreground bg-card p-4 md:p-6 rounded-lg shadow-md fade-in border-l-4 border-[hsl(var(--gold))] dark:border dark:border-border dark:text-foreground/80 space-y-4 text-sm md:text-base lg:text-lg">
           <p>
-            I'm Antonio—a builder at heart with a natural curiosity for how things work. My greatest joy comes from
-            creating useful things, not just code. One day I'm crafting elegant software architecture, the next I'm
-            inventing basketball plays that actually work against my friends, or perfecting a "caveman" style lamb and
+            I&apos;m Antonio—a builder at heart with a natural curiosity for how things work. My greatest joy comes from
+            creating useful things, not just code. One day I&apos;m crafting elegant software architecture, the next I&apos;m
+            inventing basketball plays that actually work against my friends, or perfecting a &quot;caveman&quot; style lamb and
             veggie dish. I create imaginative games for my 5-year-old daughter that usually involve a fox eating some
-            magic fruit. And yes, after thousands of repetitions, I've developed some frighteningly effective
-            self-defense combos that I hope to never use. There's something magical about transforming abstract ideas
-            into tangible reality—whether digital, culinary, playful, physical, techniques, habits, or paradigms—and I'm
+            magic fruit. And yes, after thousands of repetitions, I&apos;ve developed some frighteningly effective
+            self-defense combos that I hope to never use. There&apos;s something magical about transforming abstract ideas
+            into tangible reality—whether digital, culinary, playful, physical, techniques, habits, or paradigms—and I&apos;m
             fortunate to do this every day.
           </p>
           <p>
             My journey began in college when a friend and I launched a web development company that was later acquired
             by a marketing firm. While more educational than profitable, this venture shaped my professional philosophy:
-            technical excellence must be balanced with human values—integrity, empathy, and inclusivity. I've found that
+            technical excellence must be balanced with human values—integrity, empathy, and inclusivity. I&apos;ve found that
             diverse, psychologically safe teams consistently produce quality and cost-effective solutions.
           </p>
           <p>
             The agency world taught me to thrive in chaos and uncertainty. I still smile thinking about those impossible
-            deadlines and wild client requests that had us learning new technologies overnight. "Can you implement this
-            obscure protocol by tomorrow?" Challenge accepted! These experiences forged my adaptability and instilled a
+            deadlines and wild client requests that had us learning new technologies overnight. &quot;Can you implement this
+            obscure protocol by tomorrow?&quot; Challenge accepted! These experiences forged my adaptability and instilled a
             love for continuous learning that defines my approach to technology.
           </p>
           <p>
-            Throughout my career, I've worn many hats: Individual Contributor, Architect, CTO, Engineering Manager, and
+            Throughout my career, I&apos;ve worn many hats: Individual Contributor, Architect, CTO, Engineering Manager, and
             Director. Each role has given me a unique perspective on building technology and leading teams. Currently,
-            I'm channeling this experience as a Technical Program Manager at a global hardware company, where I bridge
+            I&apos;m channeling this experience as a Technical Program Manager at a global hardware company, where I bridge
             technical complexity with strategic business needs.
           </p>
           <p>
             My personal life has had its share of reboots and refactoring. After my marriage ended, I found myself
-            debugging my own life—sometimes successfully, sometimes with plenty of trial and error. These days, I'm
-            trying to be more intentional with my time. I've come to see movement as medicine—basketball brings me joy,
-            weightlifting keeps me strong, and martial arts keeps me sharp and confident, just like therapy does—it's
-            not a passion, just a practical tool. I cook whole foods not because I'm some health guru (I still cave for
-            pizza), but because I've noticed my body and mind work better with real ingredients. My kids keep me
-            honest—they're quick to point out when Dad's preaching doesn't match his practice. I'm learning that being a
-            good parent isn't about perfection but presence, and I genuinely treasure every moment with them. My
+            debugging my own life—sometimes successfully, sometimes with plenty of trial and error. These days, I&apos;m
+            trying to be more intentional with my time. I&apos;ve come to see movement as medicine—basketball brings me joy,
+            weightlifting keeps me strong, and martial arts keeps me sharp and confident, just like therapy does—it&apos;s
+            not a passion, just a practical tool. I cook whole foods not because I&apos;m some health guru (I still cave for
+            pizza), but because I&apos;ve noticed my body and mind work better with real ingredients. My kids keep me
+            honest—they&apos;re quick to point out when Dad&apos;s preaching doesn&apos;t match his practice. I&apos;m learning that being a
+            good parent isn&apos;t about perfection but presence, and I genuinely treasure every moment with them. My
             creative outlets include writing philosophical musings, working on various creative writing projects with my
             kids, and recently, making metal music that satisfies my need for complexity in different ways. Through it
-            all—the successes, failures, and daily mundane moments—I'm just trying to stay curious, keep building, and
+            all—the successes, failures, and daily mundane moments—I&apos;m just trying to stay curious, keep building, and
             be a little better today than yesterday.
           </p>
         </div>

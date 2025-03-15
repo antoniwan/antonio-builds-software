@@ -7,8 +7,8 @@ export function SocialLinksSection() {
     <section className="bg-muted py-10 md:py-14 geometric-bg">
       <div className="container">
         <p className="text-body-large text-center max-w-[800px] mx-auto fade-in">
-          Let's connect across platforms and explore ideas together. I'm passionate about sharing my work, thoughts, and
-          creative journey with kindred spirits. Whether you're seeking technical collaboration, creative
+          Let&apos;s connect across platforms and explore ideas together. I&apos;m passionate about sharing my work, thoughts, and
+          creative journey with kindred spirits. Whether you&apos;re seeking technical collaboration, creative
           problem-solving, or meaningful exchange—I thrive on engaging with fellow builders, creators, thinkers,
           learners, livers and lovers of life.
         </p>
