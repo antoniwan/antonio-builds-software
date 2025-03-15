@@ -25,7 +25,7 @@ export function ContactSection() {
             asChild
             className="rounded-full px-6 md:px-8 shadow-md hover:shadow-lg transition-all bg-primary hover:bg-primary/90"
           >
-            <Link href="mailto:contact@antonio.builds.software">
+            <Link href="mailto:antonio@builds.software">
               <Mail className="mr-2 h-5 w-5" />
               Start a Conversation
             </Link>
