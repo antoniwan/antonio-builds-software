@@ -1,16 +1,16 @@
-# Antonio Builds Software - Personal Website
+# Personal Portfolio Website
 
-A modern, accessible, and performant personal website built with Next.js, TypeScript, and Tailwind CSS. This website serves as a digital portfolio and professional platform for Antonio Rodriguez Martinez, a Technical Program Manager & Full-Stack Developer.
+A modern, accessible, and performant portfolio website built with Next.js, TypeScript, and Tailwind CSS. This project demonstrates best practices in web development, combining technical excellence with user-centered design.
 
 ## 🚀 Features
 
 - **Modern Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
-- **Responsive Design**: Fully responsive layout that works beautifully on all devices
-- **Dark Mode**: Automatic theme detection with manual override capability
-- **SEO Optimized**: Includes structured data and meta tags for better search engine visibility
-- **Accessibility**: Built with a11y in mind, ensuring a great experience for all users
-- **Performance**: Optimized for Core Web Vitals with excellent loading performance
-- **Interactive UI**: Smooth animations and transitions for an engaging user experience
+- **Responsive Design**: Fully responsive layout optimized for all devices
+- **Dark Mode**: System-based theme detection with manual override
+- **SEO Optimization**: Structured data and meta tags implementation
+- **Accessibility**: WCAG compliance and a11y best practices
+- **Performance**: Optimized Core Web Vitals and loading performance
+- **Interactive UI**: Smooth animations and transitions
 
 ## 🛠️ Tech Stack
 
@@ -22,11 +22,11 @@ A modern, accessible, and performant personal website built with Next.js, TypeSc
 - **Animations**: CSS animations with Tailwind
 - **Deployment**: [Vercel](https://vercel.com)
 
-## 🏃‍♂️ Running Locally
+## 🏃‍♂️ Getting Started
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/antonio-rodriguez/antonio-builds-software.git
+   git clone https://github.com/your-username/portfolio-website.git
    ```
 
 2. Install dependencies:
@@ -47,7 +47,7 @@ A modern, accessible, and performant personal website built with Next.js, TypeSc
    pnpm dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📝 Project Structure
 
@@ -60,13 +60,9 @@ A modern, accessible, and performant personal website built with Next.js, TypeSc
 └── types/           # TypeScript type definitions
 ```
 
-## 🔗 Connect with Me
+## 🤝 Contributing
 
-- LinkedIn: [@antoniwan](https://www.linkedin.com/in/antoniwan/)
-- GitHub: [@antonio-rodriguez](https://github.com/antonio-rodriguez)
-- Medium: [@antonio.builds.software](https://medium.com/@antonio.builds.software)
-- CodePen: [@antonio-rodriguez](https://codepen.io/antonio-rodriguez)
-- Email: [contact@antonio.builds.software](mailto:contact@antonio.builds.software)
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
@@ -74,4 +70,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Built with ❤️ by Antonio Rodriguez Martinez
+Built with Next.js and Tailwind CSS
