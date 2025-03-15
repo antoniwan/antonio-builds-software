@@ -55,7 +55,6 @@ export default function manifest(): MetadataRoute.Manifest {
     dir: "ltr",
     prefer_related_applications: false,
     related_applications: [],
-    iarc_rating_id: "",
     shortcuts: [
       {
         name: "Projects",
