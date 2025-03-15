@@ -16,7 +16,7 @@ export function StructuredData() {
           "https://www.linkedin.com/in/antoniwan/",
           "https://github.com/antonio-rodriguez",
           "https://medium.com/@antonio.builds.software",
-          "https://facebook.com/antonio.rodriguez",
+          "https://www.facebook.com/antoniwan777",
           "https://threads.net/@antonio.rodriguez",
           "https://codepen.io/antonio-rodriguez",
         ],

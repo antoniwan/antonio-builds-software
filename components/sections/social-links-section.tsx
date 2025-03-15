@@ -29,7 +29,7 @@ export function SocialLinksSection() {
           </Link>
 
           <Link
-            href="https://facebook.com/antonio.rodriguez"
+            href="https://www.facebook.com/antoniwan777"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: "0.2s" }}
             target="_blank"
