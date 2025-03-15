@@ -2,20 +2,335 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 240 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 30% 15%;
+    --primary: 330 90% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 350 80% 40%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 10% 97%;
+    --muted-foreground: 240 20% 40%;
+    --accent: 330 80% 97%;
+    --accent-foreground: 330 80% 40%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 330 90% 55%;
+    --radius: 0.6rem;
+
+    /* Vegeta Blue */
+    --vegeta-blue: 240 80% 40%;
+    --vegeta-blue-light: 240 80% 95%;
+    --vegeta-blue-dark: 240 80% 30%;
+
+    /* Gold Accent */
+    --gold: 45 90% 50%;
+    --gold-light: 45 90% 95%;
+    --gold-dark: 45 90% 40%;
+  }
+
+  .dark {
+    --background: 240 30% 10%;
+    --foreground: 240 15% 95%;
+    --card: 240 30% 15%;
+    --card-foreground: 240 15% 95%;
+    --popover: 240 30% 15%;
+    --popover-foreground: 240 15% 95%;
+    --primary: 330 90% 65%;
+    --primary-foreground: 240 15% 10%;
+    --secondary: 350 80% 45%;
+    --secondary-foreground: 240 15% 95%;
+    --muted: 240 30% 20%;
+    --muted-foreground: 240 15% 75%;
+    --accent: 330 70% 30%;
+    --accent-foreground: 240 15% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 240 15% 95%;
+    --border: 240 30% 25%;
+    --input: 240 30% 25%;
+    --ring: 330 90% 65%;
+
+    /* Vegeta Blue for dark mode */
+    --vegeta-blue: 240 80% 65%;
+    --vegeta-blue-light: 240 60% 25%;
+    --vegeta-blue-dark: 240 80% 75%;
+
+    /* Gold Accent for dark mode */
+    --gold: 45 90% 65%;
+    --gold-light: 45 60% 25%;
+    --gold-dark: 45 90% 75%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body transition-colors duration-300;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading tracking-tight;
+  }
 }
+
+/* Typography scale - standardized */
+.text-display {
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-heading leading-tight;
+}
+
+.text-heading-1 {
+  @apply text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight font-heading leading-tight;
+}
+
+.text-heading-2 {
+  @apply text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-heading leading-tight;
+}
+
+.text-heading-3 {
+  @apply text-lg sm:text-xl md:text-2xl font-semibold font-heading leading-snug;
+}
+
+.text-body-large {
+  @apply text-base sm:text-lg leading-relaxed font-body;
+}
+
+.text-body {
+  @apply text-sm sm:text-base leading-relaxed font-body;
+}
+
+.text-body-small {
+  @apply text-xs sm:text-sm leading-relaxed font-body;
+}
+
+.text-caption {
+  @apply text-xs md:text-sm text-muted-foreground font-body leading-normal;
+}
+
+/* Standardize spacing */
+section {
+  @apply py-10 md:py-14 lg:py-20;
+}
+
+.card-spacing {
+  @apply p-4 md:p-6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-4 font-heading;
+}
+
+p {
+  @apply mb-4 font-body;
+}
+
+p:last-child {
+  @apply mb-0;
+}
+
+/* Subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Card hover effect */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.15);
+}
+
+/* Project card image hover effect */
+.project-card .image-container {
+  overflow: hidden;
+}
+
+.project-card .image-container img {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+/* Profile image effect */
+.profile-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-image:hover::after {
+  box-shadow: inset 0 0 0 15px rgba(236, 72, 153, 0.2);
+}
+
+/* Container with proper padding */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @apply sm:px-4 md:px-6 lg:px-8;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+}
+
+/* Social links grid adjustments */
+@media (max-width: 768px) {
+  .social-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Enhance social link hover effects */
+.social-link {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure icons are properly sized and centered */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Color accent styles */
+.vegeta-blue {
+  color: hsl(var(--vegeta-blue));
+}
+
+.gold-accent {
+  color: hsl(var(--gold));
+}
+
+.tri-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--vegeta-blue)), hsl(var(--gold)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Font classes */
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Dark mode improvements */
+.dark .project-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.dark .card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhance heading styles for more creative look */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.025em;
+}
+
+.text-display {
+  letter-spacing: -0.03em;
+}
+
+/* Add subtle gradient underline to section headings */
+
+/* Badge styles for multiple labels */
+
+/* Geometric pattern for About Me section */
+.geometric-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.geometric-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  background-image: radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.1) 2px, transparent 0),
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px, 48px 48px;
+  z-index: -1;
+}
+
+.dark .geometric-bg::before {
+  opacity: 0.25;
+  background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.15) 2px, transparent 0),
+    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+}
+
