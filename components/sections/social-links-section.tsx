@@ -16,7 +16,7 @@ export function SocialLinksSection() {
         {/* First tier - Main social profiles */}
         <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 mt-6 md:mt-8 social-links-grid">
           <Link
-            href="https://linkedin.com/in/antonio-rodriguez"
+            href="https://www.linkedin.com/in/antoniwan/"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in social-link"
             style={{ animationDelay: "0.1s" }}
             target="_blank"

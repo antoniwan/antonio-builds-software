@@ -13,7 +13,7 @@ export function StructuredData() {
           "Builder at heart with a natural curiosity for how things work. I create digital products that balance technical excellence with human values—integrity, empathy, and inclusivity.",
         url: "https://antonio.builds.software",
         sameAs: [
-          "https://linkedin.com/in/antonio-rodriguez",
+          "https://www.linkedin.com/in/antoniwan/",
           "https://github.com/antonio-rodriguez",
           "https://medium.com/@antonio.builds.software",
           "https://facebook.com/antonio.rodriguez",

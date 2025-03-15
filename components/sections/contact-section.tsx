@@ -35,7 +35,7 @@ export function ContactSection() {
             asChild
             className="rounded-full px-6 md:px-8 shadow-md hover:shadow-lg transition-all bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))]"
           >
-            <Link href="https://linkedin.com/in/antonio-rodriguez" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/antoniwan/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="mr-2 h-5 w-5" />
               Connect on LinkedIn
             </Link>
