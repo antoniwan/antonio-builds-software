@@ -54,7 +54,7 @@ export const metadata = {
   openGraph: {
     title: "Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager",
     description:
-      "I transform abstract ideas into tangible reality—digital, technical, or creative. Explore my journey balancing technical excellence with human values through projects that push boundaries and create impact.",
+      "I help teams build good software that solves real problems.",
     url: "https://antonio.builds.software",
     siteName: "Antonio Rodriguez Martinez",
     locale: "en_US",
