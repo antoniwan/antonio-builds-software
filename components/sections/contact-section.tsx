@@ -16,7 +16,7 @@ export function ContactSection() {
         </div>
         <p className="text-body-large text-muted-foreground max-w-[600px] mx-auto">
           Have a challenging project? Need technical expertise? Or just want to exchange ideas? I&apos;m always open to
-          meaningful collaborations that push boundaries and create impact.
+          meaningful collaborations that solve real problems.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">

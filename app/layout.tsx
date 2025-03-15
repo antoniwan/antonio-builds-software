@@ -23,7 +23,7 @@ const inter = Inter({
 export const metadata = {
   title: "Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager",
   description:
-    "I'm Antonio—a builder at heart who balances technical excellence with human values. Technical Program Manager, Full-Stack Developer, and advocate for conscious technology that creates meaningful impact.",
+    "I'm Antonio—a builder at heart who balances technical excellence with human values through practical solutions that make a difference. Technical Program Manager, Full-Stack Developer, and advocate for conscious technology that creates meaningful impact.",
   keywords: [
     "Technical Program Manager",
     "Full-Stack Developer",
