@@ -1,96 +1,55 @@
-# Personal Portfolio Website
+# Portfolio Website
 
-A modern, accessible, and performant portfolio website showcasing professional experience and personal journey. Built with Next.js 15, React 19, and Tailwind CSS, this project demonstrates best practices in web development while maintaining excellent user experience.
+A simple portfolio website built with Next.js, React, and Tailwind CSS.
 
-## 🚀 Features
+## Features
 
-- **Modern Tech Stack**: Built with Next.js 15.1.0 and React 19
-- **Type Safety**: Full TypeScript implementation
-- **Responsive Design**: Mobile-first approach with fluid layouts
-- **Dark Mode**: Automatic and manual theme switching with next-themes
-- **Component Library**: Custom UI components built on Radix UI primitives
-- **Geometric Backgrounds**: Custom geometric patterns for visual interest
-- **Animations**: Smooth fade-ins and transitions for better UX
-- **Social Integration**: Connected with LinkedIn, GitHub, Facebook, and more
-- **Contact Options**: Direct email and professional networking links
-- **Performance**: Turbopack for fast development experience
+- Next.js 15.1.0 with TypeScript
+- Responsive design with Tailwind CSS
+- Dark mode support
+- Custom UI components
+- Social media integration
+- Contact form
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Framework**: [Next.js 15.1.0](https://nextjs.org/)
-- **Runtime**: [React 19.0.0](https://react.dev/)
-- **Language**: [TypeScript 5](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS 3.4.17](https://tailwindcss.com/)
-- **Icons**: [Lucide React 0.482.0](https://lucide.dev/)
-- **UI Components**: [Radix UI](https://www.radix-ui.com/)
-  - Dialog: ^1.1.6
-  - Slot: ^1.1.2
-- **Theme Switching**: [next-themes 0.4.6](https://github.com/pacocoursey/next-themes)
-- **Utilities**: 
-  - class-variance-authority: ^0.7.1
-  - clsx: ^2.1.1
-  - tailwind-merge: ^3.0.2
-- **Development**: Turbopack enabled
-- **Deployment**: [Vercel](https://vercel.com)
+- [Next.js](https://nextjs.org/) 15.1.0
+- [React](https://react.dev/) 19.0.0
+- [TypeScript](https://www.typescriptlang.org/) 5
+- [Tailwind CSS](https://tailwindcss.com/) 3.4.17
+- [Radix UI](https://www.radix-ui.com/) components
+- [Lucide Icons](https://lucide.dev/) 0.482.0
 
-## 🏃‍♂️ Getting Started
+## Getting Started
 
-1. Clone the repository:
+1. Clone and install:
    ```bash
    git clone https://github.com/your-username/portfolio-website.git
-   ```
-
-2. Install dependencies:
-   ```bash
+   cd portfolio-website
    npm install
-   # or
-   yarn install
-   # or
-   pnpm install
    ```
 
-3. Start the development server with Turbopack:
+2. Run development server:
    ```bash
    npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+3. Open [http://localhost:3000](http://localhost:3000)
 
-## 📝 Project Structure
+## Project Structure
 
 ```
-├── app/              # Next.js app directory and pages
+├── app/              # Pages
 ├── components/       # React components
-│   ├── sections/    # Main content sections
-│   ├── ui/          # Reusable UI components
-│   └── icons/       # Custom icon components
-├── lib/             # Utility functions
-├── public/          # Static assets
-├── styles/          # Global styles
-└── types/           # TypeScript definitions
+├── lib/             # Utilities
+├── public/          # Assets
+└── styles/          # CSS
 ```
 
-## 🎨 Design Features
+## License
 
-- Geometric background patterns
-- Responsive grid layouts
-- Smooth animations and transitions
-- Accessible color schemes
-- Dark mode support
-- Modern typography with system fonts
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT
 
 ---
 
-Built with Next.js and Tailwind CSS
+Built with Next.js
