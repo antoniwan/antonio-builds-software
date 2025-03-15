@@ -10,13 +10,12 @@ export function ContactSection() {
         <div className="inline-flex items-center gap-2 mb-4">
           <SectionHeader
             icon={<Briefcase className="h-6 w-6 text-[hsl(var(--gold))]" />}
-            title="Let&apos;s Create Something Amazing"
+            title="Building Connections"
             className="mb-0"
           />
         </div>
         <p className="text-body-large text-muted-foreground max-w-[600px] mx-auto">
-          Have a challenging project? Need technical expertise? Or just want to exchange ideas? I&apos;m always open to
-          meaningful collaborations that solve real problems.
+        Just like code, meaningful connections start with a simple hello. Whether you&apos;re looking for technical expertise or just want to exchange ideas over virtual coffee, hit me up anytime.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
