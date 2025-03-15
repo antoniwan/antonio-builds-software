@@ -1,26 +1,29 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Code, Menu, User, BookOpen, ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { useScrollToSection } from "@/components/scroll-to-section"
+import { useState } from "react";
+import Link from "next/link";
+import { Code, Menu, User, BookOpen, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { useScrollToSection } from "@/components/scroll-to-section";
 
 export function Header() {
-  const scrollToSection = useScrollToSection()
-  const [isSheetOpen, setIsSheetOpen] = useState(false)
+  const scrollToSection = useScrollToSection();
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const handleNavClick = (sectionId: string) => {
-    scrollToSection(sectionId)
-    setIsSheetOpen(false)
-  }
+    scrollToSection(sectionId);
+    setIsSheetOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
-        <Link href="/" className="font-medium flex items-center gap-2 hover:text-primary transition-colors">
+        <Link
+          href="/"
+          className="font-medium flex items-center gap-2 hover:text-primary transition-colors"
+        >
           <Code className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
           <span className="font-heading font-semibold">
             antonio<span className="text-[hsl(var(--primary))]">.builds</span>
@@ -45,14 +48,17 @@ export function Header() {
             About Me
           </button>
           <Link
-            href="https://medium.com/@antonio.builds.software"
+            href="https://medium.com/@wizards777"
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
             target="_blank"
             rel="noopener noreferrer"
           >
             <BookOpen className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
             Blog
-            <ExternalLink className="h-3 w-3 ml-1 text-muted-foreground" aria-hidden="true" />
+            <ExternalLink
+              className="h-3 w-3 ml-1 text-muted-foreground"
+              aria-hidden="true"
+            />
           </Link>
           <ThemeToggle />
         </nav>
@@ -86,7 +92,7 @@ export function Header() {
                   About Me
                 </button>
                 <Link
-                  href="https://medium.com/@antonio.builds.software"
+                  href="https://medium.com/@wizards777"
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 w-full"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -94,7 +100,10 @@ export function Header() {
                 >
                   <BookOpen className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
                   Blog
-                  <ExternalLink className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+                  <ExternalLink
+                    className="h-4 w-4 text-muted-foreground"
+                    aria-hidden="true"
+                  />
                 </Link>
               </div>
             </div>
@@ -102,6 +111,5 @@ export function Header() {
         </Sheet>
       </div>
     </header>
-  )
+  );
 }
-
