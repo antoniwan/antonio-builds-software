@@ -1,15 +1,18 @@
 # Portfolio Website
 
-A simple portfolio website built with Next.js, React, and Tailwind CSS.
+A Next.js portfolio website with TypeScript and Tailwind CSS.
 
 ## Features
 
-- Next.js 15.1.0 with TypeScript
-- Responsive design with Tailwind CSS
-- Dark mode support
-- Custom UI components
-- Social media integration
+- Next.js 15.1.0
+- TypeScript
+- Tailwind CSS
+- Dark mode
+- Radix UI components
+- Social links
 - Contact form
+- Vercel Analytics
+- Vercel Speed Insights
 
 ## Tech Stack
 
@@ -19,17 +22,19 @@ A simple portfolio website built with Next.js, React, and Tailwind CSS.
 - [Tailwind CSS](https://tailwindcss.com/) 3.4.17
 - [Radix UI](https://www.radix-ui.com/) components
 - [Lucide Icons](https://lucide.dev/) 0.482.0
+- [Vercel Analytics](https://vercel.com/analytics)
+- [Vercel Speed Insights](https://vercel.com/speed-insights)
 
-## Getting Started
+## Development
 
-1. Clone and install:
+1. Install dependencies:
+
    ```bash
-   git clone https://github.com/your-username/portfolio-website.git
-   cd portfolio-website
    npm install
    ```
 
-2. Run development server:
+2. Start development server:
+
    ```bash
    npm run dev
    ```
@@ -39,17 +44,27 @@ A simple portfolio website built with Next.js, React, and Tailwind CSS.
 ## Project Structure
 
 ```
-├── app/              # Pages
+├── app/              # Pages and routing
 ├── components/       # React components
-├── lib/             # Utilities
-├── public/          # Assets
-└── styles/          # CSS
+├── lib/             # Utilities and helpers
+├── public/          # Static assets
+└── styles/          # Global styles
 ```
 
 ## License
 
-MIT
+This project is open source and available under the [MIT License](LICENSE). Feel free to fork and modify it for your own use. The MIT License allows you to:
 
----
+- Use the code commercially
+- Modify the code
+- Distribute the code
+- Use it privately
+- Sublicense the code
 
-Built with Next.js
+Just make sure to include the original license and copyright notice.
+
+See [CHANGELOG.md](CHANGELOG.md) for updates.
+
+## Credits
+
+UI components were designed with [v0.dev](https://v0.dev), Vercel's AI-powered UI generator.
