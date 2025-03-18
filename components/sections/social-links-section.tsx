@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Mail, Linkedin, Facebook, MessageCircle, FileText, Library } from "lucide-react"
+import { Github, Mail, Linkedin, Instagram, MessageCircle, FileText, Library } from "lucide-react"
 import { CodepenIcon } from "@/components/icons/codepen-icon"
 
 export function SocialLinksSection() {
@@ -29,14 +29,14 @@ export function SocialLinksSection() {
           </Link>
 
           <Link
-            href="https://www.facebook.com/antoniwan777"
+            href="https://www.instagram.com/antoniwan777/"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: "0.2s" }}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Facebook className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
-            <span className="text-caption font-medium text-center">Facebook</span>
+            <Instagram className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+            <span className="text-caption font-medium text-center">Instagram</span>
           </Link>
 
           <Link
