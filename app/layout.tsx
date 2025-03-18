@@ -1,5 +1,6 @@
 import type React from "react"
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "@/app/globals.css"
 import { Outfit, Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -118,6 +119,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <Analytics />
+      <SpeedInsights />
       <body className={`${outfit.variable} ${inter.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="antonio-theme">
           {children}
