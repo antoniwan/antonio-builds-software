@@ -46,8 +46,8 @@ export function AboutSection() {
             pizza), but because I&apos;ve noticed my body and mind work better with real ingredients. My kids keep me
             honest—they&apos;re quick to point out when Dad&apos;s preaching doesn&apos;t match his practice. I&apos;m learning that being a
             good parent isn&apos;t about perfection but presence, and I genuinely treasure every moment with them. My
-            creative outlets include writing philosophical musings, working on various creative writing projects with my
-            kids, and recently, making metal music that satisfies my need for complexity in different ways. Through it
+            creative outlets include writing philosophical musings, working on various creative projects with my
+            kids, and recently, making metal music with my friends. Through it
             all—the successes, failures, and daily mundane moments—I&apos;m just trying to stay curious, keep building, and
             be a little better today than yesterday.
           </p>
