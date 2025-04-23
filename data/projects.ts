@@ -30,7 +30,7 @@ export const projectsData: Project[] = [
   {
     title: "Mia, the Sun, and the Moon",
     description:
-      "This bilingual e-book was a labor of love created for my daughter and nephew. Using React and Styled Components, I built an interactive reading experience that remembers the user's language preference and last page visited. The technical challenge was creating a seamless, responsive experience across devices. The creative challenge? Writing an engaging children's story and directing AI to generate illustrations. The most fun part was watching my daughter literally direct and curate the AI-generated images—she had strong opinions about which illustrations captured her vision and rejected dozens until they met her standards! The joy on their faces when they first swiped through the final pages made every line of code worth it.",
+      "This bilingual e-book was a labor of love created for my daughter and nephew. Using React and Styled Components, I built an interactive reading experience that remembers the user's language preference and last page visited. The technical challenge was creating a seamless, responsive experience across devices. The creative challenge? Writing an engaging children's story and directing AI to generate illustrations. The most fun part was watching my daughter literally direct and curate the AI-generated images—she had strong opinions about which illustrations captured her vision and rejected dozens until they met her standards!",
     shortDescription:
       "A heartfelt interactive bilingual e-book built for my daughter and nephew with React and AI-generated illustrations she personally directed and curated.",
     imageUrl: "/images/projects/mia-ebook-desktop.avif",
