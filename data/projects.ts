@@ -16,7 +16,7 @@ export const projectsData: Project[] = [
   {
     title: "AbogadaJulia.com",
     description:
-      "I designed this multilingual immigration law site in Figma and built it with a customized WordPress Twenty-Twenty-Four Theme. The challenge was creating a site that was both beautiful and highly functional across languages. I implemented advanced SEO techniques, content authoring workflows, and performance optimizations that resulted in a 92/100 average on Google PageSpeed Insights. The client was thrilled with how the site balanced professional aesthetics with technical excellence.",
+      "I designed this multilingual immigration law site in Figma and built it with a customized WordPress Twenty-Twenty-Four Theme. The challenge was creating a site that was both beautiful and highly functional across languages. I implemented advanced SEO techniques, content authoring workflows, and performance optimizations that resulted in a 92/100 average on Google PageSpeed Insights.",
     shortDescription:
       "A high-performance multilingual website for an immigration attorney that balances elegant design with technical excellence.",
     imageUrl: "/images/projects/abogadajulia-desktop.avif",
