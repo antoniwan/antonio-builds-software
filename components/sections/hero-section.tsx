@@ -52,7 +52,7 @@ export function HeroSection() {
                 </div>
               </div>
               <Image
-                src="/images/profile.avif"
+                src="/images/profile_cropped_square.avif"
                 width={320}
                 height={320}
                 alt="Antonio Rodriguez Martinez"
