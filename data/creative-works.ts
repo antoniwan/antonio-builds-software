@@ -9,17 +9,31 @@ export interface CreativeWork {
 export const creativeWorks: CreativeWork[] = [
   {
     title: "Mercy Through the Blade: The Silent Law of Leadership",
-    description: "An exploration of authentic leadership through the lens of truth and mercy. This essay delves into the delicate balance between compassion and discipline, examining how true leadership often requires making difficult decisions that serve long-term growth over short-term comfort.",
+    description: "A deep dive into authentic leadership, truth, and mercy. I explore the balance between compassion and discipline, and how real leadership sometimes means making tough decisions for long-term growth. Written from my own experience, this piece is about breaking illusions, leading with clarity, and loving fiercely.",
     type: "writing",
     url: "https://wizards777.medium.com/mercy-through-the-blade-the-silent-law-of-leadership-24cef2df828a",
     date: "2025-04-27"
   },
   {
     title: "Forging the Stronghand Terminal: From Chaos to Command",
-    description: "A technical and philosophical journey of rebuilding my development environment from the ground up. This essay explores the relationship between our tools and our mindset, detailing how I transformed my Windows 11 terminal into a powerful command center using WezTerm, PowerShell 7, and other modern tools.",
+    description: "A technical and personal story of how I rebuilt my development environment from scratch. I share my process of wiping everything, starting fresh, and building a terminal setup that matches my mindset and discipline. This is about moving with intention, creating a cockpit for serious work, and finding freedom in simplicity.",
     type: "writing",
     url: "https://wizards777.medium.com/forging-the-stronghand-terminal-from-chaos-to-command-c4e4df4d290c",
     date: "2025-04-28"
+  },
+  {
+    title: "The Power of Intentional Development",
+    description: "A thread where I reflect on how deliberate practice and focused development have transformed not just my code, but my entire approach to problem-solving and personal growth.",
+    type: "thread",
+    url: "https://www.threads.com/@antoniwan777/post/DI_53ziRpQ5",
+    date: "2025-04-28"
+  },
+  {
+    title: "Coding with Intention",
+    description: "A short video where I share how the way I approach my development environment reflects my mindset and discipline in coding.",
+    type: "reel",
+    url: "https://www.instagram.com/reel/DIcqwZcNWoX/",
+    date: "2025-04-14"
   },
   {
     title: `Uncomplete Song #2983`,
@@ -27,5 +41,12 @@ export const creativeWorks: CreativeWork[] = [
     type: "reel",
     url: "https://www.instagram.com/p/DIcqwZcNWoX/",
     date: "2025-04-28"
+  },
+  {
+    title: "Notes From a Man Who Chose Peace (Part I)",
+    description: "A stream-of-consciousness essay on simplicity, contentment, and peace of mind. I share what it means to feel whole without owning much, and how I find richness in clarity, health, and inner peace instead of material things. This is me, reflecting on my own journey toward peace, patience, and being enough.",
+    type: "writing",
+    url: "https://wizards777.medium.com/on-simplicity-and-peace-of-mind-885086031fe9",
+    date: "2024-10-04"
   }
 ]; 
