@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/section-header"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-12 md:py-16 lg:py-24 scroll-mt-20">
+    <section id="contact" className="py-12 md:py-16 lg:py-24 scroll-mt-20 bg-[hsl(var(--muted))]">
       <div className="container space-y-6 text-center fade-in">
         <div className="inline-flex items-center gap-2 mb-4">
           <SectionHeader

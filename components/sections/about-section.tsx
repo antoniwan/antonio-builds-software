@@ -3,12 +3,15 @@ import { SectionHeader } from "@/components/section-header"
 
 export function AboutSection() {
   return (
-    <section id="about" className="bg-muted py-12 md:py-16 lg:py-24 scroll-mt-20 geometric-bg">
+    <section
+      id="about"
+      className="py-12 md:py-16 lg:py-24 bg-white dark:bg-background relative"
+    >
       <div className="container space-y-6 md:space-y-8">
         <div className="flex items-center justify-center md:justify-start fade-in">
           <SectionHeader icon={<User className="h-6 w-6 text-[hsl(var(--vegeta-blue))]" />} title="About Me" />
         </div>
-        <div className="max-w-[800px] mx-auto text-muted-foreground bg-card p-4 md:p-6 rounded-lg shadow-md fade-in border-l-4 border-[hsl(var(--gold))] dark:border dark:border-border dark:text-foreground/80 space-y-4 text-sm md:text-base lg:text-lg">
+        <div className="text-muted-foreground fade-in space-y-4 text-sm md:text-base lg:text-lg">
           <p>
             I&apos;m Antonio—a builder at heart with a natural curiosity for how things work. My greatest joy comes from
             creating useful things, not just code. One day I&apos;m crafting elegant software architecture, the next I&apos;m

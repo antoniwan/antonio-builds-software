@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Code, Menu, User, BookOpen, ExternalLink } from "lucide-react";
+import { Code, Menu, User, BookOpen, ExternalLink, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -39,6 +39,13 @@ export function Header() {
           >
             <Code className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
             Projects
+          </button>
+          <button
+            onClick={() => scrollToSection("creative-works")}
+            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+          >
+            <Sparkles className="h-4 w-4 text-[hsl(var(--gold))]" />
+            Creative Works
           </button>
           <button
             onClick={() => scrollToSection("about")}
@@ -83,6 +90,13 @@ export function Header() {
                 >
                   <Code className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
                   Projects
+                </button>
+                <button
+                  onClick={() => handleNavClick("creative-works")}
+                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                >
+                  <Sparkles className="h-5 w-5 text-[hsl(var(--gold))]" />
+                  Creative Works
                 </button>
                 <button
                   onClick={() => handleNavClick("about")}
