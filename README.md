@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A Next.js portfolio website with TypeScript and Tailwind CSS.
+A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing creative works and professional experience.
 
 ## Features
 
@@ -13,6 +13,11 @@ A Next.js portfolio website with TypeScript and Tailwind CSS.
 - Contact form
 - Vercel Analytics
 - Vercel Speed Insights
+- Patreon integration
+- Creative works showcase
+- Professional experience timeline
+- Responsive design
+- SEO optimized
 
 ## Tech Stack
 
@@ -24,32 +29,47 @@ A Next.js portfolio website with TypeScript and Tailwind CSS.
 - [Lucide Icons](https://lucide.dev/) 0.482.0
 - [Vercel Analytics](https://vercel.com/analytics)
 - [Vercel Speed Insights](https://vercel.com/speed-insights)
+- [date-fns](https://date-fns.org/) for date formatting
 
 ## Development
 
-1. Install dependencies:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+   cd portfolio
+   ```
 
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Start development server:
-
+3. Start development server:
    ```bash
    npm run dev
    ```
 
-3. Open [http://localhost:3000](http://localhost:3000)
+4. Open [http://localhost:3000](http://localhost:3000)
 
 ## Project Structure
 
 ```
 ├── app/              # Pages and routing
 ├── components/       # React components
+├── data/            # Static data (creative works, experience)
 ├── lib/             # Utilities and helpers
 ├── public/          # Static assets
 └── styles/          # Global styles
 ```
+
+## Deployment
+
+This project is optimized for deployment on Vercel:
+
+1. Push your code to a GitHub repository
+2. Import the project in Vercel
+3. Configure environment variables if needed
+4. Deploy!
 
 ## License
 
