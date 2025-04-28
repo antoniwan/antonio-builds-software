@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Briefcase, Mail, Linkedin } from "lucide-react"
+import { Briefcase, Mail, Linkedin, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionHeader } from "@/components/section-header"
 
@@ -37,6 +37,16 @@ export function ContactSection() {
             <Link href="https://www.linkedin.com/in/antoniwan/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="mr-2 h-5 w-5" />
               Connect on LinkedIn
+            </Link>
+          </Button>
+          <Button
+            size="lg"
+            asChild
+            className="rounded-full px-6 md:px-8 shadow-md hover:shadow-lg transition-all bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))]"
+          >
+            <Link href="https://www.patreon.com/c/antoniwan" target="_blank" rel="noopener noreferrer">
+              <Heart className="mr-2 h-5 w-5" />
+              Support on Patreon
             </Link>
           </Button>
         </div>
