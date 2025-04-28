@@ -22,17 +22,10 @@ export const creativeWorks: CreativeWork[] = [
     date: "2025-04-28"
   },
   {
-    title: "The Power of Intentional Development",
-    description: "A Thread exploring how deliberate practice and focused development can transform not just our code, but our entire approach to problem-solving and personal growth.",
-    type: "thread",
-    url: "https://www.threads.com/@antoniwan777/post/DI_53ziRpQ5",
-    date: "2025-04-28"
-  },
-  {
-    title: "Coding with Intention",
-    description: "A short video reflection on how the way we approach our development environment reflects our mindset and discipline in coding.",
+    title: `Uncomplete Song #${Math.floor(1000 + Math.random() * 9000)}`,
+    description: `¿y quien dijo que el romanticismo estaba perdido?\n\nHace poco en uno de los días más felices de mi vida me dijeron que me veían mal mentalmente. No se dejen engañar. Tomen su espacio. Vivan. Sientan. Amen. Griten. Pataleteen. La vida es buena.\n\nA romantic, freestyle guitar jam. Just me, the strings, and a moment of feeling alive.`,
     type: "reel",
-    url: "https://www.instagram.com/reel/DIcqwZcNWoX/",
-    date: "2025-04-14"
+    url: "https://www.instagram.com/p/DIcqwZcNWoX/",
+    date: "2025-04-28"
   }
 ]; 

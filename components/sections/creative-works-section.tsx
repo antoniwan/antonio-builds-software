@@ -66,6 +66,13 @@ export function CreativeWorksSection() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Sort creative works by date descending (newest first)
+  const sortedWorks = [...creativeWorks].sort((a, b) => {
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+
   return (
     <section id="creative-works" className="py-12 md:py-16 lg:py-24 scroll-mt-20 bg-[hsl(var(--muted))]">
       <div className="container space-y-6 fade-in">
@@ -82,7 +89,7 @@ export function CreativeWorksSection() {
 
         <div className="mt-8 pb-8">
           <Carousel itemsPerView={itemsPerView} interval={8000}>
-            {creativeWorks.map((work, index) => (
+            {sortedWorks.map((work, index) => (
               <div
                 key={index}
                 style={{ minWidth: `${100 / itemsPerView}%`, maxWidth: `${100 / itemsPerView}%` }}
