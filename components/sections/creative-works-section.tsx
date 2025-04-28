@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Carousel } from "@/components/ui/carousel"
 import { useEffect, useState } from "react"
 import { creativeWorks, CreativeWork } from "@/data/creative-works"
+import { formatDistanceToNow } from "date-fns"
 
 function getTypeLabel(type: CreativeWork["type"]) {
   switch (type) {
@@ -98,7 +99,9 @@ export function CreativeWorksSection() {
                     </div>
                     <div className="text-heading-3 text-left font-semibold leading-tight">{work.title}</div>
                     {work.date && (
-                      <p className="text-sm text-muted-foreground text-left">{work.date}</p>
+                      <p className="text-sm text-muted-foreground text-left">
+                        {formatDistanceToNow(new Date(work.date), { addSuffix: true })}
+                      </p>
                     )}
                   </div>
                   <div className="py-2">
