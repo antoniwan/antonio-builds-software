@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Code, User, BookOpen, ExternalLink, Sparkles, Copyright } from "lucide-react"
+import { Code, User, BookOpen, ExternalLink, Sparkles, Copyright, Heart } from "lucide-react"
 import { useScrollToSection } from "@/components/scroll-to-section"
 
 export function Footer() {
@@ -40,6 +40,16 @@ export function Footer() {
             >
               <BookOpen className="h-3 w-3 text-[hsl(var(--vegeta-blue))]" />
               Blog
+              <ExternalLink className="h-2.5 w-2.5 text-muted-foreground" aria-hidden="true" />
+            </Link>
+            <Link
+              href="https://www.patreon.com/c/antoniwan"
+              className="text-caption text-muted-foreground hover:text-[hsl(var(--vegeta-blue))] hover:underline underline-offset-4 flex items-center gap-1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Heart className="h-3 w-3 text-[hsl(var(--vegeta-blue))]" />
+              Support
               <ExternalLink className="h-2.5 w-2.5 text-muted-foreground" aria-hidden="true" />
             </Link>
           </nav>
