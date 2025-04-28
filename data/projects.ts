@@ -14,6 +14,20 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    title: "@ Builds Software",
+    description:
+      "My personal portfolio website, built with Next.js and styled with Tailwind CSS. This project showcases how AI tools can accelerate development while maintaining high quality. Using v0.dev, I generated the initial UI components and layout, which I then refined and customized. The development process was enhanced by Cursor's AI capabilities, helping with code suggestions, debugging, and implementing complex features like the project cards and smooth scrolling. The site features a modern, responsive design with a custom color scheme and animations. It's built with performance in mind, achieving excellent Lighthouse scores while maintaining a beautiful user experience.",
+    shortDescription:
+      "A modern portfolio website built with Next.js and AI tools, showcasing how technology can enhance the development process.",
+    imageUrl: "/images/projects/antonio-builds-software-desktop.avif",
+    projectUrl: "https://builds.software",
+    labels: [
+      { name: "Next.js", color: "vegeta-blue" },
+      { name: "AI Tools", color: "gold" },
+      { name: "Portfolio", color: "primary" },
+    ],
+  },
+  {
     title: "AbogadaJulia.com",
     description:
       "I designed this multilingual immigration law site in Figma and built it with a customized WordPress Twenty-Twenty-Four Theme. The challenge was creating a site that was both beautiful and highly functional across languages. I implemented advanced SEO techniques, content authoring workflows, and performance optimizations that resulted in a 92/100 average on Google PageSpeed Insights.",
