@@ -11,11 +11,11 @@ import { formatDistanceToNow } from "date-fns"
 function getTypeLabel(type: CreativeWork["type"]) {
   switch (type) {
     case "writing":
-      return "Article"
+      return "Medium Post"
     case "music":
       return "Music"
     case "thread":
-      return "Thread"
+      return "Threads Post"
     case "reel":
       return "Instagram Reel"
   }
@@ -121,9 +121,13 @@ export function CreativeWorksSection() {
                       className="w-full rounded-full border-primary/20 hover:bg-primary/5 dark:text-foreground"
                     >
                       <Link href={work.url} target="_blank" rel="noopener noreferrer">
-                        {work.type === "writing" ? "Read Article" : 
-                         work.type === "music" ? "Listen" :
-                         work.type === "thread" ? "View Thread" : "Watch Reel"} 
+                        {work.type === "writing"
+                          ? "Read Post"
+                          : work.type === "music"
+                          ? "Listen"
+                          : work.type === "thread"
+                          ? "View Post"
+                          : "Watch Reel"}
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
