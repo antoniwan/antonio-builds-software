@@ -4,45 +4,8 @@ import { SectionHeader } from "@/components/section-header"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Carousel } from "@/components/ui/carousel"
-
-interface CreativeWork {
-  title: string
-  description: string
-  type: "writing" | "music" | "thread" | "reel"
-  url: string
-  date?: string
-}
-
-const creativeWorks: CreativeWork[] = [
-  {
-    title: "Mercy Through the Blade: The Silent Law of Leadership",
-    description: "An exploration of authentic leadership through the lens of truth and mercy. This essay delves into the delicate balance between compassion and discipline, examining how true leadership often requires making difficult decisions that serve long-term growth over short-term comfort.",
-    type: "writing",
-    url: "https://wizards777.medium.com/mercy-through-the-blade-the-silent-law-of-leadership-24cef2df828a",
-    date: "2024"
-  },
-  {
-    title: "Forging the Stronghand Terminal: From Chaos to Command",
-    description: "A technical and philosophical journey of rebuilding my development environment from the ground up. This essay explores the relationship between our tools and our mindset, detailing how I transformed my Windows 11 terminal into a powerful command center using WezTerm, PowerShell 7, and other modern tools.",
-    type: "writing",
-    url: "https://wizards777.medium.com/forging-the-stronghand-terminal-from-chaos-to-command-c4e4df4d290c",
-    date: "2024"
-  },
-  {
-    title: "The Power of Intentional Development",
-    description: "A Thread exploring how deliberate practice and focused development can transform not just our code, but our entire approach to problem-solving and personal growth.",
-    type: "thread",
-    url: "https://www.threads.com/@antoniwan777/post/DI_53ziRpQ5",
-    date: "2024"
-  },
-  {
-    title: "Coding with Intention",
-    description: "A short video reflection on how the way we approach our development environment reflects our mindset and discipline in coding.",
-    type: "reel",
-    url: "https://www.instagram.com/reel/DIcqwZcNWoX/",
-    date: "2024"
-  }
-]
+import { useEffect, useState } from "react"
+import { creativeWorks, CreativeWork } from "@/data/creative-works"
 
 function getTypeLabel(type: CreativeWork["type"]) {
   switch (type) {
@@ -83,11 +46,27 @@ function getTypeColor(type: CreativeWork["type"]) {
   }
 }
 
-const ITEMS_PER_VIEW = 2.25;
+const ITEMS_PER_VIEW_DESKTOP = 2.25;
+const ITEMS_PER_VIEW_MOBILE = 1;
 
 export function CreativeWorksSection() {
+  const [itemsPerView, setItemsPerView] = useState(ITEMS_PER_VIEW_DESKTOP);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setItemsPerView(ITEMS_PER_VIEW_MOBILE);
+      } else {
+        setItemsPerView(ITEMS_PER_VIEW_DESKTOP);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <section id="creative-works" className="py-12 md:py-16 lg:py-24 scroll-mt-20">
+    <section id="creative-works" className="py-12 md:py-16 lg:py-24 scroll-mt-20 bg-[hsl(var(--muted))]">
       <div className="container space-y-6 fade-in">
         <div className="inline-flex items-center gap-2 mb-4">
           <SectionHeader
@@ -100,37 +79,32 @@ export function CreativeWorksSection() {
           Beyond code, I explore ideas through writing, music, and social media. These creative works reflect my journey of growth, leadership, and self-discovery.
         </p>
 
-        <div className="mt-8">
-          <Carousel itemsPerView={ITEMS_PER_VIEW} interval={8000}>
+        <div className="mt-8 pb-8">
+          <Carousel itemsPerView={itemsPerView} interval={8000}>
             {creativeWorks.map((work, index) => (
               <div
                 key={index}
-                className="px-4"
-                style={{ minWidth: `${100 / ITEMS_PER_VIEW}%`, maxWidth: `${100 / ITEMS_PER_VIEW}%` }}
+                style={{ minWidth: `${100 / itemsPerView}%`, maxWidth: `${100 / itemsPerView}%` }}
               >
-                <Card className="border-none shadow-md fade-in dark:border dark:border-border overflow-hidden h-full flex flex-col">
-                  <CardHeader className="pb-2">
-                    <div className="flex flex-col gap-2">
-                      <div className="flex items-center gap-2">
-                        <span className={getTypeColor(work.type)}>
-                          {getTypeIcon(work.type)}
-                        </span>
-                        <span className={`text-sm font-medium ${getTypeColor(work.type)}`}>
-                          {getTypeLabel(work.type)}
-                        </span>
-                      </div>
-                      <CardTitle className="text-heading-3 text-left">{work.title}</CardTitle>
-                      {work.date && (
-                        <p className="text-sm text-muted-foreground text-left">{work.date}</p>
-                      )}
+                <div className="h-full flex flex-col justify-between bg-white dark:bg-background shadow-md rounded-xl p-6 transition-shadow">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-2">
+                      <span className={getTypeColor(work.type)}>
+                        {getTypeIcon(work.type)}
+                      </span>
+                      <span className={`text-sm font-medium ${getTypeColor(work.type)}`}>
+                        {getTypeLabel(work.type)}
+                      </span>
                     </div>
-                  </CardHeader>
-
-                  <CardContent className="pb-2">
+                    <div className="text-heading-3 text-left font-semibold leading-tight">{work.title}</div>
+                    {work.date && (
+                      <p className="text-sm text-muted-foreground text-left">{work.date}</p>
+                    )}
+                  </div>
+                  <div className="py-2">
                     <p className="text-body text-muted-foreground text-left">{work.description}</p>
-                  </CardContent>
-
-                  <CardFooter className="mt-auto">
+                  </div>
+                  <div className="mt-auto pt-2">
                     <Button
                       asChild
                       variant="outline"
@@ -143,8 +117,8 @@ export function CreativeWorksSection() {
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
-                  </CardFooter>
-                </Card>
+                  </div>
+                </div>
               </div>
             ))}
           </Carousel>

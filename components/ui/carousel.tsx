@@ -43,9 +43,9 @@ export function Carousel({
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="overflow-hidden">
+      <div>
         <div 
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex gap-x-4 transition-transform duration-500 ease-in-out"
           style={{ 
             transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
             width: `${children.length * (100 / itemsPerView)}%`
@@ -60,7 +60,7 @@ export function Carousel({
           <Button
             variant="ghost"
             size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full bg-background/80 hover:bg-background"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full border border-border shadow-lg bg-black/70 hover:bg-black/80 text-white"
             onClick={prevSlide}
           >
             <ChevronLeft className="h-6 w-6" />
@@ -69,7 +69,7 @@ export function Carousel({
           <Button
             variant="ghost"
             size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full bg-background/80 hover:bg-background"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full border border-border shadow-lg bg-black/70 hover:bg-black/80 text-white"
             onClick={nextSlide}
           >
             <ChevronRight className="h-6 w-6" />
