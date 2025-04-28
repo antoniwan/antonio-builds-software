@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Code, User, BookOpen, ExternalLink, Sparkles, Copyright, Heart } from "lucide-react"
+import { Code, User, BookOpen, ExternalLink, Sparkles, Copyright, Heart, MessageSquare } from "lucide-react"
 import { useScrollToSection } from "@/components/scroll-to-section"
 
 export function Footer() {
@@ -17,7 +17,7 @@ export function Footer() {
             <p className="text-caption text-muted-foreground">{currentYear} Antonio Rodriguez Martinez</p>
           </div>
 
-          <nav className="flex gap-4 sm:gap-6">
+          <nav className="flex items-center gap-4">
             <button
               onClick={() => scrollToSection("projects")}
               className="text-caption text-muted-foreground hover:text-[hsl(var(--vegeta-blue))] hover:underline underline-offset-4 flex items-center gap-1"
@@ -26,11 +26,25 @@ export function Footer() {
               Projects
             </button>
             <button
+              onClick={() => scrollToSection("creative-works")}
+              className="text-caption text-muted-foreground hover:text-[hsl(var(--gold))] hover:underline underline-offset-4 flex items-center gap-1"
+            >
+              <Sparkles className="h-3 w-3 text-[hsl(var(--gold))]" />
+              Creative Works
+            </button>
+            <button
               onClick={() => scrollToSection("about")}
               className="text-caption text-muted-foreground hover:text-[hsl(var(--vegeta-blue))] hover:underline underline-offset-4 flex items-center gap-1"
             >
               <User className="h-3 w-3 text-[hsl(var(--vegeta-blue))]" />
               About Me
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="text-caption text-muted-foreground hover:text-[hsl(var(--vegeta-blue))] hover:underline underline-offset-4 flex items-center gap-1"
+            >
+              <MessageSquare className="h-3 w-3 text-[hsl(var(--vegeta-blue))]" />
+              Contact
             </button>
             <Link
               href="https://medium.com/@antonio.builds.software"
@@ -55,7 +69,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-4 flex justify-center md:justify-end">
+        <div className="flex justify-end mt-6">
           <Link
             href="https://v0.dev"
             target="_blank"
