@@ -75,7 +75,7 @@ export function Carousel({
             <ChevronRight className="h-6 w-6" />
           </Button>
 
-          <div className="flex justify-center gap-2 mt-4">
+          <div className="flex justify-center gap-2 mt-8">
             {Array.from({ length: Math.ceil(children.length - itemsPerView + 1) }).map((_, index) => (
               <button
                 key={index}
