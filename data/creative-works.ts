@@ -40,6 +40,6 @@ export const creativeWorks: CreativeWork[] = [
     description: "A reel of me doing some heavy deadlifts with a funny caption about therapy and lifting.",
     type: "reel",
     url: "https://www.instagram.com/p/DJA8ukEt23K/",
-    date: new Date(Date.now() - 10 * 60 * 60 * 1000).toISOString().slice(0, 10) // 10 hours ago
+    date: "2025-04-29"
   }
 ]; 
