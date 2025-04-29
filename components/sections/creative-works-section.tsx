@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { BookOpen, Music, ExternalLink, MessageSquare, Instagram } from "lucide-react"
 import { SectionHeader } from "@/components/section-header"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Carousel } from "@/components/ui/carousel"
 import { useEffect, useState } from "react"

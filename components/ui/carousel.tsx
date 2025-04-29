@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -20,20 +20,23 @@ export function Carousel({
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % Math.ceil(children.length - itemsPerView + 1))
-  }
+  }, [children.length, itemsPerView])
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + Math.ceil(children.length - itemsPerView + 1)) % Math.ceil(children.length - itemsPerView + 1))
-  }
+  }, [children.length, itemsPerView])
 
   useEffect(() => {
     if (!autoPlay || isPaused) return
 
-    const timer = setInterval(nextSlide, interval)
+    const timer = setInterval(() => {
+      nextSlide()
+    }, interval)
+
     return () => clearInterval(timer)
-  }, [currentIndex, isPaused, autoPlay, interval])
+  }, [currentIndex, isPaused, autoPlay, interval, nextSlide])
 
   const showPagination = children.length > itemsPerView
 
