@@ -46,7 +46,7 @@ export function Carousel({
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div>
+      <div className="relative">
         <div 
           className="flex gap-x-4 transition-transform duration-500 ease-in-out"
           style={{ 
@@ -59,26 +59,17 @@ export function Carousel({
       </div>
 
       {showPagination && (
-        <>
+        <div className="flex items-center justify-between mt-8">
           <Button
             variant="ghost"
             size="icon"
-            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full border border-border shadow-lg bg-black/70 hover:bg-black/80 text-white"
+            className="rounded-full border border-border shadow-lg bg-black/70 hover:bg-black/80 text-white"
             onClick={prevSlide}
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full border border-border shadow-lg bg-black/70 hover:bg-black/80 text-white"
-            onClick={nextSlide}
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
-
-          <div className="flex justify-center gap-2 mt-8">
+          <div className="flex gap-2">
             {Array.from({ length: Math.ceil(children.length - itemsPerView + 1) }).map((_, index) => (
               <button
                 key={index}
@@ -89,7 +80,16 @@ export function Carousel({
               />
             ))}
           </div>
-        </>
+
+          <Button
+            variant="ghost"
+            size="icon"
+            className="rounded-full border border-border shadow-lg bg-black/70 hover:bg-black/80 text-white"
+            onClick={nextSlide}
+          >
+            <ChevronRight className="h-6 w-6" />
+          </Button>
+        </div>
       )}
     </div>
   )
