@@ -120,3 +120,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Other
 - Minor UI polish and code cleanup
+
+## [1.0.13] - 2024-06-09
+
+### Fixed
+- Removed unused imports to resolve linter errors in Creative Works Section
+
+### Changed
+- Bumped version and updated version meta tag in layout
+- Minor code and documentation cleanup

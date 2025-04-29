@@ -3,7 +3,7 @@ import { BookOpen, Music, ExternalLink, MessageSquare, Instagram } from "lucide-
 import { SectionHeader } from "@/components/section-header"
 import { Button } from "@/components/ui/button"
 import { Carousel } from "@/components/ui/carousel"
-import { creativeWorks, CreativeWork } from "@/data/creative-works"
+import { creativeWorks } from "@/data/creative-works"
 import { formatDistanceToNow } from "date-fns"
 
 const typeConfig = {
