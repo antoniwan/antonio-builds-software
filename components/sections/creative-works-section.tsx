@@ -65,38 +65,36 @@ export function CreativeWorksSection() {
               
               return (
                 <div key={index}>
-                  <div className="h-full flex flex-col justify-between bg-white dark:bg-background shadow-md rounded-xl p-6 transition-shadow">
-                    <div className="flex flex-col">
+                  <div className="h-full min-h-[340px] flex flex-col justify-between bg-white dark:bg-background shadow-md rounded-xl p-8 md:p-10 gap-4 transition-shadow hover:shadow-lg focus-within:shadow-lg">
+                    <div className="flex flex-col gap-3">
                       <div className="flex items-center gap-2">
                         <span className={config.color}>
                           <Icon className="h-4 w-4" />
                         </span>
-                        <span className={`text-sm font-medium ${config.color}`}>
+                        <span className={`text-base font-semibold ${config.color}`}>
                           {config.label}
                         </span>
                       </div>
-                      <div className="text-heading-3 text-left font-semibold leading-tight">{work.title}</div>
+                      <div className="text-xl md:text-2xl font-bold text-left leading-snug">{work.title}</div>
                       {work.date && (
-                        <p className="text-sm text-muted-foreground text-left">
+                        <p className="text-xs md:text-sm text-muted-foreground text-left">
                           {formatDistanceToNow(new Date(work.date), { addSuffix: true })}
                         </p>
                       )}
                     </div>
-                    <div className="py-2">
-                      <p className="text-body text-muted-foreground text-left">{work.description}</p>
+                    <div className="flex-1 flex items-start">
+                      <p className="text-base text-muted-foreground text-left leading-relaxed line-clamp-5">{work.description}</p>
                     </div>
-                    <div className="mt-auto pt-2">
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="w-full rounded-full border-primary/20 hover:bg-primary/5 dark:text-foreground"
-                      >
-                        <Link href={work.url} target="_blank" rel="noopener noreferrer">
-                          {buttonLabels[work.type]}
-                          <ExternalLink className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                    </div>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full rounded-full border-primary/20 hover:bg-primary/10 dark:text-foreground mt-2"
+                    >
+                      <Link href={work.url} target="_blank" rel="noopener noreferrer">
+                        {buttonLabels[work.type]}
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               )

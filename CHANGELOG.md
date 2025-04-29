@@ -129,3 +129,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Bumped version and updated version meta tag in layout
 - Minor code and documentation cleanup
+
+## [1.0.14] - 2024-06-09
+
+### Changed
+- Improved carousel card UI/UX: better spacing, legibility, and consistent height
+- Bumped version and updated version meta tag
