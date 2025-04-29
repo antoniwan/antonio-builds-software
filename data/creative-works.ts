@@ -22,20 +22,6 @@ export const creativeWorks: CreativeWork[] = [
     date: "2025-04-28"
   },
   {
-    title: "The Power of Intentional Development",
-    description: "A thread where I reflect on how deliberate practice and focused development have transformed not just my code, but my entire approach to problem-solving and personal growth.",
-    type: "thread",
-    url: "https://www.threads.com/@antoniwan777/post/DI_53ziRpQ5",
-    date: "2025-04-28"
-  },
-  {
-    title: "Coding with Intention",
-    description: "A short video where I share how the way I approach my development environment reflects my mindset and discipline in coding.",
-    type: "reel",
-    url: "https://www.instagram.com/reel/DIcqwZcNWoX/",
-    date: "2025-04-14"
-  },
-  {
     title: `Uncomplete Song #2983`,
     description: `¿y quien dijo que el romanticismo estaba perdido?\n\nHace poco en uno de los días más felices de mi vida me dijeron que me veían mal mentalmente. No se dejen engañar. Tomen su espacio. Vivan. Sientan. Amen. Griten. Pataleteen. La vida es buena.\n\nA romantic, freestyle guitar jam. Just me, the strings, and a moment of feeling alive.`,
     type: "reel",
@@ -48,5 +34,12 @@ export const creativeWorks: CreativeWork[] = [
     type: "writing",
     url: "https://wizards777.medium.com/on-simplicity-and-peace-of-mind-885086031fe9",
     date: "2024-10-04"
+  },
+  {
+    title: "Therapist: 'Try to lighten your load.' Me: adds another plate to the bar",
+    description: "A reel of me doing some heavy deadlifts with a funny caption about therapy and lifting.",
+    type: "reel",
+    url: "https://www.instagram.com/p/DJA8ukEt23K/",
+    date: new Date(Date.now() - 10 * 60 * 60 * 1000).toISOString().slice(0, 10) // 10 hours ago
   }
 ]; 
