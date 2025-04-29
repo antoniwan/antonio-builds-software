@@ -118,6 +118,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="version" content="1.0.12" />
+      </head>
       <Analytics />
       <SpeedInsights />
       <body className={`${outfit.variable} ${inter.variable}`}>
