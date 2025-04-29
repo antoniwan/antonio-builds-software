@@ -1,95 +1,93 @@
-import type React from "react";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import "@/app/globals.css";
-import { Outfit, Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+import type React from 'react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import '@/app/globals.css';
+import { Outfit, Inter } from 'next/font/google';
+import { ThemeProvider } from '@/components/theme-provider';
 
 // Outfit for headings - modern, geometric with personality
 const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
+  subsets: ['latin'],
+  variable: '--font-heading',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });
 
 // Inter for body text - clean, professional, highly readable
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata = {
-  title:
-    "Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager",
+  title: 'Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager',
   description:
     "I'm Antonio—a builder at heart who balances technical excellence with human values through practical solutions that make a difference. Technical Program Manager, Full-Stack Developer, and advocate for conscious technology that creates meaningful impact.",
   keywords: [
-    "Technical Program Manager",
-    "Full-Stack Developer",
-    "Digital Product Builder",
-    "React Developer",
-    "Systems Thinker",
-    "Conscious Technology",
-    "Human-Centered Development",
-    "Web Development",
-    "Product Leadership",
-    "Antonio Rodriguez Martinez",
-    "Interactive Portfolio",
-    "Responsive Design",
-    "Modern UI/UX",
-    "Next.js Portfolio",
-    "TypeScript Developer",
-    "Tailwind CSS",
+    'Technical Program Manager',
+    'Full-Stack Developer',
+    'Digital Product Builder',
+    'React Developer',
+    'Systems Thinker',
+    'Conscious Technology',
+    'Human-Centered Development',
+    'Web Development',
+    'Product Leadership',
+    'Antonio Rodriguez Martinez',
+    'Interactive Portfolio',
+    'Responsive Design',
+    'Modern UI/UX',
+    'Next.js Portfolio',
+    'TypeScript Developer',
+    'Tailwind CSS',
   ],
   authors: [
     {
-      name: "Antonio Rodriguez Martinez",
-      url: "https://antonio.builds.software",
+      name: 'Antonio Rodriguez Martinez',
+      url: 'https://antonio.builds.software',
     },
   ],
-  creator: "Antonio Rodriguez Martinez",
-  publisher: "Antonio Rodriguez Martinez",
+  creator: 'Antonio Rodriguez Martinez',
+  publisher: 'Antonio Rodriguez Martinez',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://antonio.builds.software"),
+  metadataBase: new URL('https://antonio.builds.software'),
   alternates: {
-    canonical: "/",
+    canonical: '/',
     languages: {
-      "en-US": "/",
+      'en-US': '/',
     },
   },
   openGraph: {
-    title:
-      "Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager",
+    title: 'Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager',
     description:
-      "Explore my interactive portfolio featuring enhanced UI/UX, responsive design, and modern carousel showcasing creative works and professional experience. Built with Next.js, TypeScript, and Tailwind CSS.",
-    url: "https://antonio.builds.software",
-    siteName: "Antonio Rodriguez Martinez",
-    locale: "en_US",
-    type: "website",
+      'Explore my interactive portfolio featuring enhanced UI/UX, responsive design, and modern carousel showcasing creative works and professional experience. Built with Next.js, TypeScript, and Tailwind CSS.',
+    url: 'https://antonio.builds.software',
+    siteName: 'Antonio Rodriguez Martinez',
+    locale: 'en_US',
+    type: 'website',
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "Antonio Rodriguez Martinez - Interactive Portfolio with Enhanced UI/UX",
-        type: "image/jpeg",
+        alt: 'Antonio Rodriguez Martinez - Interactive Portfolio with Enhanced UI/UX',
+        type: 'image/jpeg',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Antonio Rodriguez Martinez | Interactive Digital Portfolio",
+    card: 'summary_large_image',
+    title: 'Antonio Rodriguez Martinez | Interactive Digital Portfolio',
     description:
-      "Builder at heart, Technical Program Manager by profession. Explore my enhanced portfolio featuring responsive design, modern UI/UX, and interactive carousel components.",
-    creator: "@antonio_builds",
-    images: ["/images/twitter-image.jpg"],
+      'Builder at heart, Technical Program Manager by profession. Explore my enhanced portfolio featuring responsive design, modern UI/UX, and interactive carousel components.',
+    creator: '@antonio_builds',
+    images: ['/images/twitter-image.jpg'],
   },
   robots: {
     index: true,
@@ -97,43 +95,39 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   verification: {
-    google: "google-site-verification-code",
-    yandex: "yandex-verification-code",
+    google: 'google-site-verification-code',
+    yandex: 'yandex-verification-code',
   },
   icons: {
-    icon: "/images/favicon.ico",
-    shortcut: "/images/favicon.ico",
-    apple: "/images/apple-touch-icon.jpeg",
+    icon: '/images/favicon.ico',
+    shortcut: '/images/favicon.ico',
+    apple: '/images/apple-touch-icon.jpeg',
     other: [
       {
-        rel: "icon",
-        sizes: "16x16",
-        url: "/images/favicon-16by16.ico",
+        rel: 'icon',
+        sizes: '16x16',
+        url: '/images/favicon-16by16.ico',
       },
       {
-        rel: "icon",
-        sizes: "32x32",
-        url: "/images/favicon-32by32.ico",
+        rel: 'icon',
+        sizes: '32x32',
+        url: '/images/favicon-32by32.ico',
       },
     ],
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="version" content="1.1.0" />
+        <meta name="version" content="1.2.0" />
       </head>
       <Analytics />
       <SpeedInsights />
