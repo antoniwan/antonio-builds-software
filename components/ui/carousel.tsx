@@ -1,27 +1,31 @@
-"use client"
+"use client";
 
-import { useCallback } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import useEmblaCarousel from "embla-carousel-react"
+import { useCallback } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import useEmblaCarousel from "embla-carousel-react";
 
 interface CarouselProps {
-  children: React.ReactNode[]
+  children: React.ReactNode[];
 }
 
 export function Carousel({ children }: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
-    containScroll: "trimSnaps"
-  })
+    containScroll: "trimSnaps",
+    breakpoints: {
+      "(min-width: 768px)": { slidesToScroll: 2 },
+      "(max-width: 767px)": { slidesToScroll: 1 },
+    },
+  });
 
   const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
     <div className="relative w-full">
@@ -36,22 +40,14 @@ export function Carousel({ children }: CarouselProps) {
       </div>
 
       <div className="flex items-center justify-between mt-4">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={scrollPrev}
-        >
+        <Button variant="ghost" size="icon" onClick={scrollPrev}>
           <ChevronLeft className="h-4 w-4" />
         </Button>
 
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={scrollNext}
-        >
+        <Button variant="ghost" size="icon" onClick={scrollNext}>
           <ChevronRight className="h-4 w-4" />
         </Button>
       </div>
     </div>
-  )
-} 
+  );
+}
