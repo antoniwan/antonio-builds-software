@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.11] - 2024-03-19
+
+### Added
+- Patreon integration for creative works support
+
+### Changed
+- Enhanced creative works section with improved carousel layout
+- Updated footer links to reflect new sections
+- Improved UI consistency across sections
+
+### Fixed
+- Build issues and dependency warnings
+- Carousel arrows and pagination alignment
+- Optimized build configuration
+
 ## [1.0.10] - 2024-03-19
 
 ### Changed

@@ -14,10 +14,12 @@ A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing 
 - Vercel Analytics
 - Vercel Speed Insights
 - Patreon integration
-- Creative works showcase
+- Enhanced creative works showcase with improved carousel
 - Professional experience timeline
 - Responsive design
 - SEO optimized
+- Optimized build configuration
+- Improved UI/UX with consistent navigation
 
 ## Tech Stack
 
@@ -30,6 +32,15 @@ A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing 
 - [Vercel Analytics](https://vercel.com/analytics)
 - [Vercel Speed Insights](https://vercel.com/speed-insights)
 - [date-fns](https://date-fns.org/) for date formatting
+
+## Recent Updates (v1.0.11)
+
+- Enhanced creative works section with improved carousel layout
+- Fixed build issues and optimized dependencies
+- Updated footer links for better navigation
+- Improved UI consistency across sections
+- Added Patreon integration
+- Optimized carousel arrows and pagination alignment
 
 ## Development
 
