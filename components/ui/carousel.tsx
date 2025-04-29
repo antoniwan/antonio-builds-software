@@ -32,7 +32,10 @@ export function Carousel({ children }: CarouselProps) {
       <div className="px-2" ref={emblaRef}>
         <div className="flex gap-x-6">
           {children.map((child, index) => (
-            <div key={index} className="flex-[0_0_50%] min-w-0">
+            <div
+              key={index}
+              className="flex-[0_0_100%] md:flex-[0_0_50%] min-w-0"
+            >
               {child}
             </div>
           ))}
