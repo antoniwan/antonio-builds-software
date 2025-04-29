@@ -1,62 +1,97 @@
-import { User } from "lucide-react"
-import { SectionHeader } from "@/components/section-header"
+import { User } from 'lucide-react';
+import { SectionHeader } from '@/components/section-header';
 
 export function AboutSection() {
   return (
-    <section
-      id="about"
-      className="py-12 md:py-16 lg:py-24 bg-white dark:bg-background relative"
-    >
+    <section id="about" className="py-12 md:py-16 lg:py-24 bg-white dark:bg-background relative">
       <div className="container space-y-6 md:space-y-8">
         <div className="flex items-center justify-center md:justify-start fade-in">
-          <SectionHeader icon={<User className="h-6 w-6 text-[hsl(var(--vegeta-blue))]" />} title="About Me" />
+          <SectionHeader
+            icon={<User className="h-6 w-6 text-[hsl(var(--vegeta-blue))]" />}
+            title="About Me"
+          />
         </div>
         <div className="text-muted-foreground fade-in space-y-4 text-sm md:text-base lg:text-lg">
           <p>
-            I&apos;m Antonio—a builder at heart with a natural curiosity for how things work. My greatest joy comes from
-            creating useful things, not just code. One day I&apos;m crafting elegant software architecture, the next I&apos;m
-            inventing basketball plays that actually work against my friends, or perfecting a &quot;caveman&quot; style lamb and
-            veggie dish. I create imaginative games for my 5-year-old daughter that usually involve a fox eating some
-            magic fruit. And yes, after thousands of repetitions, I&apos;ve developed some frighteningly effective
-            self-defense combos that I hope to never use. There&apos;s something magical about transforming abstract ideas
-            into tangible reality—whether digital, culinary, playful, physical, techniques, habits, or paradigms—and I&apos;m
-            fortunate to do this every day.
+            I'm Antonio—a builder at the intersection of systems, soul, and sweat. I create things
+            that work: robust software, emotionally grounded mentorship models, savage guitar riffs,
+            games for my daughter about foxes and magical fruit, and t-shirts durable enough to
+            survive a jungle or a mosh pit. I'm not in this to go viral. I'm in this to leave a
+            legacy.
           </p>
           <p>
-            My journey began in college when a friend and I launched a web development company that was later acquired
-            by a marketing firm. While more educational than profitable, this venture shaped my professional philosophy:
-            technical excellence must be balanced with human values—integrity, empathy, and inclusivity. I&apos;ve found that
-            diverse, psychologically safe teams consistently produce quality and cost-effective solutions.
+            My hands know code, lumber, dough, drumsticks, and dumbbells. My heart knows failure,
+            fatherhood, loyalty, and repair. I'm not trying to "balance" opposites—I integrate them.
           </p>
           <p>
-            The agency world taught me to thrive in chaos and uncertainty. I still smile thinking about those impossible
-            deadlines and wild client requests that had us learning new technologies overnight. &quot;Can you implement this
-            obscure protocol by tomorrow?&quot; Challenge accepted! These experiences forged my adaptability and instilled a
-            love for continuous learning that defines my approach to technology.
+            I've worn a lot of titles over the years: Full-Stack Dev, Architect, CTO, Engineering
+            Manager, and now Technical Program Manager at a global hardware company. But my journey
+            started with a bootstrapped web dev agency in college—just me and a friend, learning how
+            to write clean code and clean invoices. We got acquired by a marketing firm, and even
+            though the payout wasn't huge, the learning was priceless. I found that chaos was my
+            co-pilot—especially in the agency world, where I once built a custom API parser
+            overnight because a client emailed at 4 PM asking, "Can you integrate this obscure
+            Belgian protocol by tomorrow morning?" Challenge accepted. I still smile thinking about
+            those 2 AM commits fueled by bad coffee and raw willpower.
           </p>
           <p>
-            Throughout my career, I&apos;ve worn many hats: Individual Contributor, Architect, CTO, Engineering Manager, and
-            Director. Each role has given me a unique perspective on building technology and leading teams. Currently,
-            I&apos;m channeling this experience as a Technical Program Manager at a global hardware company, where I bridge
-            technical complexity with strategic business needs.
+            Through all that, I built a personal philosophy: technical excellence means nothing
+            without human values—integrity, empathy, humility. Diverse, psychologically safe teams
+            ship better software. Full stop.
           </p>
           <p>
-            My personal life has had its share of reboots and refactoring. After my marriage ended, I found myself
-            debugging my own life—sometimes successfully, sometimes with plenty of trial and error. These days, I&apos;m
-            trying to be more intentional with my time. I&apos;ve come to see movement as medicine—basketball brings me joy,
-            weightlifting keeps me strong, and martial arts keeps me sharp and confident, just like therapy does—it&apos;s
-            not a passion, just a practical tool. I cook whole foods not because I&apos;m some health guru (I still cave for
-            pizza), but because I&apos;ve noticed my body and mind work better with real ingredients. My kids keep me
-            honest—they&apos;re quick to point out when Dad&apos;s preaching doesn&apos;t match his practice. I&apos;m learning that being a
-            good parent isn&apos;t about perfection but presence, and I genuinely treasure every moment with them. My
-            creative outlets include writing philosophical musings, working on various creative projects with my
-            kids, and recently, making metal music with my friends. Through it
-            all—the successes, failures, and daily mundane moments—I&apos;m just trying to stay curious, keep building, and
-            be a little better today than yesterday.
+            Today, I channel that experience through{' '}
+            <a
+              href="https://www.stronghandssoftheart.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[hsl(var(--vegeta-blue))] hover:underline"
+            >
+              Strong Hands, Soft Heart LLC
+            </a>
+            , my personal umbrella for creative and entrepreneurial work. It's not just a brand—it's
+            a way of life. Under it, I'm:
           </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Building a regenerative homestead in Puerto Rico with my daughter, planting fruit
+              trees and designing a self-sustaining, beautiful life.
+            </li>
+            <li>
+              Crafting artisanal soap boxes and screen-printed apparel by hand (yes, the screen
+              printer is real).
+            </li>
+            <li>
+              Recording metal albums with friends, asynchronously, sometimes at midnight, sometimes
+              between meetings.
+            </li>
+            <li>
+              Designing sacred mentorship spaces for men who want to evolve—without the gimmicks,
+              just presence and real work.
+            </li>
+          </ul>
+          <p>
+            My creative life is as chaotic as ever. I write almost every day—essays, ideas, poems,
+            documentation. I train like a monk-warrior: basketball for joy, weights for strength,
+            martial arts for discipline. I cook whole foods not because I'm a health bro—I still
+            cave for pizza—but because my brain works better when I treat my body with respect. I
+            parent two kids who call me out whenever my words and actions don't align. They keep me
+            honest. I keep showing up.
+          </p>
+          <p>
+            I've rebuilt my life post-divorce, restructured my values, and realized that presence
+            &gt; perfection. Therapy, breathwork, and lifting heavy things all help. I've learned
+            that being "strong" is hollow without gentleness, and that execution matters more than
+            talking about it.
+          </p>
+          <p>
+            Legacy to me isn't some vague future thing—it's built in the small, daily reps. It's in
+            how I treat others, how I show up when no one is watching, and how I translate love into
+            systems that endure beyond me.
+          </p>
+          <p>I'm not interested in playing small. I'm here to build.</p>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

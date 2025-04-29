@@ -33,15 +33,46 @@ A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing 
 - [Vercel Speed Insights](https://vercel.com/speed-insights)
 - [date-fns](https://date-fns.org/) for date formatting
 
-## Recent Updates (v1.1.0)
+## Recent Updates (v1.3.0)
 
-- Added enhanced carousel component with responsive design
-- Improved carousel card UI/UX: better spacing, legibility, and consistent height
-- Bumped version and updated version meta tag
+- Enhanced theme toggle component with improved accessibility
+- Added new UI components for better user experience
+- Improved layout components with better responsive design
+- Updated project structure for better maintainability
+- Enhanced component organization and documentation
+- Improved overall code quality and consistency
 
 ## Development
 
 1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/antonio-builds-software.git
    ```
 
+2. Install dependencies:
+
+   ```bash
+   npm install
    ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+
+   ```bash
+   npm run build
+   ```
+
+5. Start production server:
+   ```bash
+   npm start
+   ```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
