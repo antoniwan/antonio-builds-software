@@ -121,7 +121,14 @@ export default function RootLayout({
       <Analytics />
       <SpeedInsights />
       <body className={`${outfit.variable} ${inter.variable}`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="antonio-theme">
+        <ThemeProvider 
+          attribute="class" 
+          defaultTheme="light" 
+          enableSystem={false} 
+          storageKey="antonio-theme"
+          forcedTheme="light"
+          disableTransitionOnChange
+        >
           {children}
         </ThemeProvider>
       </body>
