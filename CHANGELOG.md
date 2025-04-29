@@ -109,3 +109,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Contact form functionality
 - Geometric background patterns
 - Animation effects
+
+## [1.0.12] - 2024-06-09
+
+### Changed
+- Simplified Creative Works Section and Carousel code for easier maintenance and readability
+
+### Fixed
+- Fixed horizontal scrollbar bug in creative works carousel
+
+### Other
+- Minor UI polish and code cleanup
