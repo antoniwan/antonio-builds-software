@@ -5,17 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2024-03-19
+
+### Added
+
+- Enhanced carousel component with responsive design
+- Improved carousel navigation controls
+
+### Changed
+
+- Updated carousel card UI/UX with better spacing and consistent height
+- Improved carousel legibility and responsiveness
+- Bumped version and updated version meta tag
+
 ## [1.0.11] - 2024-03-19
 
 ### Added
+
 - Patreon integration for creative works support
 
 ### Changed
+
 - Enhanced creative works section with improved carousel layout
 - Updated footer links to reflect new sections
 - Improved UI consistency across sections
 
 ### Fixed
+
 - Build issues and dependency warnings
 - Carousel arrows and pagination alignment
 - Optimized build configuration
@@ -113,25 +129,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.12] - 2024-06-09
 
 ### Changed
+
 - Simplified Creative Works Section and Carousel code for easier maintenance and readability
 
 ### Fixed
+
 - Fixed horizontal scrollbar bug in creative works carousel
 
 ### Other
+
 - Minor UI polish and code cleanup
 
 ## [1.0.13] - 2024-06-09
 
 ### Fixed
+
 - Removed unused imports to resolve linter errors in Creative Works Section
 
 ### Changed
+
 - Bumped version and updated version meta tag in layout
 - Minor code and documentation cleanup
 
 ## [1.0.14] - 2024-06-09
 
 ### Changed
+
 - Improved carousel card UI/UX: better spacing, legibility, and consistent height
 - Bumped version and updated version meta tag

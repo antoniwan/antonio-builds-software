@@ -1,9 +1,9 @@
-import type React from "react"
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import "@/app/globals.css"
-import { Outfit, Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
+import type React from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import "@/app/globals.css";
+import { Outfit, Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 
 // Outfit for headings - modern, geometric with personality
 const outfit = Outfit({
@@ -11,7 +11,7 @@ const outfit = Outfit({
   variable: "--font-heading",
   display: "swap",
   weight: ["400", "500", "600", "700"],
-})
+});
 
 // Inter for body text - clean, professional, highly readable
 const inter = Inter({
@@ -19,10 +19,11 @@ const inter = Inter({
   variable: "--font-body",
   display: "swap",
   weight: ["400", "500", "600", "700"],
-})
+});
 
 export const metadata = {
-  title: "Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager",
+  title:
+    "Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager",
   description:
     "I'm Antonio—a builder at heart who balances technical excellence with human values through practical solutions that make a difference. Technical Program Manager, Full-Stack Developer, and advocate for conscious technology that creates meaningful impact.",
   keywords: [
@@ -36,8 +37,19 @@ export const metadata = {
     "Web Development",
     "Product Leadership",
     "Antonio Rodriguez Martinez",
+    "Interactive Portfolio",
+    "Responsive Design",
+    "Modern UI/UX",
+    "Next.js Portfolio",
+    "TypeScript Developer",
+    "Tailwind CSS",
   ],
-  authors: [{ name: "Antonio Rodriguez Martinez", url: "https://antonio.builds.software" }],
+  authors: [
+    {
+      name: "Antonio Rodriguez Martinez",
+      url: "https://antonio.builds.software",
+    },
+  ],
   creator: "Antonio Rodriguez Martinez",
   publisher: "Antonio Rodriguez Martinez",
   formatDetection: {
@@ -53,9 +65,10 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager",
+    title:
+      "Antonio Rodriguez Martinez | Builder of Digital Products & Technical Program Manager",
     description:
-      "I help teams build good software that solves real problems.",
+      "Explore my interactive portfolio featuring enhanced UI/UX, responsive design, and modern carousel showcasing creative works and professional experience. Built with Next.js, TypeScript, and Tailwind CSS.",
     url: "https://antonio.builds.software",
     siteName: "Antonio Rodriguez Martinez",
     locale: "en_US",
@@ -65,15 +78,16 @@ export const metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Antonio Rodriguez Martinez - Builder of Digital Products & Technical Program Manager",
+        alt: "Antonio Rodriguez Martinez - Interactive Portfolio with Enhanced UI/UX",
+        type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Antonio Rodriguez Martinez | Builder of Digital Products",
+    title: "Antonio Rodriguez Martinez | Interactive Digital Portfolio",
     description:
-      "Builder at heart, Technical Program Manager by profession. I create digital products that balance technical excellence with human values—integrity, empathy, and inclusivity.",
+      "Builder at heart, Technical Program Manager by profession. Explore my enhanced portfolio featuring responsive design, modern UI/UX, and interactive carousel components.",
     creator: "@antonio_builds",
     images: ["/images/twitter-image.jpg"],
   },
@@ -109,24 +123,24 @@ export const metadata = {
       },
     ],
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="version" content="1.0.14" />
+        <meta name="version" content="1.1.0" />
       </head>
       <Analytics />
       <SpeedInsights />
       <body className={`${outfit.variable} ${inter.variable}`}>
-        <ThemeProvider 
-          attribute="class" 
-          defaultTheme="light" 
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
           enableSystem={true}
           storageKey="antonio-theme"
           disableTransitionOnChange
@@ -135,6 +149,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
-
