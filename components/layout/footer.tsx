@@ -1,23 +1,34 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Code, User, BookOpen, ExternalLink, Sparkles, Copyright, Heart, MessageSquare } from "lucide-react"
-import { useScrollToSection } from "@/components/scroll-to-section"
+import Link from "next/link";
+import {
+  Code,
+  User,
+  BookOpen,
+  ExternalLink,
+  Sparkles,
+  Copyright,
+  Heart,
+  MessageSquare,
+} from "lucide-react";
+import { useScrollToSection } from "@/components/scroll-to-section";
 
 export function Footer() {
-  const scrollToSection = useScrollToSection()
-  const currentYear = new Date().getFullYear()
+  const scrollToSection = useScrollToSection();
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t py-6 md:py-8 border-t-[hsl(var(--vegeta-blue-light))]">
       <div className="container">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col items-center gap-6">
           <div className="flex items-center gap-2">
             <Copyright className="h-3 w-3 text-muted-foreground" />
-            <p className="text-caption text-muted-foreground">{currentYear} Antonio Rodriguez Martinez</p>
+            <p className="text-caption text-muted-foreground">
+              {currentYear} Antonio Rodriguez Martinez
+            </p>
           </div>
 
-          <nav className="flex items-center gap-4">
+          <nav className="flex flex-col md:flex-row items-center gap-3 md:gap-4">
             <button
               onClick={() => scrollToSection("projects")}
               className="text-caption text-muted-foreground hover:text-[hsl(var(--vegeta-blue))] hover:underline underline-offset-4 flex items-center gap-1"
@@ -54,7 +65,10 @@ export function Footer() {
             >
               <BookOpen className="h-3 w-3 text-[hsl(var(--vegeta-blue))]" />
               Blog
-              <ExternalLink className="h-2.5 w-2.5 text-muted-foreground" aria-hidden="true" />
+              <ExternalLink
+                className="h-2.5 w-2.5 text-muted-foreground"
+                aria-hidden="true"
+              />
             </Link>
             <Link
               href="https://www.patreon.com/c/antoniwan"
@@ -64,12 +78,15 @@ export function Footer() {
             >
               <Heart className="h-3 w-3 text-[hsl(var(--vegeta-blue))]" />
               Support
-              <ExternalLink className="h-2.5 w-2.5 text-muted-foreground" aria-hidden="true" />
+              <ExternalLink
+                className="h-2.5 w-2.5 text-muted-foreground"
+                aria-hidden="true"
+              />
             </Link>
           </nav>
         </div>
 
-        <div className="flex justify-end mt-6">
+        <div className="flex justify-center md:justify-end mt-6">
           <Link
             href="https://v0.dev"
             target="_blank"
@@ -78,7 +95,8 @@ export function Footer() {
           >
             <Sparkles className="h-3 w-3 text-[hsl(var(--primary))]" />
             <span className="font-medium">
-              Built with <span className="text-[hsl(var(--vegeta-blue))]">v0</span> by{" "}
+              Built with{" "}
+              <span className="text-[hsl(var(--vegeta-blue))]">v0</span> by{" "}
               <span className="text-[hsl(var(--gold))]">Vercel</span>
             </span>
             <ExternalLink className="h-2.5 w-2.5 text-muted-foreground opacity-70 group-hover:opacity-100 transition-opacity" />
@@ -86,6 +104,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
