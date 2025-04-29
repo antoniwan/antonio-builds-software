@@ -19,7 +19,7 @@ export const projectsData: Project[] = [
       "A lifestyle brand and platform honoring the fusion of strength and compassion. SHSH is home to handcrafted soap boxes, bilingual children's stories, original music, and heartfelt reflections — all built around a philosophy of legacy, love, and craftsmanship.",
     shortDescription:
       'A lifestyle brand and content platform built around legacy, love, and craftsmanship.',
-    imageUrl: '/images/arisanal-hands.avif',
+    imageUrl: '/images/projects/artisanal-hands.avif',
     projectUrl:
       'https://www.stronghandssoftheart.com/?utm_source=antonio.builds.software&utm_medium=referral&utm_campaign=portfolio_click',
     labels: [
