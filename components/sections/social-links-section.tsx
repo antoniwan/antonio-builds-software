@@ -17,13 +17,6 @@ export function SocialLinksSection() {
   return (
     <section id="social-links" className="py-12 md:py-16 lg:py-24 scroll-mt-20">
       <div className="container">
-        <p className="text-body-large text-center max-w-[800px] mx-auto fade-in">
-          Let&apos;s connect across platforms and explore ideas together. I&apos;m passionate about
-          sharing my work, thoughts, and creative journey with kindred spirits. Whether you&apos;re
-          seeking technical collaboration, creative problem-solving, or meaningful exchange—I thrive
-          on engaging with fellow builders, creators, thinkers, learners, livers and lovers of life.
-        </p>
-
         <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 mt-6 md:mt-8 social-links-grid">
           <Link
             href="https://www.linkedin.com/in/antoniwan/"

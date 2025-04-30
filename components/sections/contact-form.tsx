@@ -45,7 +45,6 @@ export function ContactForm({ className }: ContactFormProps) {
     <section className={cn('w-full max-w-2xl mx-auto', className)}>
       <div className="space-y-8">
         <div className="space-y-2 text-center">
-          <h2 className="text-3xl font-bold tracking-tight">Get in Touch</h2>
           <p className="text-muted-foreground">
             Whether you're a founder, team lead, or visionary with a plan — I help you build it
             right. Clear systems. Clear process. Quiet execution.
