@@ -67,7 +67,7 @@ export function ProjectCard({
         >
           <Image
             src={imageUrl || '/images/placeholder-project.jpg'}
-            alt={title}
+            alt={`${title} project screenshot`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={index < 2}
@@ -75,6 +75,8 @@ export function ProjectCard({
             quality={90}
             className="object-cover rounded-t-lg md:rounded-t-xl"
             style={{ objectPosition: 'center' }}
+            role="img"
+            aria-label={`${title} project screenshot`}
           />
         </motion.div>
         {/* Card content with padding */}

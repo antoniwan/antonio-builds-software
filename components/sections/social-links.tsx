@@ -91,13 +91,18 @@ export function SocialLinks() {
         <Link
           key={link.href}
           href={link.href}
-          className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
+          className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring"
           style={{ animationDelay: link.delay }}
           target={link.href.startsWith('http') ? '_blank' : undefined}
           rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-          aria-label={link.ariaLabel}
+          aria-label={link.ariaLabel || `Visit ${link.label}`}
+          role="link"
+          tabIndex={0}
         >
-          <link.icon className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+          <link.icon
+            className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]"
+            aria-hidden="true"
+          />
           <span className="text-caption font-medium text-center">{link.label}</span>
         </Link>
       ))}
