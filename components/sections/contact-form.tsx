@@ -91,12 +91,12 @@ export function ContactForm({ className }: ContactFormProps) {
               required
               className="w-full px-3 py-2 border rounded-md bg-background"
             >
-              <option value="">Select a subject</option>
-              <option value="project">Project Inquiry</option>
-              <option value="mentorship">Mentorship Inquiry</option>
-              <option value="partnership">Partnership</option>
-              <option value="consulting">Consulting</option>
-              <option value="other">Other</option>
+              <option value="">What brings you here?</option>
+              <option value="project">Let's Build Something Together</option>
+              <option value="mentorship">Share Your Wisdom</option>
+              <option value="partnership">Join Forces</option>
+              <option value="consulting">Need a Fresh Perspective</option>
+              <option value="other">Something Else on Your Mind</option>
             </select>
           </div>
 
