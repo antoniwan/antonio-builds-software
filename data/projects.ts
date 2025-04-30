@@ -16,7 +16,7 @@ export const projectsData: Project[] = [
   {
     title: 'Strong Hands, Soft Heart',
     description:
-      "A lifestyle brand and platform honoring the fusion of strength and compassion. SHSH is home to handcrafted soap boxes, bilingual children's stories, original music, and heartfelt reflections — all built around a philosophy of legacy, love, and craftsmanship.",
+      "A lifestyle brand and platform honoring the fusion of strength and compassion. SH&SH is home to handcrafted soap boxes, bilingual children's stories, original music, and heartfelt reflections — all built around a philosophy of legacy, love, and craftsmanship.",
     shortDescription:
       'A lifestyle brand and content platform built around legacy, love, and craftsmanship.',
     imageUrl: '/images/projects/artisanal-hands.avif',
