@@ -55,13 +55,13 @@ export function ProjectCard({
           <Badge
             key={index}
             className={
-              label.color === 'blue'
-                ? 'bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))]'
+              label.color === 'vegeta-blue'
+                ? 'bg-brand-blue hover:bg-brand-blue-dark'
                 : label.color === 'gold'
-                ? 'bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))]'
+                ? 'bg-brand-gold hover:bg-brand-gold-dark'
                 : label.color === 'primary'
                 ? 'bg-primary hover:bg-primary/90'
-                : 'bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))]'
+                : 'bg-brand-blue hover:bg-brand-blue-dark'
             }
           >
             {label.name}

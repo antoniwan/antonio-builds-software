@@ -40,7 +40,7 @@ export function PrinciplesSection() {
       <div className="container space-y-8 md:space-y-10">
         <div className="flex items-center fade-in">
           <SectionHeader
-            icon={<Sparkles className="h-6 w-6 text-[hsl(var(--vegeta-blue))]" />}
+            icon={<Sparkles className="h-6 w-6 text-brand-gold" />}
             title="Principles"
           />
         </div>
@@ -51,7 +51,7 @@ export function PrinciplesSection() {
               className="fade-in p-8 rounded-lg border border-border bg-card hover:bg-card/80 transition-colors"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="text-heading-3 font-semibold mb-4 text-[hsl(var(--vegeta-blue))]">
+              <h3 className="text-heading-3 font-semibold mb-4 text-brand-blue">
                 {principle.title}
               </h3>
               <p className="text-body text-muted-foreground">{principle.description}</p>

@@ -4,8 +4,8 @@
   "description": "Building systems with clarity, purpose, and performance.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "hsl(var(--background))",
+  "theme_color": "hsl(var(--background))",
   "icons": [
     {
       "src": "/images/favicon-16by16.ico",

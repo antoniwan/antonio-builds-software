@@ -9,10 +9,7 @@ export function AboutSection() {
     >
       <div className="container space-y-8 md:space-y-10">
         <div className="flex items-center justify-center md:justify-start fade-in">
-          <SectionHeader
-            icon={<User className="h-6 w-6 text-[hsl(var(--vegeta-blue))]" />}
-            title="About Me"
-          />
+          <SectionHeader icon={<User className="h-6 w-6 text-brand-gold" />} title="About Me" />
         </div>
         <div className="text-muted-foreground fade-in space-y-6">
           <p className="text-body">
@@ -49,7 +46,7 @@ export function AboutSection() {
               href="https://www.stronghandssoftheart.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[hsl(var(--vegeta-blue))] hover:underline"
+              className="text-brand-blue hover:underline"
             >
               Strong Hands, Soft Heart LLC
             </a>

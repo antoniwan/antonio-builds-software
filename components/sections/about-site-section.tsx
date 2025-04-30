@@ -10,7 +10,7 @@ export function AboutSiteSection() {
       <div className="container space-y-8 md:space-y-10">
         <div className="flex items-center fade-in">
           <SectionHeader
-            icon={<Globe className="h-6 w-6 text-[hsl(var(--vegeta-blue))]" />}
+            icon={<Globe className="h-6 w-6 text-brand-gold" />}
             title="About This Site"
           />
         </div>

@@ -74,6 +74,18 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        brand: {
+          blue: {
+            DEFAULT: 'hsl(var(--vegeta-blue))',
+            light: 'hsl(var(--vegeta-blue-light))',
+            dark: 'hsl(var(--vegeta-blue-dark))',
+          },
+          gold: {
+            DEFAULT: 'hsl(var(--gold))',
+            light: 'hsl(var(--gold-light))',
+            dark: 'hsl(var(--gold-dark))',
+          },
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

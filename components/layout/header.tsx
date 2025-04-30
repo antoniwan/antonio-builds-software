@@ -33,10 +33,10 @@ export function Header() {
           href="/"
           className="font-medium flex items-center gap-2 hover:text-primary transition-colors"
         >
-          <Code className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+          <Code className="h-4 w-4 text-brand-blue" />
           <span className="font-heading font-semibold">
-            <span className="text-[hsl(var(--primary))]">Builds</span>
-            <span className="text-[hsl(var(--gold))]">.Software</span>
+            <span className="text-primary">Builds</span>
+            <span className="text-brand-gold">.Software</span>
           </span>
         </Link>
 
@@ -46,42 +46,42 @@ export function Header() {
             onClick={() => scrollToSection('about-site')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
-            <Globe className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+            <Globe className="h-4 w-4 text-brand-blue" />
             About Site
           </button>
           <button
             onClick={() => scrollToSection('principles')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
-            <Lightbulb className="h-4 w-4 text-[hsl(var(--gold))]" />
+            <Lightbulb className="h-4 w-4 text-brand-blue" />
             Principles
           </button>
           <button
             onClick={() => scrollToSection('projects')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
-            <Code className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+            <Code className="h-4 w-4 text-brand-blue" />
             Projects
           </button>
           <button
             onClick={() => scrollToSection('creative-works')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
-            <Heart className="h-4 w-4 text-[hsl(var(--gold))]" />
+            <Heart className="h-4 w-4 text-brand-blue" />
             Creative Works
           </button>
           <button
             onClick={() => scrollToSection('about')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
-            <User className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+            <User className="h-4 w-4 text-brand-blue" />
             About Me
           </button>
           <button
             onClick={() => scrollToSection('contact')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
-            <MessageSquare className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+            <MessageSquare className="h-4 w-4 text-brand-blue" />
             Contact
           </button>
           <ThemeToggle />
@@ -105,42 +105,42 @@ export function Header() {
                   onClick={() => handleNavClick('about-site')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
-                  <Globe className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
+                  <Globe className="h-5 w-5 text-brand-blue" />
                   About Site
                 </button>
                 <button
                   onClick={() => handleNavClick('principles')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
-                  <Lightbulb className="h-5 w-5 text-[hsl(var(--gold))]" />
+                  <Lightbulb className="h-5 w-5 text-brand-blue" />
                   Principles
                 </button>
                 <button
                   onClick={() => handleNavClick('projects')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
-                  <Code className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
+                  <Code className="h-5 w-5 text-brand-blue" />
                   Projects
                 </button>
                 <button
                   onClick={() => handleNavClick('creative-works')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
-                  <Heart className="h-5 w-5 text-[hsl(var(--gold))]" />
+                  <Heart className="h-5 w-5 text-brand-blue" />
                   Creative Works
                 </button>
                 <button
                   onClick={() => handleNavClick('about')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
-                  <User className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
+                  <User className="h-5 w-5 text-brand-blue" />
                   About Me
                 </button>
                 <button
                   onClick={() => handleNavClick('contact')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
-                  <MessageSquare className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
+                  <MessageSquare className="h-5 w-5 text-brand-blue" />
                   Contact
                 </button>
               </div>

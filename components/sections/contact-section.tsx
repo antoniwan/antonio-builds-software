@@ -36,7 +36,7 @@ export function ContactSection() {
                 rel="noopener noreferrer"
               >
                 <div className="social-icon">
-                  <Linkedin className="h-5 w-5 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                  <Linkedin className="h-5 w-5 mb-2 text-brand-blue" />
                 </div>
                 <span className="text-caption font-medium text-center">LinkedIn</span>
               </Link>
@@ -48,7 +48,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Instagram className="h-5 w-5 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <Instagram className="h-5 w-5 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">Instagram</span>
               </Link>
 
@@ -59,7 +59,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <MessageCircle className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">Threads</span>
               </Link>
 
@@ -70,7 +70,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Globe className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <Globe className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">Bluesky</span>
               </Link>
 
@@ -81,7 +81,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <Github className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">GitHub</span>
               </Link>
 
@@ -92,7 +92,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <CodepenIcon className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <CodepenIcon className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">CodePen</span>
               </Link>
 
@@ -101,7 +101,7 @@ export function ContactSection() {
                 className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
                 style={{ animationDelay: '0.7s' }}
               >
-                <Mail className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <Mail className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">Email Me</span>
               </Link>
 
@@ -112,7 +112,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FileText className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <FileText className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">Medium</span>
               </Link>
 
@@ -123,7 +123,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BookOpen className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <BookOpen className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">Goodreads</span>
               </Link>
 
@@ -134,7 +134,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Building2 className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <Building2 className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">SH&SH</span>
               </Link>
 
@@ -145,7 +145,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Heart className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+                <Heart className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">Support Me</span>
               </Link>
             </div>
