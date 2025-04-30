@@ -19,8 +19,10 @@ export function generateMetadata({
       ? (defaultMetadata.openGraph.images[0] as { url: string })?.url
       : (defaultMetadata.openGraph?.images as { url: string })?.url);
 
-  const metadataTitle = title ? `${title} | Antonio Rodriguez Martinez` : defaultMetadata.title;
-  const metadataDescription = description || defaultMetadata.description;
+  const metadataTitle = title
+    ? `${title} | Antonio Rodriguez Martinez`
+    : (defaultMetadata.title as string);
+  const metadataDescription = description || defaultMetadata.description || '';
 
   return {
     ...defaultMetadata,
@@ -53,7 +55,7 @@ export function generateMetadata({
       title: metadataTitle,
       description: metadataDescription,
       images: ogImage ? [ogImage] : defaultMetadata.twitter?.images,
-      card: 'summary_large_image',
+      card: 'summary_large_image' as const,
       creator: '@antoniwan777',
       site: '@antoniwan777',
     },

@@ -35,7 +35,7 @@ export function ContactForm({ className }: ContactFormProps) {
       } else {
         setSubmitStatus('error');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -47,7 +47,7 @@ export function ContactForm({ className }: ContactFormProps) {
       <div className="space-y-4">
         <div className="text-left">
           <p className="text-body text-muted-foreground">
-            Whether you're a founder, team lead, or visionary with a plan — I help you build it
+            Whether you&apos;re a founder, team lead, or visionary with a plan — I help you build it
             right. Clear systems. Clear process. Quiet execution.
           </p>
         </div>

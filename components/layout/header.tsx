@@ -2,21 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import {
-  Code,
-  Menu,
-  User,
-  ExternalLink,
-  Globe,
-  Lightbulb,
-  Heart,
-  MessageSquare,
-  Sparkles,
-  Rocket,
-  Palette,
-  Brain,
-  Handshake,
-} from 'lucide-react';
+import { Code, Menu, User, Sparkles, Rocket, Palette, Brain, Handshake } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme-toggle';

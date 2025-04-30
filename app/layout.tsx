@@ -1,9 +1,5 @@
-import { ThemeProvider } from '@/components/theme-provider';
-import { Header } from '@/components/layout/header';
-import { Footer } from '@/components/layout/footer';
-import { ScrollToTop } from '@/components/scroll-to-top';
-import { StructuredData } from '@/components/structured-data';
 import defaultMetadata from './metadata';
+import { LayoutContent } from '@/components/layout-content';
 import './globals.css';
 
 export const metadata = defaultMetadata;
@@ -21,22 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       </head>
       <body className="antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="flex min-h-screen flex-col bg-background">
-            <StructuredData />
-            <Header />
-            <main className="flex-1" role="main">
-              {children}
-            </main>
-            <Footer />
-            <ScrollToTop />
-          </div>
-        </ThemeProvider>
+        <LayoutContent>{children}</LayoutContent>
       </body>
     </html>
   );
