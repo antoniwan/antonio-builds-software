@@ -27,7 +27,13 @@ export function Footer() {
                 {currentYear} Antonio Rodriguez Martinez
               </p>
             </div>
-            <p className="text-[0.7rem] text-muted-foreground/80">Built with love from 🇵🇷 and 🇺🇸</p>
+            <div className="flex items-center gap-2 text-[0.7rem] text-muted-foreground/80">
+              <span>v1.0 · Built with 💻 and 🧠 by Antonio Rodriguez Martinez</span>
+              <span className="flex items-center gap-1">
+                <span>🇵🇷</span>
+                <span>🇺🇸</span>
+              </span>
+            </div>
           </div>
 
           <nav className="flex flex-col md:flex-row items-center gap-3 md:gap-4">
