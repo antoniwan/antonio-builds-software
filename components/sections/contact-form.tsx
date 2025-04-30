@@ -42,16 +42,16 @@ export function ContactForm({ className }: ContactFormProps) {
   };
 
   return (
-    <section className={cn('w-full max-w-2xl mx-auto', className)}>
-      <div className="space-y-8">
-        <div className="space-y-2 text-center">
+    <section className={cn('w-full', className)}>
+      <div className="space-y-4">
+        <div className="text-left">
           <p className="text-body text-muted-foreground">
             Whether you're a founder, team lead, or visionary with a plan — I help you build it
             right. Clear systems. Clear process. Quiet execution.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
               <label htmlFor="name" className="text-body-small font-medium">
