@@ -5,9 +5,9 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="py-16 md:py-24 lg:py-32 bg-white dark:bg-background relative scroll-mt-20"
+      className="py-20 md:py-28 lg:py-36 bg-white dark:bg-background relative scroll-mt-20"
     >
-      <div className="container space-y-8 md:space-y-10">
+      <div className="container space-y-10 md:space-y-12">
         <div className="flex items-center justify-center md:justify-start fade-in">
           <SectionHeader icon={<User className="h-6 w-6 text-brand-gold" />} title="About Me" />
         </div>

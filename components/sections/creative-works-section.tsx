@@ -59,10 +59,10 @@ export function CreativeWorksSection() {
   return (
     <section
       id="creative-works"
-      className="py-16 md:py-24 lg:py-32 scroll-mt-20 bg-[hsl(var(--muted))] overflow-x-hidden relative"
+      className="py-20 md:py-28 lg:py-36 scroll-mt-20 bg-[hsl(var(--muted))] overflow-x-hidden relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[hsl(var(--muted))]/50" />
-      <div className="container space-y-8 md:space-y-10 fade-in relative">
+      <div className="container space-y-10 md:space-y-12 fade-in relative">
         <div className="space-y-4">
           <SectionHeader
             icon={<BookOpen className="h-6 w-6 text-[hsl(var(--gold))]" />}
