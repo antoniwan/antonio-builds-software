@@ -48,11 +48,11 @@ export function ProjectCard({
         />
       </div>
       {/* Card content with padding */}
-      <div className="flex flex-col flex-1 box-padding-md md:box-padding-lg">
-        <CardHeader className="pb-0">
+      <div className="flex flex-col flex-1 p-6 md:p-8">
+        <CardHeader className="pb-2">
           <CardTitle className="text-xl font-semibold leading-tight">{title}</CardTitle>
         </CardHeader>
-        <div className="flex flex-wrap gap-2 mt-3 mb-2">
+        <div className="flex flex-wrap gap-2.5 mt-4 mb-3">
           {labels.map((label, index) => (
             <Badge
               key={index}
@@ -70,7 +70,7 @@ export function ProjectCard({
             </Badge>
           ))}
         </div>
-        <CardContent className="flex-grow flex flex-col space-y-2 p-0">
+        <CardContent className="flex-grow flex flex-col space-y-3 p-0">
           <div
             className={`text-body text-muted-foreground overflow-hidden transition-all duration-300 ${
               isExpanded ? 'max-h-[1000px]' : 'max-h-[80px]'
@@ -81,12 +81,12 @@ export function ProjectCard({
           <Button
             variant="link"
             onClick={() => setIsExpanded(!isExpanded)}
-            className="p-0 h-auto mt-1 text-primary font-medium self-start"
+            className="p-0 h-auto mt-2 text-primary font-medium self-start"
           >
             {isExpanded ? 'Show less' : 'Read more'}
           </Button>
         </CardContent>
-        <CardFooter className="pt-0 mt-2">
+        <CardFooter className="pt-4 mt-2">
           <Button
             asChild
             variant="outline"
