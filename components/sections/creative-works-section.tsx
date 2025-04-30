@@ -1,50 +1,66 @@
-import Link from "next/link"
-import { BookOpen, Music, ExternalLink, MessageSquare, Instagram } from "lucide-react"
-import { SectionHeader } from "@/components/section-header"
-import { Button } from "@/components/ui/button"
-import { Carousel } from "@/components/ui/carousel"
-import { creativeWorks } from "@/data/creative-works"
-import { formatDistanceToNow } from "date-fns"
+import Link from 'next/link';
+import {
+  BookOpen,
+  Music,
+  ExternalLink,
+  MessageSquare,
+  Instagram,
+  FlaskConical,
+} from 'lucide-react';
+import { SectionHeader } from '@/components/section-header';
+import { Button } from '@/components/ui/button';
+import { Carousel } from '@/components/ui/carousel';
+import { creativeWorks } from '@/data/creative-works';
+import { formatDistanceToNow } from 'date-fns';
 
 const typeConfig = {
   writing: {
-    label: "Medium Post",
+    label: 'Medium Post',
     icon: BookOpen,
-    color: "text-[hsl(var(--vegeta-blue))]"
+    color: 'text-[hsl(var(--vegeta-blue))]',
   },
   music: {
-    label: "Music",
+    label: 'Music',
     icon: Music,
-    color: "text-[hsl(var(--primary))]"
+    color: 'text-[hsl(var(--primary))]',
   },
   thread: {
-    label: "Threads Post",
+    label: 'Threads Post',
     icon: MessageSquare,
-    color: "text-[hsl(var(--gold))]"
+    color: 'text-[hsl(var(--gold))]',
   },
   reel: {
-    label: "Instagram Reel",
+    label: 'Instagram Reel',
     icon: Instagram,
-    color: "text-pink-500"
-  }
-} as const
+    color: 'text-pink-500',
+  },
+  living: {
+    label: 'Living Entry',
+    icon: FlaskConical,
+    color: 'text-purple-700 dark:text-purple-300',
+  },
+} as const;
 
 const buttonLabels = {
-  writing: "Read Post",
-  music: "Listen",
-  thread: "View Post",
-  reel: "Watch Reel"
-} as const
+  writing: 'Read Post',
+  music: 'Listen',
+  thread: 'View Post',
+  reel: 'Watch Reel',
+  living: 'Explore Entry',
+} as const;
 
 export function CreativeWorksSection() {
   const sortedWorks = [...creativeWorks].sort((a, b) => {
-    if (!a.date) return 1
-    if (!b.date) return -1
-    return new Date(b.date).getTime() - new Date(a.date).getTime()
-  })
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 
   return (
-    <section id="creative-works" className="py-12 md:py-16 lg:py-24 scroll-mt-20 bg-[hsl(var(--muted))] overflow-x-hidden">
+    <section
+      id="creative-works"
+      className="py-12 md:py-16 lg:py-24 scroll-mt-20 bg-[hsl(var(--muted))] overflow-x-hidden"
+    >
       <div className="container space-y-6 fade-in">
         <div className="inline-flex items-center gap-2 mb-4">
           <SectionHeader
@@ -54,15 +70,16 @@ export function CreativeWorksSection() {
           />
         </div>
         <p className="text-body-large text-muted-foreground max-w-[600px]">
-          Beyond code, I explore ideas through writing, music, and social media. These creative works reflect my journey of growth, leadership, and self-discovery.
+          Beyond code, I explore ideas through writing, music, and social media. These creative
+          works reflect my journey of growth, leadership, and self-discovery.
         </p>
 
         <div className="mt-8 pb-8">
           <Carousel>
             {sortedWorks.map((work, index) => {
-              const config = typeConfig[work.type]
-              const Icon = config.icon
-              
+              const config = typeConfig[work.type];
+              const Icon = config.icon;
+
               return (
                 <div key={index}>
                   <div className="h-full min-h-[340px] flex flex-col justify-between bg-white dark:bg-background shadow-md rounded-xl p-8 md:p-10 gap-4 transition-shadow hover:shadow-lg focus-within:shadow-lg">
@@ -75,7 +92,9 @@ export function CreativeWorksSection() {
                           {config.label}
                         </span>
                       </div>
-                      <div className="text-xl md:text-2xl font-bold text-left leading-snug">{work.title}</div>
+                      <div className="text-xl md:text-2xl font-bold text-left leading-snug">
+                        {work.title}
+                      </div>
                       {work.date && (
                         <p className="text-xs md:text-sm text-muted-foreground text-left">
                           {formatDistanceToNow(new Date(work.date), { addSuffix: true })}
@@ -83,7 +102,9 @@ export function CreativeWorksSection() {
                       )}
                     </div>
                     <div className="flex-1 flex items-start">
-                      <p className="text-base text-muted-foreground text-left leading-relaxed line-clamp-5">{work.description}</p>
+                      <p className="text-base text-muted-foreground text-left leading-relaxed line-clamp-5">
+                        {work.description}
+                      </p>
                     </div>
                     <Button
                       asChild
@@ -97,11 +118,11 @@ export function CreativeWorksSection() {
                     </Button>
                   </div>
                 </div>
-              )
+              );
             })}
           </Carousel>
         </div>
       </div>
     </section>
-  )
-} 
+  );
+}

@@ -1,7 +1,7 @@
 export interface CreativeWork {
   title: string;
   description: string;
-  type: 'writing' | 'music' | 'thread' | 'reel';
+  type: 'writing' | 'music' | 'thread' | 'reel' | 'living';
   url: string;
   date?: string; // ISO format
 }
@@ -50,7 +50,7 @@ export const creativeWorks: CreativeWork[] = [
     title: 'The SHSH Logo: Minimalism, Symbolism, and Legacy',
     description:
       'I wrote and designed the SHSH logo from scratch, learning branding, logo design, and deep philosophical/metaphilosophical concepts along the way. This piece explores the geometric, symbolic, and cognitive foundations of the logo, and what it means to build a living symbol for a brand and a philosophy.',
-    type: 'writing',
+    type: 'living',
     url: 'https://www.stronghandssoftheart.com/logo?utm_source=antonio-builds-software&utm_medium=link&utm_campaign=creative-works',
     date: '2025-04-30',
   },
