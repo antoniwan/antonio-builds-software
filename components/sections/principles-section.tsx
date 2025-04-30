@@ -36,7 +36,7 @@ const principles = [
 
 export function PrinciplesSection() {
   return (
-    <section id="principles" className="py-12 md:py-16 lg:py-24">
+    <section id="principles" className="py-12 md:py-16 lg:py-24 scroll-mt-20">
       <div className="container space-y-6 md:space-y-8">
         <div className="flex items-center fade-in">
           <SectionHeader

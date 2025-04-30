@@ -10,7 +10,7 @@ export function HeroSection() {
   const scrollToSection = useScrollToSection();
 
   return (
-    <section className="py-8 md:py-16 lg:py-24">
+    <section className="py-8 md:py-16 lg:py-24 scroll-mt-20">
       <div className="container">
         <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
           <div
@@ -20,7 +20,7 @@ export function HeroSection() {
             <Badge className="mb-2 bg-muted/80 text-muted-foreground hover:bg-muted text-[13px]">
               ⚠️ Currently not taking new projects
             </Badge>
-            <h1 className="text-display tri-gradient">I build systems. Quietly. Powerfully.</h1>
+            <h1 className="text-display tri-gradient">I build systems.</h1>
             <p className="text-body-large text-muted-foreground max-w-[600px] mx-auto md:mx-0">
               Digital craftsman. Strategic partner. Builder of tools, platforms, and long-term
               ecosystems.

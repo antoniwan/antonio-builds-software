@@ -5,7 +5,7 @@ export function AboutSiteSection() {
   return (
     <section
       id="about-site"
-      className="py-12 md:py-16 lg:py-24 bg-white dark:bg-background relative"
+      className="py-12 md:py-16 lg:py-24 bg-white dark:bg-background relative scroll-mt-20"
     >
       <div className="container space-y-6 md:space-y-8">
         <div className="flex items-center fade-in">

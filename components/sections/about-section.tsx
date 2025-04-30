@@ -3,7 +3,10 @@ import { SectionHeader } from '@/components/section-header';
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-12 md:py-16 lg:py-24 bg-white dark:bg-background relative">
+    <section
+      id="about"
+      className="py-12 md:py-16 lg:py-24 bg-white dark:bg-background relative scroll-mt-20"
+    >
       <div className="container space-y-6 md:space-y-8">
         <div className="flex items-center justify-center md:justify-start fade-in">
           <SectionHeader

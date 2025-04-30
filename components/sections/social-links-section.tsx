@@ -15,7 +15,7 @@ import { CodepenIcon } from '@/components/icons/codepen-icon';
 
 export function SocialLinksSection() {
   return (
-    <section className="bg-muted py-10 md:py-14 geometric-bg">
+    <section id="social-links" className="py-12 md:py-16 lg:py-24 scroll-mt-20">
       <div className="container">
         <p className="text-body-large text-center max-w-[800px] mx-auto fade-in">
           Let&apos;s connect across platforms and explore ideas together. I&apos;m passionate about
