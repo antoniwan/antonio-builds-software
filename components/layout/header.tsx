@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Code, Menu, User, BookOpen, ExternalLink, Sparkles } from 'lucide-react';
+import { Code, Menu, User, Sparkles, Rocket, Palette, Brain, Handshake } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { useScrollToSection } from '@/components/scroll-to-section';
 
@@ -18,101 +18,168 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header
+      className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 scroll-mt-20"
+      role="banner"
+    >
       <div className="container flex h-14 items-center justify-between">
         <Link
           href="/"
           className="font-medium flex items-center gap-2 hover:text-primary transition-colors"
+          aria-label="Home"
+          role="link"
         >
-          <Code className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+          <Code className="h-4 w-4 text-brand" aria-hidden="true" />
           <span className="font-heading font-semibold">
-            <span className="text-[hsl(var(--primary))]">Builds</span>
-            <span className="text-[hsl(var(--gold))]">.Software</span>
+            <span className="text-primary">Builds</span>
+            <span className="text-brand-gold">.Software</span>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav
+          className="hidden md:flex items-center gap-6"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+          <button
+            onClick={() => scrollToSection('about-site')}
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
+            aria-label="Navigate to About Site section"
+            role="link"
+            tabIndex={0}
+          >
+            <Sparkles className="h-4 w-4 text-brand" aria-hidden="true" />
+            About Site
+          </button>
+          <button
+            onClick={() => scrollToSection('principles')}
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
+            aria-label="Navigate to Principles section"
+            role="link"
+            tabIndex={0}
+          >
+            <Brain className="h-4 w-4 text-brand" aria-hidden="true" />
+            Principles
+          </button>
           <button
             onClick={() => scrollToSection('projects')}
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
+            aria-label="Navigate to Projects section"
+            role="link"
+            tabIndex={0}
           >
-            <Code className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+            <Rocket className="h-4 w-4 text-brand" aria-hidden="true" />
             Projects
           </button>
           <button
             onClick={() => scrollToSection('creative-works')}
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
+            aria-label="Navigate to Creative Works section"
+            role="link"
+            tabIndex={0}
           >
-            <Sparkles className="h-4 w-4 text-[hsl(var(--gold))]" />
+            <Palette className="h-4 w-4 text-brand" aria-hidden="true" />
             Creative Works
           </button>
           <button
             onClick={() => scrollToSection('about')}
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
+            aria-label="Navigate to About section"
+            role="link"
+            tabIndex={0}
           >
-            <User className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+            <User className="h-4 w-4 text-brand" aria-hidden="true" />
             About Me
           </button>
-          <Link
-            href="https://medium.com/@wizards777"
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => scrollToSection('connect')}
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
+            aria-label="Navigate to Connect section"
+            role="link"
+            tabIndex={0}
           >
-            <BookOpen className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
-            Blog
-            <ExternalLink className="h-3 w-3 ml-1 text-muted-foreground" aria-hidden="true" />
-          </Link>
+            <Handshake className="h-4 w-4 text-brand" aria-hidden="true" />
+            Connect
+          </button>
           <ThemeToggle />
         </nav>
 
         {/* Mobile Navigation */}
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              aria-label="Open navigation menu"
+              aria-expanded={isSheetOpen}
+              aria-controls="mobile-navigation"
+            >
+              <Menu className="h-5 w-5" aria-hidden="true" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="z-[100]">
-            <div className="flex flex-col gap-4 mt-8">
+          <SheetContent className="w-[280px] sm:w-[300px] border-r bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+            <div
+              className="flex flex-col gap-4 mt-8"
+              role="navigation"
+              id="mobile-navigation"
+              aria-label="Mobile navigation"
+            >
               <div className="flex justify-end mb-4">
                 <ThemeToggle />
               </div>
-              <div className="space-y-4 pt-4 border-t">
+              <div className="flex flex-col gap-2">
+                <button
+                  onClick={() => handleNavClick('about-site')}
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
+                  aria-label="Navigate to About Site section"
+                >
+                  <Sparkles className="h-5 w-5 text-brand" />
+                  About Site
+                </button>
+                <button
+                  onClick={() => handleNavClick('principles')}
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
+                  aria-label="Navigate to Principles section"
+                >
+                  <Brain className="h-5 w-5 text-brand" />
+                  Principles
+                </button>
                 <button
                   onClick={() => handleNavClick('projects')}
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
+                  aria-label="Navigate to Projects section"
                 >
-                  <Code className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
+                  <Rocket className="h-5 w-5 text-brand" />
                   Projects
                 </button>
                 <button
                   onClick={() => handleNavClick('creative-works')}
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
+                  aria-label="Navigate to Creative Works section"
                 >
-                  <Sparkles className="h-5 w-5 text-[hsl(var(--gold))]" />
+                  <Palette className="h-5 w-5 text-brand" />
                   Creative Works
                 </button>
                 <button
                   onClick={() => handleNavClick('about')}
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
+                  aria-label="Navigate to About section"
                 >
-                  <User className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
+                  <User className="h-5 w-5 text-brand" />
                   About Me
                 </button>
-                <Link
-                  href="https://medium.com/@wizards777"
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 w-full"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsSheetOpen(false)}
+                <button
+                  onClick={() => handleNavClick('connect')}
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
+                  aria-label="Navigate to Connect section"
                 >
-                  <BookOpen className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
-                  Blog
-                  <ExternalLink className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
-                </Link>
+                  <Handshake className="h-5 w-5 text-brand" />
+                  Connect
+                </button>
               </div>
             </div>
           </SheetContent>

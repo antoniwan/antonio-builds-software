@@ -5,25 +5,25 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 30% 15%;
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
-    --card-foreground: 240 30% 15%;
+    --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 30% 15%;
-    --primary: 330 90% 55%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 350 80% 40%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 10% 97%;
-    --muted-foreground: 240 20% 40%;
-    --accent: 330 80% 97%;
-    --accent-foreground: 330 80% 40%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 10% 90%;
-    --input: 240 10% 90%;
-    --ring: 330 90% 55%;
-    --radius: 0.6rem;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
 
     /* Vegeta Blue */
     --vegeta-blue: 240 80% 40%;
@@ -34,28 +34,46 @@
     --gold: 45 90% 50%;
     --gold-light: 45 90% 95%;
     --gold-dark: 45 90% 40%;
+
+    /* Box System Variables */
+    --box-radius-sm: 0.375rem; /* 6px */
+    --box-radius-md: 0.5rem; /* 8px */
+    --box-radius-lg: 0.75rem; /* 12px */
+    --box-radius-xl: 1rem; /* 16px */
+    --box-radius-2xl: 1.5rem; /* 24px */
+    --box-radius-full: 9999px;
+
+    --box-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --box-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --box-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --box-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    --box-padding-sm: 0.5rem; /* 8px */
+    --box-padding-md: 1rem; /* 16px */
+    --box-padding-lg: 1.5rem; /* 24px */
+    --box-padding-xl: 2rem; /* 32px */
   }
 
   .dark {
-    --background: 240 30% 10%;
-    --foreground: 240 15% 95%;
-    --card: 240 30% 15%;
-    --card-foreground: 240 15% 95%;
-    --popover: 240 30% 15%;
-    --popover-foreground: 240 15% 95%;
-    --primary: 330 90% 65%;
-    --primary-foreground: 240 15% 10%;
-    --secondary: 350 80% 45%;
-    --secondary-foreground: 240 15% 95%;
-    --muted: 240 30% 20%;
-    --muted-foreground: 240 15% 75%;
-    --accent: 330 70% 30%;
-    --accent-foreground: 240 15% 95%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 240 15% 95%;
-    --border: 240 30% 25%;
-    --input: 240 30% 25%;
-    --ring: 330 90% 65%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
 
     /* Vegeta Blue for dark mode */
     --vegeta-blue: 240 80% 65%;
@@ -75,9 +93,16 @@
   }
   body {
     @apply bg-background text-foreground font-body transition-colors duration-300;
+    font-size: 1rem; /* Base font size */
+    line-height: 1.75; /* Consistent line height */
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
   }
   h1,
   h2,
@@ -86,49 +111,59 @@
   h5,
   h6 {
     @apply font-heading tracking-tight;
+    text-wrap: balance;
   }
 }
 
-/* Typography scale - standardized */
+/* Typography scale - enhanced */
 .text-display {
-  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-heading leading-tight;
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight font-heading leading-[1.1];
+  text-wrap: balance;
 }
 
 .text-heading-1 {
-  @apply text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight font-heading leading-tight;
+  @apply text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight font-heading leading-[1.1];
+  text-wrap: balance;
 }
 
 .text-heading-2 {
-  @apply text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-heading leading-tight;
+  @apply text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight font-heading leading-[1.1];
+  text-wrap: balance;
 }
 
 .text-heading-3 {
-  @apply text-lg sm:text-xl md:text-2xl font-semibold font-heading leading-snug;
+  @apply text-xl sm:text-2xl md:text-3xl font-bold font-heading leading-[1.2];
+  text-wrap: balance;
 }
 
 .text-body-large {
-  @apply text-base sm:text-lg leading-relaxed font-body;
+  @apply text-lg sm:text-xl leading-[1.75] font-body;
+  text-wrap: pretty;
 }
 
 .text-body {
-  @apply text-sm sm:text-base leading-relaxed font-body;
+  @apply text-base sm:text-lg leading-[1.75] font-body;
+  text-wrap: pretty;
 }
 
 .text-body-small {
-  @apply text-xs sm:text-sm leading-relaxed font-body;
+  @apply text-sm sm:text-base leading-[1.75] font-body;
+  text-wrap: pretty;
 }
 
 .text-caption {
-  @apply text-xs md:text-sm text-muted-foreground font-body leading-normal;
+  @apply text-sm md:text-base text-muted-foreground font-body leading-[1.6];
+  text-wrap: pretty;
 }
 
-/* Standardize spacing */
+/* Enhanced spacing */
 section {
-  @apply py-10 md:py-14 lg:py-20;
+  @apply py-16 md:py-24 lg:py-32;
+  scroll-margin-top: 4rem;
 }
 
 .card-spacing {
-  @apply p-4 md:p-6;
+  @apply p-6 md:p-8;
 }
 
 h1,
@@ -137,91 +172,44 @@ h3,
 h4,
 h5,
 h6 {
-  @apply mb-4 font-heading;
+  @apply mb-6 font-heading;
 }
 
 p {
-  @apply mb-4 font-body;
+  @apply mb-6 font-body max-w-[70ch];
 }
 
 p:last-child {
   @apply mb-0;
 }
 
-/* Subtle animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
-}
-
-/* Card hover effect */
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.15);
-}
-
-/* Project card image hover effect */
-.project-card .image-container {
-  overflow: hidden;
-}
-
-.project-card .image-container img {
-  transition: transform 0.5s ease;
-}
-
-.project-card:hover .image-container img {
-  transform: scale(1.05);
-}
-
-/* Profile image effect */
-.profile-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.profile-image::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.profile-image:hover::after {
-  box-shadow: inset 0 0 0 15px rgba(236, 72, 153, 0.2);
-}
-
-/* Container with proper padding */
+/* Container with proper padding and max-width */
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1280px; /* Slightly reduced for better line lengths */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  @apply sm:px-4 md:px-6 lg:px-8;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  @apply sm:px-6 md:px-8 lg:px-12;
 }
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Reduce motion on mobile */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 /* Social links grid adjustments */
@@ -237,100 +225,145 @@ p:last-child {
   }
 }
 
-/* Enhance social link hover effects */
+/* Enhance social link hover effects with hardware acceleration */
 .social-link {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .social-link:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) translateZ(0);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure icons are properly sized and centered */
+/* Ensure icons are properly sized and centered with hardware acceleration */
 .social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.5rem;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
-/* Color accent styles */
+/* Color accent styles with reduced paint operations */
 .vegeta-blue {
   color: hsl(var(--vegeta-blue));
+  will-change: color;
 }
 
 .gold-accent {
   color: hsl(var(--gold));
+  will-change: color;
 }
 
 .tri-gradient {
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--vegeta-blue)), hsl(var(--gold)));
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)),
+    hsl(var(--vegeta-blue)),
+    hsl(var(--gold))
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  will-change: background;
 }
 
-/* Font classes */
-.font-heading {
-  font-family: var(--font-heading);
-  letter-spacing: -0.025em;
+/* Focus styles for better accessibility */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
 }
 
-.font-body {
-  font-family: var(--font-body);
+/* Dark mode transition */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
 }
 
-/* Dark mode improvements */
-.dark .project-card {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .no-print {
+    display: none;
+  }
 }
 
-.dark .project-card:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+@layer components {
+  .box {
+    @apply border border-border bg-background;
+  }
+
+  .box-radius-sm {
+    @apply rounded-[var(--box-radius-sm)];
+  }
+
+  .box-radius-md {
+    @apply rounded-[var(--box-radius-md)];
+  }
+
+  .box-radius-lg {
+    @apply rounded-[var(--box-radius-lg)];
+  }
+
+  .box-radius-xl {
+    @apply rounded-[var(--box-radius-xl)];
+  }
+
+  .box-radius-2xl {
+    @apply rounded-[var(--box-radius-2xl)];
+  }
+
+  .box-radius-full {
+    @apply rounded-[var(--box-radius-full)];
+  }
+
+  .box-elevation-0 {
+    @apply shadow-none;
+  }
+
+  .box-elevation-1 {
+    @apply shadow-[var(--box-shadow-sm)];
+  }
+
+  .box-elevation-2 {
+    @apply shadow-[var(--box-shadow-md)];
+  }
+
+  .box-elevation-3 {
+    @apply shadow-[var(--box-shadow-lg)];
+  }
+
+  .box-elevation-4 {
+    @apply shadow-[var(--box-shadow-xl)];
+  }
+
+  .box-padding-sm {
+    @apply p-[var(--box-padding-sm)];
+  }
+
+  .box-padding-md {
+    @apply p-[var(--box-padding-md)];
+  }
+
+  .box-padding-lg {
+    @apply p-[var(--box-padding-lg)];
+  }
+
+  .box-padding-xl {
+    @apply p-[var(--box-padding-xl)];
+  }
+
+  .box-hover {
+    @apply transition-all duration-300 hover:border-border/80 hover:shadow-md;
+  }
 }
-
-.dark .card {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Enhance heading styles for more creative look */
-h1,
-h2,
-h3 {
-  letter-spacing: -0.025em;
-}
-
-.text-display {
-  letter-spacing: -0.03em;
-}
-
-/* Add subtle gradient underline to section headings */
-
-/* Badge styles for multiple labels */
-
-/* Geometric pattern for About Me section */
-.geometric-bg {
-  position: relative;
-  isolation: isolate;
-}
-
-.geometric-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.4;
-  background-image: radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.1) 2px, transparent 0),
-    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-  background-size: 24px 24px, 48px 48px, 48px 48px;
-  z-index: -1;
-}
-
-.dark .geometric-bg::before {
-  opacity: 0.25;
-  background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.15) 2px, transparent 0),
-    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-}
-
