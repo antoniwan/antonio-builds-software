@@ -125,7 +125,7 @@ export function SocialLinksSection() {
           </Link>
 
           <Link
-            href="https://www.stronghandssoftheart.com"
+            href="https://www.stronghandssoftheart.com?utm_source=antonio-builds-software&utm_medium=link&utm_campaign=social-links-section"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: '1s' }}
             target="_blank"
