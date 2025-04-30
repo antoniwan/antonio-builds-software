@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Code, Menu, User, BookOpen, ExternalLink, Sparkles } from 'lucide-react';
+import { Code, Menu, User, BookOpen, ExternalLink, Sparkles, Globe, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme-toggle';
@@ -34,6 +34,20 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <button
+            onClick={() => scrollToSection('about-site')}
+            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+          >
+            <Globe className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+            About Site
+          </button>
+          <button
+            onClick={() => scrollToSection('principles')}
+            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+          >
+            <Sparkles className="h-4 w-4 text-[hsl(var(--gold))]" />
+            Principles
+          </button>
+          <button
             onClick={() => scrollToSection('projects')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
@@ -53,6 +67,13 @@ export function Header() {
           >
             <User className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
             About Me
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+          >
+            <Mail className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+            Contact
           </button>
           <Link
             href="https://medium.com/@wizards777"
@@ -82,6 +103,20 @@ export function Header() {
               </div>
               <div className="space-y-4 pt-4 border-t">
                 <button
+                  onClick={() => handleNavClick('about-site')}
+                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                >
+                  <Globe className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
+                  About Site
+                </button>
+                <button
+                  onClick={() => handleNavClick('principles')}
+                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                >
+                  <Sparkles className="h-5 w-5 text-[hsl(var(--gold))]" />
+                  Principles
+                </button>
+                <button
                   onClick={() => handleNavClick('projects')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
@@ -101,6 +136,13 @@ export function Header() {
                 >
                   <User className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
                   About Me
+                </button>
+                <button
+                  onClick={() => handleNavClick('contact')}
+                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                >
+                  <Mail className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
+                  Contact
                 </button>
                 <Link
                   href="https://medium.com/@wizards777"
