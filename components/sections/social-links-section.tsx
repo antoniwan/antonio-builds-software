@@ -6,7 +6,6 @@ import {
   Instagram,
   MessageCircle,
   FileText,
-  Library,
   Building2,
   Globe,
   BookOpen,
