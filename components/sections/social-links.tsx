@@ -86,12 +86,12 @@ const socialLinks = [
 
 export function SocialLinks() {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-4">
       {socialLinks.map((link) => (
         <Link
           key={link.href}
           href={link.href}
-          className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring"
+          className="flex flex-col items-center p-4 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring active:scale-95"
           style={{ animationDelay: link.delay }}
           target={link.href.startsWith('http') ? '_blank' : undefined}
           rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -100,7 +100,7 @@ export function SocialLinks() {
           tabIndex={0}
         >
           <link.icon
-            className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]"
+            className="h-6 w-6 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]"
             aria-hidden="true"
           />
           <span className="text-caption font-medium text-center">{link.label}</span>

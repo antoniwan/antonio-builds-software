@@ -35,13 +35,13 @@ export function ScrollToTop() {
       {isVisible && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 z-50 p-2.5 rounded-full bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))] shadow-md hover:shadow-lg transition-all duration-300 md:p-3 md:bottom-6 md:right-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring"
+          className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))] shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring md:p-3 md:bottom-6 md:right-6"
           size="icon"
           aria-label="Scroll to top"
           role="button"
           tabIndex={0}
         >
-          <ChevronUp className="h-4 w-4 md:h-5 md:w-5 text-white" aria-hidden="true" />
+          <ChevronUp className="h-5 w-5 md:h-5 md:w-5 text-white" aria-hidden="true" />
         </Button>
       )}
     </>

@@ -134,21 +134,21 @@ export function Header() {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent>
+          <SheetContent className="w-[280px] sm:w-[300px] border-r bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
             <div
-              className="flex flex-col gap-6 mt-8"
+              className="flex flex-col gap-4 mt-8"
               role="navigation"
               id="mobile-navigation"
               aria-label="Mobile navigation"
             >
-              <div className="flex justify-end mb-6">
+              <div className="flex justify-end mb-4">
                 <ThemeToggle />
               </div>
-              <div className="space-y-6 pt-6 border-t">
+              <div className="flex flex-col gap-2">
                 <button
                   onClick={() => handleNavClick('about-site')}
-                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
                   aria-label="Navigate to About Site section"
                 >
                   <Sparkles className="h-5 w-5 text-brand" />
@@ -156,7 +156,7 @@ export function Header() {
                 </button>
                 <button
                   onClick={() => handleNavClick('principles')}
-                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
                   aria-label="Navigate to Principles section"
                 >
                   <Brain className="h-5 w-5 text-brand" />
@@ -164,7 +164,7 @@ export function Header() {
                 </button>
                 <button
                   onClick={() => handleNavClick('projects')}
-                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
                   aria-label="Navigate to Projects section"
                 >
                   <Rocket className="h-5 w-5 text-brand" />
@@ -172,7 +172,7 @@ export function Header() {
                 </button>
                 <button
                   onClick={() => handleNavClick('creative-works')}
-                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
                   aria-label="Navigate to Creative Works section"
                 >
                   <Palette className="h-5 w-5 text-brand" />
@@ -180,7 +180,7 @@ export function Header() {
                 </button>
                 <button
                   onClick={() => handleNavClick('about')}
-                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
                   aria-label="Navigate to About section"
                 >
                   <User className="h-5 w-5 text-brand" />
@@ -188,7 +188,7 @@ export function Header() {
                 </button>
                 <button
                   onClick={() => handleNavClick('connect')}
-                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
                   aria-label="Navigate to Connect section"
                 >
                   <Handshake className="h-5 w-5 text-brand" />

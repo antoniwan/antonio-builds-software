@@ -118,17 +118,17 @@ export function HeroSection() {
             >
               <Button
                 onClick={() => scrollToSection('projects')}
-                className="rounded-full bg-primary hover:bg-primary/90 transition-transform duration-300 hover:scale-105"
+                className="rounded-full bg-primary hover:bg-primary/90 transition-transform duration-300 hover:scale-105 active:scale-95 px-6 py-6 md:py-4 text-base md:text-sm"
               >
-                <Code className="mr-2 h-4 w-4" />
+                <Code className="mr-2 h-5 w-5 md:h-4 md:w-4" />
                 View Projects
               </Button>
               <Button
                 variant="outline"
                 onClick={() => scrollToSection('message')}
-                className="rounded-full border-[hsl(var(--vegeta-blue))] text-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-light))] hover:text-[hsl(var(--vegeta-blue-dark))] transition-transform duration-300 hover:scale-105"
+                className="rounded-full border-[hsl(var(--vegeta-blue))] text-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-light))] hover:text-[hsl(var(--vegeta-blue-dark))] transition-transform duration-300 hover:scale-105 active:scale-95 px-6 py-6 md:py-4 text-base md:text-sm"
               >
-                <Mail className="mr-2 h-4 w-4" />
+                <Mail className="mr-2 h-5 w-5 md:h-4 md:w-4" />
                 Work With Me
               </Button>
             </motion.div>
