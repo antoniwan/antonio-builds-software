@@ -42,7 +42,7 @@ export function ContactForm({ className }: ContactFormProps) {
   };
 
   return (
-    <div className={cn('w-full', className)}>
+    <div className={cn(className)}>
       <div className="space-y-4">
         <div className="text-left">
           <p className="text-body text-muted-foreground">

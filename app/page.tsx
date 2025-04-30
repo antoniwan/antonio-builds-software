@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <StructuredData />
       <main className="flex-1">
-        <div className="space-y-16 md:space-y-24 lg:space-y-32">
+        <div className="space-y-20 md:space-y-28 lg:space-y-36">
           <HeroSection />
           <AboutSiteSection />
           <PrinciplesSection />

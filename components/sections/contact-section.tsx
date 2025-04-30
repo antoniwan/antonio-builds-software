@@ -7,25 +7,29 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16 scroll-mt-20 bg-[hsl(var(--muted))]"
+      className="py-20 md:py-28 lg:py-36 bg-white dark:bg-background relative scroll-mt-20"
     >
-      <div className="container space-y-12 md:space-y-16">
+      <div className="container space-y-10 md:space-y-12">
         {/* Social Links Section */}
-        <div className="space-y-4 fade-in max-w-2xl mx-auto pt-4 pb-6">
+        <div className="fade-in">
           <SectionHeader
             icon={<Share2 className="h-6 w-6 text-[hsl(var(--gold))]" />}
             title="Connect With Me"
           />
-          <SocialLinks />
+          <div className="mt-6">
+            <SocialLinks />
+          </div>
         </div>
 
         {/* Contact Form Section */}
-        <div className="space-y-4 fade-in max-w-2xl mx-auto pt-4 pb-6">
+        <div className="fade-in">
           <SectionHeader
             icon={<MessageCircle className="h-6 w-6 text-[hsl(var(--gold))]" />}
             title="Send Me a Message"
           />
-          <ContactForm />
+          <div className="mt-6 max-w-2xl">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>

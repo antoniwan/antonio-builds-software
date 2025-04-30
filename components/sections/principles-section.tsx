@@ -36,25 +36,27 @@ const principles = [
 
 export function PrinciplesSection() {
   return (
-    <section id="principles" className="py-16 md:py-24 lg:py-32 scroll-mt-20">
-      <div className="container space-y-8 md:space-y-10">
+    <section id="principles" className="py-20 md:py-28 lg:py-36 scroll-mt-20">
+      <div className="container space-y-10 md:space-y-12">
         <div className="flex items-center fade-in">
           <SectionHeader
             icon={<Sparkles className="h-6 w-6 text-brand-gold" />}
             title="Principles"
           />
         </div>
-        <div className="grid gap-8 md:gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:gap-10 lg:gap-12 md:grid-cols-2 lg:grid-cols-3">
           {principles.map((principle, index) => (
             <article
               key={index}
               className="fade-in p-8 rounded-lg border border-border bg-card hover:bg-card/80 transition-colors"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="text-heading-3 font-semibold mb-4 text-brand-blue">
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 text-brand-blue">
                 {principle.title}
               </h3>
-              <p className="text-body text-muted-foreground">{principle.description}</p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                {principle.description}
+              </p>
             </article>
           ))}
         </div>

@@ -33,11 +33,11 @@ export function HeroSection() {
   const scrollToSection = useScrollToSection();
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 scroll-mt-20">
+    <section className="py-20 md:py-28 lg:py-36 scroll-mt-20">
       <div className="container">
-        <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-center">
+        <div className="grid gap-16 md:grid-cols-2 md:gap-20 items-center">
           <motion.div
-            className="space-y-8 md:space-y-10 text-center md:text-left"
+            className="space-y-10 md:space-y-12 text-center md:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -47,12 +47,12 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <Badge className="mb-2 bg-muted/80 text-muted-foreground hover:bg-muted text-caption font-medium">
+              <Badge className="mb-3 bg-muted/80 text-muted-foreground hover:bg-muted text-sm font-medium">
                 ⚠️ Currently not taking new projects
               </Badge>
             </motion.div>
             <motion.h1
-              className="text-display font-bold tracking-tight tri-gradient"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight tri-gradient"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -60,7 +60,7 @@ export function HeroSection() {
               <TypewriterText text="I build systems." />
             </motion.h1>
             <motion.p
-              className="text-body-large text-muted-foreground max-w-[600px] mx-auto md:mx-0"
+              className="text-lg md:text-xl text-muted-foreground max-w-[600px] mx-auto md:mx-0 leading-relaxed"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
