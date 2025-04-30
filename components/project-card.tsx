@@ -1,38 +1,45 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { ExternalLink } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface ProjectLabel {
-  name: string
-  color?: string
+  name: string;
+  color?: string;
 }
 
 interface ProjectProps {
-  title: string
-  description: string
-  shortDescription?: string
-  imageUrl: string
-  projectUrl: string
-  labels: ProjectLabel[]
+  title: string;
+  description: string;
+  shortDescription?: string;
+  imageUrl: string;
+  projectUrl: string;
+  labels: ProjectLabel[];
 }
 
-export function ProjectCard({ title, description, shortDescription, imageUrl, projectUrl, labels }: ProjectProps) {
-  const [isExpanded, setIsExpanded] = useState(false)
+export function ProjectCard({
+  title,
+  description,
+  shortDescription,
+  imageUrl,
+  projectUrl,
+  labels,
+}: ProjectProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
 
   // If no short description is provided, create one from the full description
-  const shortDesc = shortDescription || description.split(" ").slice(0, 25).join(" ") + "..."
+  const shortDesc = shortDescription || description.split(' ').slice(0, 25).join(' ') + '...';
 
   return (
-    <Card className="project-card border-none shadow-md fade-in dark:border dark:border-border overflow-hidden flex flex-col h-full">
+    <Card className="project-card border-none shadow-md fade-in dark:border dark:border-border overflow-hidden flex flex-col h-full transition-all duration-300 hover:scale-[1.025] hover:shadow-lg dark:hover:shadow-xl">
       <div className="relative aspect-video w-full overflow-hidden">
         <Image
-          src={imageUrl || "/images/placeholder-project.jpg"}
+          src={imageUrl || '/images/placeholder-project.jpg'}
           alt={title}
           fill
           className="object-cover transition-transform duration-500 hover:scale-105"
@@ -41,7 +48,10 @@ export function ProjectCard({ title, description, shortDescription, imageUrl, pr
 
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
-          <CardTitle className="text-heading-3">{title}</CardTitle>
+          <CardTitle className="text-heading-3 relative group">
+            {title}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[hsl(var(--vegeta-blue))] transition-all duration-300 group-hover:w-full"></span>
+          </CardTitle>
         </div>
       </CardHeader>
 
@@ -50,13 +60,13 @@ export function ProjectCard({ title, description, shortDescription, imageUrl, pr
           <Badge
             key={index}
             className={
-              label.color === "vegeta-blue"
-                ? "bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))]"
-                : label.color === "gold"
-                  ? "bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))]"
-                  : label.color === "primary"
-                    ? "bg-primary hover:bg-primary/90"
-                    : "bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))]"
+              label.color === 'vegeta-blue'
+                ? 'bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))]'
+                : label.color === 'gold'
+                ? 'bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))]'
+                : label.color === 'primary'
+                ? 'bg-primary hover:bg-primary/90'
+                : 'bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))]'
             }
           >
             {label.name}
@@ -66,7 +76,9 @@ export function ProjectCard({ title, description, shortDescription, imageUrl, pr
 
       <CardContent className="pb-2 flex-grow">
         <div
-          className={`text-body text-muted-foreground overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-[1000px]" : "max-h-[80px]"}`}
+          className={`text-body text-muted-foreground overflow-hidden transition-all duration-300 ${
+            isExpanded ? 'max-h-[1000px]' : 'max-h-[80px]'
+          }`}
         >
           <p>{isExpanded ? description : shortDesc}</p>
         </div>
@@ -75,7 +87,7 @@ export function ProjectCard({ title, description, shortDescription, imageUrl, pr
           onClick={() => setIsExpanded(!isExpanded)}
           className="p-0 h-auto mt-2 text-primary font-medium"
         >
-          {isExpanded ? "Show less" : "Read more"}
+          {isExpanded ? 'Show less' : 'Read more'}
         </Button>
       </CardContent>
 
@@ -91,6 +103,5 @@ export function ProjectCard({ title, description, shortDescription, imageUrl, pr
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
-
