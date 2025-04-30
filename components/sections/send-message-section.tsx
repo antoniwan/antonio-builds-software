@@ -9,7 +9,7 @@ export function SendMessageSection() {
       className="py-20 md:py-28 lg:py-36 bg-gray-50 dark:bg-gray-900 relative scroll-mt-20"
     >
       <div className="container space-y-10 md:space-y-12">
-        <div className="fade-in">
+        <div>
           <SectionHeader
             icon={<MessageCircle className="h-6 w-6 text-[hsl(var(--gold))]" />}
             title="Send Me a Message"

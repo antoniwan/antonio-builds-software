@@ -63,13 +63,12 @@ export function CreativeWorksSection() {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[hsl(var(--muted))]/50" />
       <div className="container space-y-10 md:space-y-12 fade-in relative">
-        <div className="space-y-4">
+        <div>
           <SectionHeader
             icon={<BookOpen className="h-6 w-6 text-[hsl(var(--gold))]" />}
             title="Creative Works"
-            className="mb-0"
           />
-          <p className="text-body-large text-muted-foreground max-w-[600px]">
+          <p className="text-body-large text-muted-foreground max-w-[600px] mt-6">
             Beyond code, I explore ideas through writing, music, and social media. These creative
             works reflect my journey of growth, leadership, and self-discovery.
           </p>

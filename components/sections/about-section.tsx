@@ -8,8 +8,11 @@ export function AboutSection() {
       className="py-20 md:py-28 lg:py-36 bg-white dark:bg-background relative scroll-mt-20"
     >
       <div className="container space-y-10 md:space-y-12">
-        <div className="flex items-center justify-center md:justify-start fade-in">
-          <SectionHeader icon={<User className="h-6 w-6 text-brand-gold" />} title="About Me" />
+        <div>
+          <SectionHeader
+            icon={<User className="h-6 w-6 text-[hsl(var(--gold))]" />}
+            title="About Me"
+          />
         </div>
         <div className="text-muted-foreground fade-in space-y-6">
           <p className="text-body">
