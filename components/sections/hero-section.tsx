@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useScrollToSection } from '@/components/scroll-to-section';
+import { useScrollToSection } from '@/hooks/use-scroll-to-section';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Code, Mail, Trophy } from 'lucide-react';

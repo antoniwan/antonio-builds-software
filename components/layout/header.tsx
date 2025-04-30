@@ -6,7 +6,7 @@ import { Code, Menu, User, Sparkles, Rocket, Palette, Brain, Handshake } from 'l
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { useScrollToSection } from '@/components/scroll-to-section';
+import { useScrollToSection } from '@/hooks/use-scroll-to-section';
 
 export function Header() {
   const scrollToSection = useScrollToSection();
