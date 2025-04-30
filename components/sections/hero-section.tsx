@@ -10,11 +10,11 @@ export function HeroSection() {
   const scrollToSection = useScrollToSection();
 
   return (
-    <section className="py-8 md:py-16 lg:py-24 scroll-mt-20">
+    <section className="py-16 md:py-24 lg:py-32 scroll-mt-20">
       <div className="container">
-        <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
+        <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-center">
           <div
-            className="space-y-6 md:space-y-8 fade-in text-center md:text-left"
+            className="space-y-8 md:space-y-10 fade-in text-center md:text-left"
             style={{ animationDelay: '0.1s' }}
           >
             <Badge className="mb-2 bg-muted/80 text-muted-foreground hover:bg-muted text-[13px]">

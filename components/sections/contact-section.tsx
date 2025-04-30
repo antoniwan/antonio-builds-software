@@ -18,10 +18,10 @@ import { ContactForm } from './contact-form';
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-8 md:py-12 lg:py-16 scroll-mt-20 bg-[hsl(var(--muted))]">
-      <div className="container space-y-12">
-        <div className="text-center space-y-6 fade-in">
-          <div className="flex flex-col items-center gap-2 mb-4">
+    <section id="contact" className="py-16 md:py-24 lg:py-32 scroll-mt-20 bg-[hsl(var(--muted))]">
+      <div className="container space-y-8 md:space-y-10">
+        <div className="text-center space-y-8 fade-in">
+          <div className="flex flex-col items-center gap-4 mb-6">
             <SectionHeader
               icon={<Briefcase className="h-6 w-6 text-[hsl(var(--gold))]" />}
               title="Get in Touch"

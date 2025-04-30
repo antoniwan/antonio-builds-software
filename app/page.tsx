@@ -14,13 +14,15 @@ export default function Home() {
     <>
       <StructuredData />
       <main className="flex-1">
-        <HeroSection />
-        <AboutSiteSection />
-        <PrinciplesSection />
-        <ProjectsSection />
-        <CreativeWorksSection />
-        <AboutSection />
-        <ContactSection />
+        <div className="space-y-16 md:space-y-24 lg:space-y-32">
+          <HeroSection />
+          <AboutSiteSection />
+          <PrinciplesSection />
+          <ProjectsSection />
+          <CreativeWorksSection />
+          <AboutSection />
+          <ContactSection />
+        </div>
       </main>
     </>
   );

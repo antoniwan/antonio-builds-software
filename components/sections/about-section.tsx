@@ -5,16 +5,16 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="py-12 md:py-16 lg:py-24 bg-white dark:bg-background relative scroll-mt-20"
+      className="py-16 md:py-24 lg:py-32 bg-white dark:bg-background relative scroll-mt-20"
     >
-      <div className="container space-y-6 md:space-y-8">
+      <div className="container space-y-8 md:space-y-10">
         <div className="flex items-center justify-center md:justify-start fade-in">
           <SectionHeader
             icon={<User className="h-6 w-6 text-[hsl(var(--vegeta-blue))]" />}
             title="About Me"
           />
         </div>
-        <div className="text-muted-foreground fade-in space-y-4 text-sm md:text-base lg:text-lg">
+        <div className="text-muted-foreground fade-in space-y-6 text-sm md:text-base lg:text-lg">
           <p>
             I&apos;m Antonio—a builder at the intersection of systems, soul, and sweat. I create
             things that work: robust software, emotionally grounded mentorship models, savage guitar

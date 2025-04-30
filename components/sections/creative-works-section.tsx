@@ -59,11 +59,11 @@ export function CreativeWorksSection() {
   return (
     <section
       id="creative-works"
-      className="py-12 md:py-16 lg:py-24 scroll-mt-20 bg-[hsl(var(--muted))] overflow-x-hidden relative"
+      className="py-16 md:py-24 lg:py-32 scroll-mt-20 bg-[hsl(var(--muted))] overflow-x-hidden relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[hsl(var(--muted))]/50" />
-      <div className="container space-y-6 fade-in relative">
-        <div className="inline-flex items-center gap-2 mb-4">
+      <div className="container space-y-8 md:space-y-10 fade-in relative">
+        <div className="inline-flex items-center gap-2 mb-6">
           <SectionHeader
             icon={<BookOpen className="h-6 w-6 text-[hsl(var(--gold))]" />}
             title="Creative Works"
@@ -75,7 +75,7 @@ export function CreativeWorksSection() {
           works reflect my journey of growth, leadership, and self-discovery.
         </p>
 
-        <div className="relative">
+        <div className="mt-8">
           <Carousel>
             {sortedWorks.map((work, index) => {
               const config = typeConfig[work.type];
@@ -83,7 +83,7 @@ export function CreativeWorksSection() {
 
               return (
                 <div key={index}>
-                  <div className="h-full min-h-[340px] flex flex-col justify-between bg-white dark:bg-background shadow-md rounded-xl p-8 md:p-10 gap-4 transition-all duration-300 hover:shadow-lg focus-within:shadow-lg border border-border/50 hover:border-border">
+                  <div className="h-full min-h-[340px] flex flex-col justify-between bg-white dark:bg-background shadow-md rounded-xl p-8 md:p-10 gap-6 transition-all duration-300 hover:shadow-lg focus-within:shadow-lg border border-border/50 hover:border-border">
                     <div className="flex flex-col gap-3">
                       <div className="flex items-center gap-2">
                         <span className={config.color}>
