@@ -51,12 +51,8 @@ export function PrinciplesSection() {
               className="fade-in p-8 rounded-lg border border-border bg-card hover:bg-card/80 transition-colors"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="text-xl md:text-2xl font-semibold mb-4 text-brand-blue">
-                {principle.title}
-              </h3>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                {principle.description}
-              </p>
+              <h3 className="text-heading-3 text-brand-blue">{principle.title}</h3>
+              <p className="text-body text-muted-foreground">{principle.description}</p>
             </article>
           ))}
         </div>

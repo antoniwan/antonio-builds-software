@@ -52,7 +52,7 @@ export function HeroSection() {
               </Badge>
             </motion.div>
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight tri-gradient"
+              className="text-display font-bold tracking-tight tri-gradient"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -60,7 +60,7 @@ export function HeroSection() {
               <TypewriterText text="I build systems." />
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-muted-foreground max-w-[600px] mx-auto md:mx-0 leading-relaxed"
+              className="text-body-large text-muted-foreground max-w-[600px] mx-auto md:mx-0"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
