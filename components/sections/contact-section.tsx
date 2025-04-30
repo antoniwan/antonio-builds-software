@@ -5,25 +5,28 @@ import { SocialLinks } from './social-links';
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-16 md:py-24 lg:py-32 scroll-mt-20 bg-[hsl(var(--muted))]">
-      <div className="container space-y-16 md:space-y-20">
+    <section
+      id="contact"
+      className="pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16 scroll-mt-20 bg-[hsl(var(--muted))]"
+    >
+      <div className="container space-y-12 md:space-y-16">
         {/* Social Links Section */}
-        <div className="flex items-center fade-in">
+        <div className="space-y-4 fade-in max-w-2xl mx-auto pt-4 pb-6">
           <SectionHeader
             icon={<Share2 className="h-6 w-6 text-[hsl(var(--gold))]" />}
             title="Connect With Me"
           />
+          <SocialLinks />
         </div>
-        <SocialLinks />
 
         {/* Contact Form Section */}
-        <div className="flex items-center fade-in">
+        <div className="space-y-4 fade-in max-w-2xl mx-auto pt-4 pb-6">
           <SectionHeader
             icon={<MessageCircle className="h-6 w-6 text-[hsl(var(--gold))]" />}
             title="Send Me a Message"
           />
+          <ContactForm />
         </div>
-        <ContactForm />
       </div>
     </section>
   );

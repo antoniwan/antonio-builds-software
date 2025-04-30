@@ -7,7 +7,7 @@ import Link from 'next/link';
 export function BlogSection() {
   return (
     <section id="blog" className="py-12 md:py-16 lg:py-24">
-      <div className="container space-y-6 md:space-y-8">
+      <div className="container space-y-8 md:space-y-10">
         <div className="flex items-center fade-in">
           <SectionHeader
             icon={<BookOpen className="h-6 w-6 text-[hsl(var(--vegeta-blue))]" />}

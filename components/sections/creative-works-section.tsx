@@ -63,66 +63,63 @@ export function CreativeWorksSection() {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[hsl(var(--muted))]/50" />
       <div className="container space-y-8 md:space-y-10 fade-in relative">
-        <div className="inline-flex items-center gap-2 mb-6">
+        <div className="space-y-4">
           <SectionHeader
             icon={<BookOpen className="h-6 w-6 text-[hsl(var(--gold))]" />}
             title="Creative Works"
             className="mb-0"
           />
+          <p className="text-body-large text-muted-foreground max-w-[600px]">
+            Beyond code, I explore ideas through writing, music, and social media. These creative
+            works reflect my journey of growth, leadership, and self-discovery.
+          </p>
         </div>
-        <p className="text-body-large text-muted-foreground max-w-[600px]">
-          Beyond code, I explore ideas through writing, music, and social media. These creative
-          works reflect my journey of growth, leadership, and self-discovery.
-        </p>
+        <Carousel>
+          {sortedWorks.map((work, index) => {
+            const config = typeConfig[work.type];
+            const Icon = config.icon;
 
-        <div className="mt-8">
-          <Carousel>
-            {sortedWorks.map((work, index) => {
-              const config = typeConfig[work.type];
-              const Icon = config.icon;
-
-              return (
-                <div key={index}>
-                  <div className="h-full min-h-[340px] flex flex-col justify-between bg-white dark:bg-background shadow-md rounded-xl p-8 md:p-10 gap-6 transition-all duration-300 hover:shadow-lg focus-within:shadow-lg border border-border/50 hover:border-border">
-                    <div className="flex flex-col gap-3">
-                      <div className="flex items-center gap-2">
-                        <span className={config.color}>
-                          <Icon className="h-4 w-4" />
-                        </span>
-                        <span className={`text-base font-semibold ${config.color}`}>
-                          {config.label}
-                        </span>
-                      </div>
-                      <div className="text-xl md:text-2xl font-bold text-left leading-snug">
-                        {work.title}
-                      </div>
-                      {work.date && (
-                        <p className="text-xs md:text-sm text-muted-foreground text-left">
-                          {formatDistanceToNow(new Date(work.date), { addSuffix: true })}
-                        </p>
-                      )}
+            return (
+              <div key={index}>
+                <div className="h-full min-h-[340px] flex flex-col justify-between bg-white dark:bg-background shadow-md rounded-xl p-8 md:p-10 gap-6 transition-all duration-300 hover:shadow-lg focus-within:shadow-lg border border-border/50 hover:border-border">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-2">
+                      <span className={config.color}>
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span className={`text-base font-semibold ${config.color}`}>
+                        {config.label}
+                      </span>
                     </div>
-                    <div className="flex-1 flex items-start">
-                      <p className="text-base text-muted-foreground text-left leading-relaxed line-clamp-5">
-                        {work.description}
+                    <div className="text-xl md:text-2xl font-bold text-left leading-snug">
+                      {work.title}
+                    </div>
+                    {work.date && (
+                      <p className="text-xs md:text-sm text-muted-foreground text-left">
+                        {formatDistanceToNow(new Date(work.date), { addSuffix: true })}
                       </p>
-                    </div>
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="w-full rounded-full border-primary/20 hover:bg-primary/10 dark:text-foreground mt-2"
-                    >
-                      <Link href={work.url} target="_blank" rel="noopener noreferrer">
-                        {buttonLabels[work.type]}
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
+                    )}
                   </div>
+                  <div className="flex-1 flex items-start">
+                    <p className="text-base text-muted-foreground text-left leading-relaxed line-clamp-5">
+                      {work.description}
+                    </p>
+                  </div>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full rounded-full border-primary/20 hover:bg-primary/10 dark:text-foreground mt-2"
+                  >
+                    <Link href={work.url} target="_blank" rel="noopener noreferrer">
+                      {buttonLabels[work.type]}
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
-              );
-            })}
-          </Carousel>
-        </div>
+              </div>
+            );
+          })}
+        </Carousel>
       </div>
     </section>
   );
