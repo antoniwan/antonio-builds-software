@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { version } from '../package.json';
 
 const defaultMetadata: Metadata = {
   metadataBase: new URL('https://builds.software'),
@@ -23,7 +24,7 @@ const defaultMetadata: Metadata = {
     telephone: false,
   },
   other: {
-    version: '2.0.0',
+    version,
   },
   openGraph: {
     type: 'website',
