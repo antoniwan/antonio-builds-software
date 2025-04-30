@@ -1,6 +1,6 @@
 {
   "name": "antonio-builds-software",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

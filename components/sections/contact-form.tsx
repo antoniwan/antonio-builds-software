@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
@@ -12,6 +12,7 @@ interface ContactFormProps {
 export function ContactForm({ className }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -21,22 +22,22 @@ export function ContactForm({ className }: ContactFormProps) {
     const formData = new FormData(e.currentTarget);
 
     try {
-      const response = await fetch('https://formspree.io/f/manoqalw', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
       });
 
       if (response.ok) {
         setSubmitStatus('success');
-        e.currentTarget.reset();
+        formRef.current?.reset();
       } else {
+        const data = await response.json();
         setSubmitStatus('error');
+        console.error('Form submission error:', data);
       }
-    } catch {
+    } catch (error) {
       setSubmitStatus('error');
+      console.error('Network error:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -52,7 +53,7 @@ export function ContactForm({ className }: ContactFormProps) {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
               <label htmlFor="name" className="text-body-small font-medium">
