@@ -2,7 +2,20 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Code, Menu, User, BookOpen, ExternalLink, Sparkles, Globe, Mail } from 'lucide-react';
+import {
+  Code,
+  Menu,
+  User,
+  BookOpen,
+  ExternalLink,
+  Sparkles,
+  Globe,
+  Mail,
+  Lightbulb,
+  Briefcase,
+  Heart,
+  MessageSquare,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme-toggle';
@@ -44,7 +57,7 @@ export function Header() {
             onClick={() => scrollToSection('principles')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
-            <Sparkles className="h-4 w-4 text-[hsl(var(--gold))]" />
+            <Lightbulb className="h-4 w-4 text-[hsl(var(--gold))]" />
             Principles
           </button>
           <button
@@ -58,7 +71,7 @@ export function Header() {
             onClick={() => scrollToSection('creative-works')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
-            <Sparkles className="h-4 w-4 text-[hsl(var(--gold))]" />
+            <Heart className="h-4 w-4 text-[hsl(var(--gold))]" />
             Creative Works
           </button>
           <button
@@ -72,7 +85,7 @@ export function Header() {
             onClick={() => scrollToSection('contact')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
-            <Mail className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
+            <MessageSquare className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
             Contact
           </button>
           <Link
@@ -113,7 +126,7 @@ export function Header() {
                   onClick={() => handleNavClick('principles')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
-                  <Sparkles className="h-5 w-5 text-[hsl(var(--gold))]" />
+                  <Lightbulb className="h-5 w-5 text-[hsl(var(--gold))]" />
                   Principles
                 </button>
                 <button
@@ -127,7 +140,7 @@ export function Header() {
                   onClick={() => handleNavClick('creative-works')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
-                  <Sparkles className="h-5 w-5 text-[hsl(var(--gold))]" />
+                  <Heart className="h-5 w-5 text-[hsl(var(--gold))]" />
                   Creative Works
                 </button>
                 <button
@@ -141,7 +154,7 @@ export function Header() {
                   onClick={() => handleNavClick('contact')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
-                  <Mail className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
+                  <MessageSquare className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
                   Contact
                 </button>
                 <Link
