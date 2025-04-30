@@ -1,5 +1,4 @@
-'use client';
-
+import { Metadata } from 'next';
 import { HeroSection } from '@/components/sections/hero-section';
 import { AboutSiteSection } from '@/components/sections/about-site-section';
 import { PrinciplesSection } from '@/components/sections/principles-section';
@@ -9,6 +8,14 @@ import { AboutSection } from '@/components/sections/about-section';
 import { ConnectWithMeSection } from '@/components/sections/connect-with-me-section';
 import { SendMessageSection } from '@/components/sections/send-message-section';
 import { StructuredData } from '@/components/structured-data';
+import { generateMetadata } from './metadata-helpers';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'Home',
+  description:
+    'Digital craftsman building systems with clarity, purpose, and performance. Explore my projects, principles, and creative works.',
+  path: '/',
+});
 
 export default function Home() {
   return (
