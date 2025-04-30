@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 
 interface ContactFormProps {
   className?: string;
@@ -20,7 +21,7 @@ export function ContactForm({ className }: ContactFormProps) {
     const formData = new FormData(e.currentTarget);
 
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('https://formspree.io/f/manoqalw', {
         method: 'POST',
         body: formData,
         headers: {
@@ -62,7 +63,7 @@ export function ContactForm({ className }: ContactFormProps) {
                 name="name"
                 type="text"
                 required
-                className="w-full px-3 py-2 border rounded-md bg-background"
+                className="w-full px-3 py-2 border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
                 placeholder="Your name"
               />
             </div>
@@ -75,7 +76,7 @@ export function ContactForm({ className }: ContactFormProps) {
                 name="email"
                 type="email"
                 required
-                className="w-full px-3 py-2 border rounded-md bg-background"
+                className="w-full px-3 py-2 border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
                 placeholder="your@email.com"
               />
             </div>
@@ -89,7 +90,7 @@ export function ContactForm({ className }: ContactFormProps) {
               id="subject"
               name="subject"
               required
-              className="w-full px-3 py-2 border rounded-md bg-background"
+              className="w-full px-3 py-2 border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
             >
               <option value="">What brings you here?</option>
               <option value="project">Let's Build Something Together</option>
@@ -109,24 +110,33 @@ export function ContactForm({ className }: ContactFormProps) {
               name="message"
               required
               rows={6}
-              className="w-full px-3 py-2 border rounded-md bg-background"
+              className="w-full px-3 py-2 border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
               placeholder="Your message..."
             />
           </div>
 
-          <Button type="submit" disabled={isSubmitting} className="w-full">
-            {isSubmitting ? 'Sending...' : 'Send Message'}
+          <Button type="submit" disabled={isSubmitting} className="w-full relative">
+            {isSubmitting ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                Sending...
+              </>
+            ) : (
+              'Send Message'
+            )}
           </Button>
 
           {submitStatus === 'success' && (
-            <p className="text-body-small text-green-600 text-center">
-              Thank you for your message! I'll get back to you soon.
-            </p>
+            <div className="flex items-center gap-2 text-green-600 text-body-small">
+              <CheckCircle2 className="h-4 w-4" />
+              <p>Thank you for your message! I'll get back to you soon.</p>
+            </div>
           )}
           {submitStatus === 'error' && (
-            <p className="text-body-small text-red-600 text-center">
-              Something went wrong. Please try again later.
-            </p>
+            <div className="flex items-center gap-2 text-red-600 text-body-small">
+              <AlertCircle className="h-4 w-4" />
+              <p>Something went wrong. Please try again later.</p>
+            </div>
           )}
         </form>
       </div>
