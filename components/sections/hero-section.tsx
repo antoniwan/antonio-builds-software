@@ -83,7 +83,7 @@ export function HeroSection() {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection('message')}
                 className="rounded-full border-[hsl(var(--vegeta-blue))] text-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-light))] hover:text-[hsl(var(--vegeta-blue-dark))]"
               >
                 <Mail className="mr-2 h-4 w-4" />
