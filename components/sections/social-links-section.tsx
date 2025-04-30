@@ -24,6 +24,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '0.1s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <div className="social-icon">
               <Linkedin className="h-5 w-5 mb-2 text-[hsl(var(--vegeta-blue))]" />
@@ -37,6 +38,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '0.2s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <Instagram className="h-5 w-5 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">Instagram</span>
@@ -48,6 +50,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '0.3s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <MessageCircle className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">Threads</span>
@@ -59,6 +62,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '0.4s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <Globe className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">Bluesky</span>
@@ -70,6 +74,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '0.5s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <Github className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">GitHub</span>
@@ -81,6 +86,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '0.6s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <CodepenIcon className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">CodePen</span>
@@ -90,6 +96,7 @@ export function SocialLinksSection() {
             href="mailto:antonio@builds.software"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: '0.7s' }}
+            prefetch={false}
           >
             <Mail className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">Email Me</span>
@@ -101,6 +108,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '0.8s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <FileText className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">Medium</span>
@@ -112,6 +120,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '0.9s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <BookOpen className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">Goodreads</span>
@@ -123,6 +132,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '1s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <Building2 className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">SH&SH</span>
@@ -134,6 +144,7 @@ export function SocialLinksSection() {
             style={{ animationDelay: '1.1s' }}
             target="_blank"
             rel="noopener noreferrer"
+            prefetch={false}
           >
             <Heart className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">Support Me</span>

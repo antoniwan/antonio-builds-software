@@ -182,6 +182,10 @@ p:last-child {
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 /* Social links grid adjustments */
@@ -197,31 +201,39 @@ p:last-child {
   }
 }
 
-/* Enhance social link hover effects */
+/* Enhance social link hover effects with hardware acceleration */
 .social-link {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .social-link:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) translateZ(0);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure icons are properly sized and centered */
+/* Ensure icons are properly sized and centered with hardware acceleration */
 .social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.5rem;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
-/* Color accent styles */
+/* Color accent styles with reduced paint operations */
 .vegeta-blue {
   color: hsl(var(--vegeta-blue));
+  will-change: color;
 }
 
 .gold-accent {
   color: hsl(var(--gold));
+  will-change: color;
 }
 
 .tri-gradient {
@@ -234,16 +246,104 @@ p:last-child {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  will-change: background;
 }
 
-/* Font classes */
+/* Font classes with optimized rendering */
 .font-heading {
   font-family: var(--font-heading);
   letter-spacing: -0.025em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .font-body {
   font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Optimize animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+/* Optimize transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Optimize shadows */
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Optimize focus states */
+.focus-visible\:ring-2:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px hsl(var(--ring));
+}
+
+/* Optimize dark mode transitions */
+.dark {
+  color-scheme: dark;
+}
+
+/* Optimize image loading */
+img {
+  content-visibility: auto;
+}
+
+/* Optimize container queries */
+@container (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@container (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@container (min-width: 1024px) {
+  .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@container (min-width: 1280px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 /* Dark mode improvements */

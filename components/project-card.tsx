@@ -18,9 +18,10 @@ interface ProjectProps {
   title: string;
   description: string;
   shortDescription?: string;
-  imageUrl: string;
-  projectUrl: string;
-  labels: ProjectLabel[];
+  imageUrl?: string;
+  projectUrl?: string;
+  labels?: ProjectLabel[];
+  index?: number;
 }
 
 const fadeIn = {
@@ -48,6 +49,7 @@ export function ProjectCard({
   imageUrl,
   projectUrl,
   labels,
+  index = 0,
 }: ProjectProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -67,70 +69,42 @@ export function ProjectCard({
             src={imageUrl || '/images/placeholder-project.jpg'}
             alt={title}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={index < 2}
+            loading={index < 2 ? 'eager' : 'lazy'}
+            quality={90}
             className="object-cover rounded-t-lg md:rounded-t-xl"
             style={{ objectPosition: 'center' }}
           />
         </motion.div>
         {/* Card content with padding */}
-        <div className="flex flex-col flex-1 p-6 md:p-8">
-          <CardHeader className="pb-2">
-            <CardTitle className="text-xl font-semibold leading-tight">{title}</CardTitle>
+        <CardContent className="flex flex-col gap-4 p-6">
+          <CardHeader className="p-0">
+            <CardTitle className="text-xl md:text-2xl font-bold">{title}</CardTitle>
           </CardHeader>
-          <div className="flex flex-wrap gap-2.5 mt-4 mb-3">
-            {labels.map((label, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Badge
-                  className={
-                    label.color === 'vegeta-blue'
-                      ? 'bg-brand-blue hover:bg-brand-blue-dark'
-                      : label.color === 'gold'
-                      ? 'bg-brand-gold hover:bg-brand-gold-dark'
-                      : label.color === 'primary'
-                      ? 'bg-primary hover:bg-primary/90'
-                      : 'bg-brand-blue hover:bg-brand-blue-dark'
-                  }
-                >
-                  {label.name}
-                </Badge>
-              </motion.div>
+          <div className="flex flex-wrap gap-2">
+            {labels?.map((label) => (
+              <Badge key={label.name} variant="outline" className={label.color}>
+                {label.name}
+              </Badge>
             ))}
           </div>
-          <CardContent className="flex-grow flex flex-col space-y-3 p-0">
-            <motion.div
-              className={`text-body text-muted-foreground overflow-hidden transition-all duration-300 ${
-                isExpanded ? 'max-h-[1000px]' : 'max-h-[80px]'
-              }`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-            >
-              <p>{isExpanded ? description : shortDesc}</p>
-            </motion.div>
-            <Button
-              variant="link"
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="p-0 h-auto mt-2 text-primary font-medium self-start transition-transform duration-300 hover:scale-105"
-            >
-              {isExpanded ? 'Show less' : 'Read more'}
-            </Button>
-          </CardContent>
-          <CardFooter className="pt-4 mt-2">
+          <p className="text-muted-foreground">{isExpanded ? description : shortDesc}</p>
+        </CardContent>
+        <CardFooter className="p-6 pt-0">
+          {projectUrl && (
             <Button
               asChild
               variant="outline"
-              className="w-full border-primary/20 hover:bg-primary/5 dark:text-foreground transition-transform duration-300 hover:scale-105"
+              className="w-full rounded-full border-primary/20 hover:bg-primary/10 dark:text-foreground"
             >
               <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
-                Visit Project <ExternalLink className="ml-2" />
+                View Project
+                <ExternalLink className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-          </CardFooter>
-        </div>
+          )}
+        </CardFooter>
       </Card>
     </motion.div>
   );
