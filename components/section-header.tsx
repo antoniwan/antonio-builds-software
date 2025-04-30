@@ -8,7 +8,7 @@ interface SectionHeaderProps {
 
 export function SectionHeader({ icon, title, className = '' }: SectionHeaderProps) {
   return (
-    <div className={`inline-flex items-center gap-4 mb-8 md:mb-12 fade-in relative ${className}`}>
+    <div className={`inline-flex items-center gap-4 mb-10 md:mb-12 fade-in relative ${className}`}>
       <div className="flex items-center gap-4">
         {icon}
         <h2 className="text-heading-2 font-bold tracking-tight m-0">{title}</h2>

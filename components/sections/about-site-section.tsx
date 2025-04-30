@@ -5,9 +5,9 @@ export function AboutSiteSection() {
   return (
     <section
       id="about-site"
-      className="py-20 md:py-28 lg:py-36 bg-white dark:bg-background relative scroll-mt-20"
+      className="py-24 md:py-32 lg:py-40 bg-white dark:bg-background relative scroll-mt-20"
     >
-      <div className="container space-y-10 md:space-y-12">
+      <div className="container space-y-12 md:space-y-16">
         <div>
           <SectionHeader
             icon={<Globe className="h-6 w-6 text-[hsl(var(--gold))]" />}
