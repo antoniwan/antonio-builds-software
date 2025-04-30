@@ -12,17 +12,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enhanced creative works showcase with improved carousel functionality
 - Added new UI components for better user experience
 - Improved accessibility features across all components
+- Added version meta tag to site metadata
+- Updated footer to display current version
 
 ### Changed
 
 - Updated project dependencies to latest stable versions
 - Enhanced overall code quality and maintainability
 - Improved component performance and loading times
+- Simplified Creative Works Section and Carousel code
+- Improved carousel card UI/UX with better spacing and consistent height
 
 ### Fixed
 
 - Minor UI inconsistencies and responsive design issues
 - Optimized build configuration for better performance
+- Fixed horizontal scrollbar bug in creative works carousel
+- Removed unused imports to resolve linter errors
 
 ## [1.4.0] - 2024-06-11
 
@@ -201,35 +207,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Contact form functionality
 - Geometric background patterns
 - Animation effects
-
-## [1.0.12] - 2024-06-09
-
-### Changed
-
-- Simplified Creative Works Section and Carousel code for easier maintenance and readability
-
-### Fixed
-
-- Fixed horizontal scrollbar bug in creative works carousel
-
-### Other
-
-- Minor UI polish and code cleanup
-
-## [1.0.13] - 2024-06-09
-
-### Fixed
-
-- Removed unused imports to resolve linter errors in Creative Works Section
-
-### Changed
-
-- Bumped version and updated version meta tag in layout
-- Minor code and documentation cleanup
-
-## [1.0.14] - 2024-06-09
-
-### Changed
-
-- Improved carousel card UI/UX: better spacing, legibility, and consistent height
-- Bumped version and updated version meta tag

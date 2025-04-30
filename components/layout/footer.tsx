@@ -1,9 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const version = '1.5.0'; // This should match the version in package.json
 
   return (
     <footer
@@ -29,7 +31,7 @@ export function Footer() {
               </p>
             </div>
             <div className="flex items-center gap-2 text-[0.7rem] text-muted-foreground/80">
-              <span>v1.0 · Built with 💻 and 🧠 by Antonio Rodriguez Martinez</span>
+              <span>v{version} · Built with 💻 and 🧠 by Antonio Rodriguez Martinez</span>
               <span className="flex items-center gap-1" aria-label="Nationality flags">
                 <span role="img" aria-label="Puerto Rican flag">
                   🇵🇷

@@ -22,6 +22,9 @@ const defaultMetadata: Metadata = {
     address: false,
     telephone: false,
   },
+  other: {
+    version: '1.5.0',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
