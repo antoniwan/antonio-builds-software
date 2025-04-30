@@ -83,12 +83,20 @@ export function Header() {
             About Me
           </button>
           <button
-            onClick={() => scrollToSection('contact')}
+            onClick={() => scrollToSection('connect-with-me')}
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
-            aria-label="Navigate to Contact section"
+            aria-label="Navigate to Connect With Me section"
           >
             <MessageSquare className="h-4 w-4 text-brand-blue" />
-            Contact
+            Connect
+          </button>
+          <button
+            onClick={() => scrollToSection('send-message')}
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
+            aria-label="Navigate to Send Message section"
+          >
+            <MessageSquare className="h-4 w-4 text-brand-blue" />
+            Message
           </button>
           <ThemeToggle />
         </nav>
@@ -148,12 +156,20 @@ export function Header() {
                   About Me
                 </button>
                 <button
-                  onClick={() => handleNavClick('contact')}
+                  onClick={() => handleNavClick('connect-with-me')}
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
-                  aria-label="Navigate to Contact section"
+                  aria-label="Navigate to Connect With Me section"
                 >
                   <MessageSquare className="h-5 w-5 text-brand-blue" />
-                  Contact
+                  Connect
+                </button>
+                <button
+                  onClick={() => handleNavClick('send-message')}
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
+                  aria-label="Navigate to Send Message section"
+                >
+                  <MessageSquare className="h-5 w-5 text-brand-blue" />
+                  Message
                 </button>
               </div>
             </div>
