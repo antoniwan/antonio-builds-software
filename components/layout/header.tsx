@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Link from "next/link";
-import { Code, Menu, User, BookOpen, ExternalLink, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { useScrollToSection } from "@/components/scroll-to-section";
+import { useState } from 'react';
+import Link from 'next/link';
+import { Code, Menu, User, BookOpen, ExternalLink, Sparkles } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { ThemeToggle } from '@/components/theme-toggle';
+import { useScrollToSection } from '@/components/scroll-to-section';
 
 export function Header() {
   const scrollToSection = useScrollToSection();
@@ -26,29 +26,29 @@ export function Header() {
         >
           <Code className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
           <span className="font-heading font-semibold">
-            antonio<span className="text-[hsl(var(--primary))]">.builds</span>
-            <span className="text-[hsl(var(--gold))]">.software</span>
+            <span className="text-[hsl(var(--primary))]">Builds</span>
+            <span className="text-[hsl(var(--gold))]">.Software</span>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <button
-            onClick={() => scrollToSection("projects")}
+            onClick={() => scrollToSection('projects')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
             <Code className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
             Projects
           </button>
           <button
-            onClick={() => scrollToSection("creative-works")}
+            onClick={() => scrollToSection('creative-works')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
             <Sparkles className="h-4 w-4 text-[hsl(var(--gold))]" />
             Creative Works
           </button>
           <button
-            onClick={() => scrollToSection("about")}
+            onClick={() => scrollToSection('about')}
             className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
           >
             <User className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
@@ -62,10 +62,7 @@ export function Header() {
           >
             <BookOpen className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
             Blog
-            <ExternalLink
-              className="h-3 w-3 ml-1 text-muted-foreground"
-              aria-hidden="true"
-            />
+            <ExternalLink className="h-3 w-3 ml-1 text-muted-foreground" aria-hidden="true" />
           </Link>
           <ThemeToggle />
         </nav>
@@ -85,21 +82,21 @@ export function Header() {
               </div>
               <div className="space-y-4 pt-4 border-t">
                 <button
-                  onClick={() => handleNavClick("projects")}
+                  onClick={() => handleNavClick('projects')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
                   <Code className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
                   Projects
                 </button>
                 <button
-                  onClick={() => handleNavClick("creative-works")}
+                  onClick={() => handleNavClick('creative-works')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
                   <Sparkles className="h-5 w-5 text-[hsl(var(--gold))]" />
                   Creative Works
                 </button>
                 <button
-                  onClick={() => handleNavClick("about")}
+                  onClick={() => handleNavClick('about')}
                   className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
                 >
                   <User className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
@@ -114,10 +111,7 @@ export function Header() {
                 >
                   <BookOpen className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
                   Blog
-                  <ExternalLink
-                    className="h-4 w-4 text-muted-foreground"
-                    aria-hidden="true"
-                  />
+                  <ExternalLink className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                 </Link>
               </div>
             </div>

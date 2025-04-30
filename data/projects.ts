@@ -21,7 +21,7 @@ export const projectsData: Project[] = [
       'A lifestyle brand and content platform built around legacy, love, and craftsmanship.',
     imageUrl: '/images/projects/artisanal-hands.avif',
     projectUrl:
-      'https://www.stronghandssoftheart.com/?utm_source=antonio.builds.software&utm_medium=referral&utm_campaign=portfolio_click',
+      'https://www.stronghandssoftheart.com/?utm_source=builds.software&utm_medium=referral&utm_campaign=portfolio_click',
     labels: [
       { name: 'Brand', color: 'vegeta-blue' },
       { name: 'Ecommerce', color: 'gold' },
@@ -85,7 +85,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    title: '@ Builds Software',
+    title: 'Builds.Software',
     description:
       "My personal portfolio website, built with Next.js and styled with Tailwind CSS. This project showcases how AI tools can accelerate development while maintaining high quality. Using v0.dev, I generated the initial UI components and layout, which I then refined and customized. The development process was enhanced by Cursor's AI capabilities, helping with code suggestions, debugging, and implementing complex features like the project cards and smooth scrolling. The site features a modern, responsive design with a custom color scheme and animations. It's built with performance in mind, achieving excellent Lighthouse scores while maintaining a beautiful user experience.",
     shortDescription:
