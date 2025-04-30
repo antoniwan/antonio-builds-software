@@ -52,18 +52,31 @@ export function ProjectCard({
   index = 0,
 }: ProjectProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   // If no short description is provided, create one from the full description
   const shortDesc = shortDescription || description.split(' ').slice(0, 25).join(' ') + '...';
 
   return (
-    <motion.div {...fadeIn} transition={{ duration: 0.4 }}>
-      <Card className="box box-radius-lg box-elevation-1 box-hover overflow-hidden flex flex-col h-full transition-all duration-300 hover:scale-[1.025] p-0">
+    <motion.div
+      {...fadeIn}
+      transition={{ duration: 0.4 }}
+      role="article"
+      aria-label={`Project: ${title}`}
+    >
+      <Card
+        className="box box-radius-lg box-elevation-1 box-hover overflow-hidden flex flex-col h-full transition-all duration-300 hover:scale-[1.025] p-0"
+        onMouseEnter={() => setIsExpanded(true)}
+        onMouseLeave={() => setIsExpanded(false)}
+        onFocus={() => setIsExpanded(true)}
+        onBlur={() => setIsExpanded(false)}
+      >
         {/* Edge-to-edge image at the top, inheriting card's border radius */}
         <motion.div
           className="relative aspect-video w-full"
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          role="presentation"
         >
           <Image
             src={imageUrl || '/images/placeholder-project.jpg'}
@@ -73,10 +86,13 @@ export function ProjectCard({
             priority={index < 2}
             loading={index < 2 ? 'eager' : 'lazy'}
             quality={90}
-            className="object-cover rounded-t-lg md:rounded-t-xl"
+            className={`object-cover rounded-t-lg md:rounded-t-xl transition-opacity duration-300 ${
+              isImageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
             style={{ objectPosition: 'center' }}
-            role="img"
-            aria-label={`${title} project screenshot`}
+            onLoadingComplete={() => setIsImageLoaded(true)}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkLzYvLy0vLzYvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLz/2wBDAR0dHh4eHRoaHSQtJSEkLzYvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
           />
         </motion.div>
         {/* Card content with padding */}
@@ -84,9 +100,9 @@ export function ProjectCard({
           <CardHeader className="p-0">
             <CardTitle className="text-xl md:text-2xl font-bold">{title}</CardTitle>
           </CardHeader>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" role="list" aria-label="Project technologies">
             {labels?.map((label) => (
-              <Badge key={label.name} variant="outline" className={label.color}>
+              <Badge key={label.name} variant="outline" className={label.color} role="listitem">
                 {label.name}
               </Badge>
             ))}
@@ -99,10 +115,16 @@ export function ProjectCard({
               asChild
               variant="outline"
               className="w-full rounded-full border-primary/20 hover:bg-primary/10 dark:text-foreground"
+              aria-label={`View ${title} project`}
             >
-              <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
+              <Link
+                href={projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2"
+              >
                 View Project
-                <ExternalLink className="ml-2 h-4 w-4" />
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
               </Link>
             </Button>
           )}

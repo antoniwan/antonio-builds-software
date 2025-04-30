@@ -11,7 +11,16 @@ export const metadata = defaultMetadata;
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+      </head>
+      <body className="antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -21,7 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="flex min-h-screen flex-col bg-background">
             <StructuredData />
             <Header />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1" role="main">
+              {children}
+            </main>
             <Footer />
             <ScrollToTop />
           </div>

@@ -96,9 +96,13 @@
     font-size: 1rem; /* Base font size */
     line-height: 1.75; /* Consistent line height */
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
   }
   h1,
   h2,
@@ -107,45 +111,55 @@
   h5,
   h6 {
     @apply font-heading tracking-tight;
+    text-wrap: balance;
   }
 }
 
 /* Typography scale - enhanced */
 .text-display {
   @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight font-heading leading-[1.1];
+  text-wrap: balance;
 }
 
 .text-heading-1 {
   @apply text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight font-heading leading-[1.1];
+  text-wrap: balance;
 }
 
 .text-heading-2 {
   @apply text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight font-heading leading-[1.1];
+  text-wrap: balance;
 }
 
 .text-heading-3 {
   @apply text-xl sm:text-2xl md:text-3xl font-bold font-heading leading-[1.2];
+  text-wrap: balance;
 }
 
 .text-body-large {
   @apply text-lg sm:text-xl leading-[1.75] font-body;
+  text-wrap: pretty;
 }
 
 .text-body {
   @apply text-base sm:text-lg leading-[1.75] font-body;
+  text-wrap: pretty;
 }
 
 .text-body-small {
   @apply text-sm sm:text-base leading-[1.75] font-body;
+  text-wrap: pretty;
 }
 
 .text-caption {
   @apply text-sm md:text-base text-muted-foreground font-body leading-[1.6];
+  text-wrap: pretty;
 }
 
 /* Enhanced spacing */
 section {
   @apply py-16 md:py-24 lg:py-32;
+  scroll-margin-top: 4rem;
 }
 
 .card-spacing {
@@ -185,6 +199,16 @@ p:last-child {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  /* Reduce motion on mobile */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -249,261 +273,27 @@ p:last-child {
   will-change: background;
 }
 
-/* Font classes with optimized rendering */
-.font-heading {
-  font-family: var(--font-heading);
-  letter-spacing: -0.025em;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-.font-body {
-  font-family: var(--font-body);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Optimize animations */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fade-in 0.5s ease-out forwards;
-  will-change: opacity, transform;
-}
-
-/* Optimize transitions */
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-/* Optimize shadows */
-.shadow-sm {
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-}
-
-.shadow {
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-}
-
-.shadow-lg {
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-
-/* Optimize focus states */
-.focus-visible\:ring-2:focus-visible {
-  outline: 2px solid transparent;
+/* Focus styles for better accessibility */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
   outline-offset: 2px;
-  box-shadow: 0 0 0 2px hsl(var(--ring));
 }
 
-/* Optimize dark mode transitions */
-.dark {
-  color-scheme: dark;
-}
-
-/* Optimize image loading */
-img {
-  content-visibility: auto;
-}
-
-/* Optimize container queries */
-@container (min-width: 640px) {
-  .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+/* Dark mode transition */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
   }
 }
 
-@container (min-width: 768px) {
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-@container (min-width: 1024px) {
-  .container {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-}
-
-@container (min-width: 1280px) {
-  .container {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
-
-/* Dark mode improvements */
-.dark .box {
-  @apply border-border/50;
-}
-
-.dark .box-hover:hover {
-  @apply border-border/80 shadow-[var(--box-shadow-lg)];
-}
-
-.dark .box-elevation-1 {
-  @apply shadow-[var(--box-shadow-md)];
-}
-
-.dark .box-elevation-2 {
-  @apply shadow-[var(--box-shadow-lg)];
-}
-
-.dark .box-elevation-3 {
-  @apply shadow-[var(--box-shadow-xl)];
-}
-
-.dark .box-elevation-4 {
-  @apply shadow-[var(--box-shadow-xl)];
-}
-
-/* Remove old dark mode styles */
-.dark .project-card {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.dark .project-card:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
-.dark .card {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Enhance heading styles for more creative look */
-h1,
-h2,
-h3 {
-  letter-spacing: -0.025em;
-}
-
-.text-display {
-  letter-spacing: -0.03em;
-}
-
-/* Add subtle gradient underline to section headings */
-
-/* Badge styles for multiple labels */
-
-/* Geometric pattern for About Me section */
-.geometric-bg {
-  position: relative;
-  isolation: isolate;
-}
-
-.geometric-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.4;
-  background-image: radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.1) 2px, transparent 0),
-    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-  background-size: 24px 24px, 48px 48px, 48px 48px;
-  z-index: -1;
-}
-
-.dark .geometric-bg::before {
-  opacity: 0.25;
-  background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.15) 2px, transparent 0),
-    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-}
-
-@layer components {
-  /* Base Box Styles */
-  .box {
-    @apply bg-background border border-border;
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
   }
 
-  /* Box Elevation Levels */
-  .box-elevation-0 {
-    @apply shadow-none;
-  }
-
-  .box-elevation-1 {
-    @apply shadow-[var(--box-shadow-sm)];
-  }
-
-  .box-elevation-2 {
-    @apply shadow-[var(--box-shadow-md)];
-  }
-
-  .box-elevation-3 {
-    @apply shadow-[var(--box-shadow-lg)];
-  }
-
-  .box-elevation-4 {
-    @apply shadow-[var(--box-shadow-xl)];
-  }
-
-  /* Box Border Radius */
-  .box-radius-sm {
-    @apply rounded-[var(--box-radius-sm)];
-  }
-
-  .box-radius-md {
-    @apply rounded-[var(--box-radius-md)];
-  }
-
-  .box-radius-lg {
-    @apply rounded-[var(--box-radius-lg)];
-  }
-
-  .box-radius-xl {
-    @apply rounded-[var(--box-radius-xl)];
-  }
-
-  .box-radius-2xl {
-    @apply rounded-[var(--box-radius-2xl)];
-  }
-
-  .box-radius-full {
-    @apply rounded-[var(--box-radius-full)];
-  }
-
-  /* Box Padding */
-  .box-padding-sm {
-    @apply p-[var(--box-padding-sm)];
-  }
-
-  .box-padding-md {
-    @apply p-[var(--box-padding-md)];
-  }
-
-  .box-padding-lg {
-    @apply p-[var(--box-padding-lg)];
-  }
-
-  .box-padding-xl {
-    @apply p-[var(--box-padding-xl)];
-  }
-
-  /* Box Hover States */
-  .box-hover {
-    @apply transition-all duration-200 ease-in-out;
-  }
-
-  .box-hover:hover {
-    @apply shadow-[var(--box-shadow-md)] border-border/80;
-  }
-
-  /* Box Focus States */
-  .box-focus {
-    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  .no-print {
+    display: none;
   }
 }
