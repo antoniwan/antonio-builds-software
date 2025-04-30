@@ -6,7 +6,8 @@ import { PrinciplesSection } from '@/components/sections/principles-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
 import { CreativeWorksSection } from '@/components/sections/creative-works-section';
 import { AboutSection } from '@/components/sections/about-section';
-import { ContactSection } from '@/components/sections/contact-section';
+import { ConnectWithMeSection } from '@/components/sections/connect-with-me-section';
+import { SendMessageSection } from '@/components/sections/send-message-section';
 import { StructuredData } from '@/components/structured-data';
 
 export default function Home() {
@@ -21,7 +22,8 @@ export default function Home() {
           <ProjectsSection />
           <CreativeWorksSection />
           <AboutSection />
-          <ContactSection />
+          <ConnectWithMeSection />
+          <SendMessageSection />
         </div>
       </main>
     </>
