@@ -6,13 +6,9 @@ import {
   Code,
   Menu,
   User,
-  BookOpen,
   ExternalLink,
-  Sparkles,
   Globe,
-  Mail,
   Lightbulb,
-  Briefcase,
   Heart,
   MessageSquare,
 } from 'lucide-react';
@@ -88,16 +84,6 @@ export function Header() {
             <MessageSquare className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
             Contact
           </button>
-          <Link
-            href="https://medium.com/@wizards777"
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <BookOpen className="h-4 w-4 text-[hsl(var(--vegeta-blue))]" />
-            Blog
-            <ExternalLink className="h-3 w-3 ml-1 text-muted-foreground" aria-hidden="true" />
-          </Link>
           <ThemeToggle />
         </nav>
 
@@ -157,17 +143,6 @@ export function Header() {
                   <MessageSquare className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
                   Contact
                 </button>
-                <Link
-                  href="https://medium.com/@wizards777"
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 w-full"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsSheetOpen(false)}
-                >
-                  <BookOpen className="h-5 w-5 text-[hsl(var(--vegeta-blue))]" />
-                  Blog
-                  <ExternalLink className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
-                </Link>
               </div>
             </div>
           </SheetContent>
