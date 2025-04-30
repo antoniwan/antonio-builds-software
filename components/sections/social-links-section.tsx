@@ -27,25 +27,25 @@ export function SocialLinksSection() {
         <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 mt-6 md:mt-8 social-links-grid">
           <Link
             href="https://www.linkedin.com/in/antoniwan/"
-            className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in social-link"
+            className="flex flex-col items-center p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in social-link"
             style={{ animationDelay: '0.1s' }}
             target="_blank"
             rel="noopener noreferrer"
           >
             <div className="social-icon">
-              <Linkedin className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+              <Linkedin className="h-5 w-5 mb-2 text-[hsl(var(--vegeta-blue))]" />
             </div>
             <span className="text-caption font-medium text-center">LinkedIn</span>
           </Link>
 
           <Link
             href="https://www.instagram.com/antoniwan777/"
-            className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
+            className="flex flex-col items-center p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: '0.2s' }}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Instagram className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+            <Instagram className="h-5 w-5 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">Instagram</span>
           </Link>
 

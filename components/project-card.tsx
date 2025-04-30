@@ -46,16 +46,11 @@ export function ProjectCard({
         />
       </div>
 
-      <CardHeader className="pb-2">
-        <div className="flex justify-between items-start">
-          <CardTitle className="text-heading-3 relative group">
-            {title}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[hsl(var(--vegeta-blue))] transition-all duration-300 group-hover:w-full"></span>
-          </CardTitle>
-        </div>
+      <CardHeader>
+        <CardTitle className="text-xl font-semibold">{title}</CardTitle>
       </CardHeader>
 
-      <div className="px-6 flex flex-wrap gap-2 mb-3">
+      <div className="px-4 flex flex-wrap gap-2 mb-3">
         {labels.map((label, index) => (
           <Badge
             key={index}
@@ -74,7 +69,7 @@ export function ProjectCard({
         ))}
       </div>
 
-      <CardContent className="pb-2 flex-grow">
+      <CardContent className="pb-4 flex-grow">
         <div
           className={`text-body text-muted-foreground overflow-hidden transition-all duration-300 ${
             isExpanded ? 'max-h-[1000px]' : 'max-h-[80px]'
@@ -95,10 +90,10 @@ export function ProjectCard({
         <Button
           asChild
           variant="outline"
-          className="w-full rounded-full border-primary/20 hover:bg-primary/5 dark:text-foreground"
+          className="w-full border-primary/20 hover:bg-primary/5 dark:text-foreground"
         >
           <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
-            Visit Project <ExternalLink className="ml-2 h-4 w-4" />
+            Visit Project <ExternalLink className="ml-2 h-5 w-5" />
           </Link>
         </Button>
       </CardFooter>
