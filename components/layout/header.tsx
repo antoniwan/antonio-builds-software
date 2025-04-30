@@ -11,6 +11,11 @@ import {
   Lightbulb,
   Heart,
   MessageSquare,
+  Sparkles,
+  Rocket,
+  Palette,
+  Brain,
+  Handshake,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -47,7 +52,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
             aria-label="Navigate to About Site section"
           >
-            <Globe className="h-4 w-4 text-brand-blue" />
+            <Sparkles className="h-4 w-4 text-brand-blue" />
             About Site
           </button>
           <button
@@ -55,7 +60,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
             aria-label="Navigate to Principles section"
           >
-            <Lightbulb className="h-4 w-4 text-brand-blue" />
+            <Brain className="h-4 w-4 text-brand-blue" />
             Principles
           </button>
           <button
@@ -63,7 +68,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
             aria-label="Navigate to Projects section"
           >
-            <Code className="h-4 w-4 text-brand-blue" />
+            <Rocket className="h-4 w-4 text-brand-blue" />
             Projects
           </button>
           <button
@@ -71,7 +76,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
             aria-label="Navigate to Creative Works section"
           >
-            <Heart className="h-4 w-4 text-brand-blue" />
+            <Palette className="h-4 w-4 text-brand-blue" />
             Creative Works
           </button>
           <button
@@ -83,20 +88,12 @@ export function Header() {
             About Me
           </button>
           <button
-            onClick={() => scrollToSection('connect-with-me')}
+            onClick={() => scrollToSection('connect')}
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
-            aria-label="Navigate to Connect With Me section"
+            aria-label="Navigate to Connect section"
           >
-            <MessageSquare className="h-4 w-4 text-brand-blue" />
+            <Handshake className="h-4 w-4 text-brand-blue" />
             Connect
-          </button>
-          <button
-            onClick={() => scrollToSection('send-message')}
-            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
-            aria-label="Navigate to Send Message section"
-          >
-            <MessageSquare className="h-4 w-4 text-brand-blue" />
-            Message
           </button>
           <ThemeToggle />
         </nav>
@@ -120,7 +117,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
                   aria-label="Navigate to About Site section"
                 >
-                  <Globe className="h-5 w-5 text-brand-blue" />
+                  <Sparkles className="h-5 w-5 text-brand-blue" />
                   About Site
                 </button>
                 <button
@@ -128,7 +125,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
                   aria-label="Navigate to Principles section"
                 >
-                  <Lightbulb className="h-5 w-5 text-brand-blue" />
+                  <Brain className="h-5 w-5 text-brand-blue" />
                   Principles
                 </button>
                 <button
@@ -136,7 +133,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
                   aria-label="Navigate to Projects section"
                 >
-                  <Code className="h-5 w-5 text-brand-blue" />
+                  <Rocket className="h-5 w-5 text-brand-blue" />
                   Projects
                 </button>
                 <button
@@ -144,7 +141,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
                   aria-label="Navigate to Creative Works section"
                 >
-                  <Heart className="h-5 w-5 text-brand-blue" />
+                  <Palette className="h-5 w-5 text-brand-blue" />
                   Creative Works
                 </button>
                 <button
@@ -156,20 +153,12 @@ export function Header() {
                   About Me
                 </button>
                 <button
-                  onClick={() => handleNavClick('connect-with-me')}
+                  onClick={() => handleNavClick('connect')}
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
-                  aria-label="Navigate to Connect With Me section"
+                  aria-label="Navigate to Connect section"
                 >
-                  <MessageSquare className="h-5 w-5 text-brand-blue" />
+                  <Handshake className="h-5 w-5 text-brand-blue" />
                   Connect
-                </button>
-                <button
-                  onClick={() => handleNavClick('send-message')}
-                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
-                  aria-label="Navigate to Send Message section"
-                >
-                  <MessageSquare className="h-5 w-5 text-brand-blue" />
-                  Message
                 </button>
               </div>
             </div>
