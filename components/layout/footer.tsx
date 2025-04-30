@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { version } from '../../../../package.json';
+import pkg from '@/package.json';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -30,7 +30,7 @@ export function Footer() {
               </p>
             </div>
             <div className="flex items-center gap-2 text-[0.7rem] text-muted-foreground/80">
-              <span>v{version} · Built with 💻 and 🧠 by Antonio Rodriguez Martinez</span>
+              <span>v{pkg.version} · Built with 💻 and 🧠 by Antonio Rodriguez Martinez</span>
               <span className="flex items-center gap-1" aria-label="Nationality flags">
                 <span role="img" aria-label="Puerto Rican flag">
                   🇵🇷

@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/footer';
 import { ScrollToTop } from '@/components/scroll-to-top';
 import { StructuredData } from '@/components/structured-data';
 
-export function LayoutContent({ children }: { children: React.ReactNode }) {
+function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
       <StructuredData />
@@ -20,4 +20,8 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
       </div>
     </ThemeProvider>
   );
+}
+
+export function LayoutContent({ children }: { children: React.ReactNode }) {
+  return <ClientLayout>{children}</ClientLayout>;
 }
