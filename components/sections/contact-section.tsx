@@ -18,7 +18,7 @@ import { ContactForm } from './contact-form';
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-12 md:py-16 lg:py-24 scroll-mt-20 bg-[hsl(var(--muted))]">
+    <section id="contact" className="py-8 md:py-12 lg:py-16 scroll-mt-20 bg-[hsl(var(--muted))]">
       <div className="container space-y-12">
         <div className="text-center space-y-6 fade-in">
           <div className="flex flex-col items-center gap-2 mb-4">
