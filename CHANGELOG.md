@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2024-06-13
+
+### Added
+
+- Complete site redesign and content overhaul
+- New file structure and organization
+- Centralized metadata management (`app/metadata.ts`)
+- Enhanced SEO, Open Graph, and social sharing metadata
+- New/updated components, pages, and assets
+- Improved accessibility and performance features
+
+### Changed
+
+- Major architectural improvements
+- Updated project structure for better maintainability
+- Enhanced component organization and documentation
+- Improved overall code quality and consistency
+
+### Breaking Changes
+
+- Old routes/components have been removed or renamed
+- Metadata and SEO configuration is now centralized
+- Major UI/UX improvements and redesigns
+
 ## [1.5.0] - 2024-06-12
 
 ### Added

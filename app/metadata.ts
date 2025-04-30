@@ -23,7 +23,7 @@ const defaultMetadata: Metadata = {
     telephone: false,
   },
   other: {
-    version: '1.5.0',
+    version: '2.0.0',
   },
   openGraph: {
     type: 'website',
