@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { version } from '../../../package.json';
+import { version } from '../../../../package.json';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();

@@ -33,8 +33,9 @@ A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing 
 - [Vercel Speed Insights](https://vercel.com/speed-insights)
 - [date-fns](https://date-fns.org/) for date formatting
 
-## Recent Updates (v2.2.0)
+## Recent Updates (v2.2.1)
 
+- Fixed build error related to package.json import path
 - Updated canonical URL to https://builds.software
 - Consolidated all SEO-related configurations
 - Enhanced structured data with new canonical URLs
