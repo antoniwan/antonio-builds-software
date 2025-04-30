@@ -8,6 +8,9 @@ import {
   FileText,
   Library,
   Building2,
+  Globe,
+  BookOpen,
+  Heart,
 } from 'lucide-react';
 import { CodepenIcon } from '@/components/icons/codepen-icon';
 
@@ -22,7 +25,6 @@ export function SocialLinksSection() {
           on engaging with fellow builders, creators, thinkers, learners, livers and lovers of life.
         </p>
 
-        {/* First tier - Main social profiles */}
         <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 mt-6 md:mt-8 social-links-grid">
           <Link
             href="https://www.linkedin.com/in/antoniwan/"
@@ -60,9 +62,20 @@ export function SocialLinksSection() {
           </Link>
 
           <Link
-            href="https://github.com/antoniwan"
+            href="https://bsky.app/profile/antoniwan.bsky.social"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: '0.4s' }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Globe className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+            <span className="text-caption font-medium text-center">Bluesky</span>
+          </Link>
+
+          <Link
+            href="https://github.com/antoniwan"
+            className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
+            style={{ animationDelay: '0.5s' }}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -73,7 +86,7 @@ export function SocialLinksSection() {
           <Link
             href="https://codepen.io/antoniwan"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
-            style={{ animationDelay: '0.5s' }}
+            style={{ animationDelay: '0.6s' }}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -84,52 +97,54 @@ export function SocialLinksSection() {
           <Link
             href="mailto:antonio@builds.software"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: '0.7s' }}
           >
             <Mail className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
             <span className="text-caption font-medium text-center">Email Me</span>
           </Link>
-        </div>
 
-        {/* Second tier - Content and interests */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 mt-3 md:mt-4 social-links-grid">
           <Link
             href="https://wizards777.medium.com"
-            className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
-            style={{ animationDelay: '0.7s' }}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FileText className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
-            <span className="text-caption font-medium text-center">
-              Explore my tech & philosophy articles
-            </span>
-          </Link>
-
-          <Link
-            href="https://www.goodreads.com/antoniwan"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: '0.8s' }}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Library className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
-            <span className="text-caption font-medium text-center">
-              Discover what shapes my thinking
-            </span>
+            <FileText className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+            <span className="text-caption font-medium text-center">Medium</span>
           </Link>
 
           <Link
-            href="https://www.stronghandssoftheart.com"
+            href="https://www.goodreads.com/antoniwan"
             className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
             style={{ animationDelay: '0.9s' }}
             target="_blank"
             rel="noopener noreferrer"
           >
+            <BookOpen className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+            <span className="text-caption font-medium text-center">Goodreads</span>
+          </Link>
+
+          <Link
+            href="https://www.stronghandssoftheart.com"
+            className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
+            style={{ animationDelay: '1s' }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Building2 className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
-            <span className="text-caption font-medium text-center">
-              Visit my creative & entrepreneurial work
-            </span>
+            <span className="text-caption font-medium text-center">SH&SH</span>
+          </Link>
+
+          <Link
+            href="https://patreon.com/antoniwan"
+            className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
+            style={{ animationDelay: '1.1s' }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Heart className="h-5 w-5 md:h-6 md:w-6 mb-2 text-[hsl(var(--vegeta-blue))]" />
+            <span className="text-caption font-medium text-center">Support Me</span>
           </Link>
         </div>
       </div>
