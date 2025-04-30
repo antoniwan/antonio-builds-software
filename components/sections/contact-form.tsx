@@ -45,7 +45,7 @@ export function ContactForm({ className }: ContactFormProps) {
     <section className={cn('w-full max-w-2xl mx-auto', className)}>
       <div className="space-y-8">
         <div className="space-y-2 text-center">
-          <p className="text-muted-foreground">
+          <p className="text-body text-muted-foreground">
             Whether you're a founder, team lead, or visionary with a plan — I help you build it
             right. Clear systems. Clear process. Quiet execution.
           </p>
@@ -54,7 +54,7 @@ export function ContactForm({ className }: ContactFormProps) {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium">
+              <label htmlFor="name" className="text-body-small font-medium">
                 Name
               </label>
               <input
@@ -67,7 +67,7 @@ export function ContactForm({ className }: ContactFormProps) {
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium">
+              <label htmlFor="email" className="text-body-small font-medium">
                 Email
               </label>
               <input
@@ -82,7 +82,7 @@ export function ContactForm({ className }: ContactFormProps) {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="subject" className="text-sm font-medium">
+            <label htmlFor="subject" className="text-body-small font-medium">
               Subject
             </label>
             <select
@@ -101,7 +101,7 @@ export function ContactForm({ className }: ContactFormProps) {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="message" className="text-sm font-medium">
+            <label htmlFor="message" className="text-body-small font-medium">
               Message
             </label>
             <textarea
@@ -119,12 +119,12 @@ export function ContactForm({ className }: ContactFormProps) {
           </Button>
 
           {submitStatus === 'success' && (
-            <p className="text-sm text-green-600 text-center">
+            <p className="text-body-small text-green-600 text-center">
               Thank you for your message! I'll get back to you soon.
             </p>
           )}
           {submitStatus === 'error' && (
-            <p className="text-sm text-red-600 text-center">
+            <p className="text-body-small text-red-600 text-center">
               Something went wrong. Please try again later.
             </p>
           )}

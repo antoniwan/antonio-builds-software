@@ -17,10 +17,10 @@ export function HeroSection() {
             className="space-y-8 md:space-y-10 fade-in text-center md:text-left"
             style={{ animationDelay: '0.1s' }}
           >
-            <Badge className="mb-2 bg-muted/80 text-muted-foreground hover:bg-muted text-[13px]">
+            <Badge className="mb-2 bg-muted/80 text-muted-foreground hover:bg-muted text-caption font-medium">
               ⚠️ Currently not taking new projects
             </Badge>
-            <h1 className="text-display tri-gradient">I build systems.</h1>
+            <h1 className="text-display font-bold tracking-tight tri-gradient">I build systems.</h1>
             <p className="text-body-large text-muted-foreground max-w-[600px] mx-auto md:mx-0">
               Digital craftsman. Strategic partner. Builder of tools, platforms, and long-term
               ecosystems.

@@ -14,20 +14,20 @@ export function AboutSection() {
             title="About Me"
           />
         </div>
-        <div className="text-muted-foreground fade-in space-y-6 text-sm md:text-base lg:text-lg">
-          <p>
+        <div className="text-muted-foreground fade-in space-y-6">
+          <p className="text-body">
             I&apos;m Antonio—a builder at the intersection of systems, soul, and sweat. I create
             things that work: robust software, emotionally grounded mentorship models, savage guitar
             riffs, games for my daughter about foxes and magical fruit, and t-shirts durable enough
             to survive a jungle or a mosh pit. I&apos;m not in this to go viral. I&apos;m in this to
             leave a legacy.
           </p>
-          <p>
+          <p className="text-body">
             My hands know code, lumber, dough, drumsticks, and dumbbells. My heart knows failure,
             fatherhood, loyalty, and repair. I&apos;m not trying to &quot;balance&quot; opposites—I
             integrate them.
           </p>
-          <p>
+          <p className="text-body">
             I&apos;ve worn a lot of titles over the years: Full-Stack Dev, Architect, CTO,
             Engineering Manager, and now Technical Program Manager at a global hardware company. But
             my journey started with a bootstrapped web dev agency in college—just me and a friend,
@@ -38,12 +38,12 @@ export function AboutSection() {
             this obscure Belgian protocol by tomorrow morning?&quot; Challenge accepted. I still
             smile thinking about those 2 AM commits fueled by bad coffee and raw willpower.
           </p>
-          <p>
+          <p className="text-body">
             Through all that, I built a personal philosophy: technical excellence means nothing
             without human values—integrity, empathy, humility. Diverse, psychologically safe teams
             ship better software. Full stop.
           </p>
-          <p>
+          <p className="text-body">
             Today, I channel that experience through{' '}
             <a
               href="https://www.stronghandssoftheart.com/"
@@ -74,7 +74,7 @@ export function AboutSection() {
               just presence and real work.
             </li>
           </ul>
-          <p>
+          <p className="text-body">
             My creative life is as chaotic as ever. I write almost every day—essays, ideas, poems,
             documentation. I train like a monk-warrior: basketball for joy, weights for strength,
             martial arts for discipline. I cook whole foods not because I&apos;m a health bro—I
@@ -82,18 +82,20 @@ export function AboutSection() {
             respect. I parent two kids who call me out whenever my words and actions don&apos;t
             align. They keep me honest. I keep showing up.
           </p>
-          <p>
+          <p className="text-body">
             I&apos;ve rebuilt my life post-divorce, restructured my values, and realized that
             presence &gt; perfection. Therapy, breathwork, and lifting heavy things all help.
             I&apos;ve learned that being &quot;strong&quot; is hollow without gentleness, and that
             execution matters more than talking about it.
           </p>
-          <p>
+          <p className="text-body">
             Legacy to me isn&apos;t some vague future thing—it&apos;s built in the small, daily
             reps. It&apos;s in how I treat others, how I show up when no one is watching, and how I
             translate love into systems that endure beyond me.
           </p>
-          <p>I&apos;m not interested in playing small. I&apos;m here to build.</p>
+          <p className="text-body">
+            I&apos;m not interested in playing small. I&apos;m here to build.
+          </p>
         </div>
       </div>
     </section>

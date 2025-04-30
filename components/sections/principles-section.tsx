@@ -51,10 +51,10 @@ export function PrinciplesSection() {
               className="fade-in p-8 rounded-lg border border-border bg-card hover:bg-card/80 transition-colors"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="text-heading-3 mb-4 text-[hsl(var(--vegeta-blue))]">
+              <h3 className="text-heading-3 font-semibold mb-4 text-[hsl(var(--vegeta-blue))]">
                 {principle.title}
               </h3>
-              <p className="text-muted-foreground">{principle.description}</p>
+              <p className="text-body text-muted-foreground">{principle.description}</p>
             </article>
           ))}
         </div>
