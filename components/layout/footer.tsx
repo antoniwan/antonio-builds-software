@@ -1,15 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import {
-  Code,
-  User,
-  BookOpen,
-  ExternalLink,
-  Sparkles,
-  Copyright,
-  MessageSquare,
-} from 'lucide-react';
+import { Code, User, BookOpen, ExternalLink, Sparkles, MessageSquare } from 'lucide-react';
 import { useScrollToSection } from '@/components/scroll-to-section';
 
 export function Footer() {
@@ -83,22 +75,6 @@ export function Footer() {
               <ExternalLink className="h-2.5 w-2.5 text-muted-foreground" aria-hidden="true" />
             </Link>
           </nav>
-        </div>
-
-        <div className="flex justify-center md:justify-end mt-6">
-          <Link
-            href="https://v0.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full bg-background px-3 py-1 text-xs border border-border/40 shadow-sm transition-colors hover:bg-accent/50 group"
-          >
-            <Sparkles className="h-3 w-3 text-[hsl(var(--primary))]" />
-            <span className="font-medium">
-              Built with <span className="text-[hsl(var(--vegeta-blue))]">v0</span> by{' '}
-              <span className="text-[hsl(var(--gold))]">Vercel</span>
-            </span>
-            <ExternalLink className="h-2.5 w-2.5 text-muted-foreground opacity-70 group-hover:opacity-100 transition-opacity" />
-          </Link>
         </div>
       </div>
     </footer>
