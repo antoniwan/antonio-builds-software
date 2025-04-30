@@ -18,7 +18,7 @@ import {
   Handshake,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { useScrollToSection } from '@/components/scroll-to-section';
 
@@ -107,6 +107,7 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="z-[100]">
+            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
             <div className="flex flex-col gap-4 mt-8">
               <div className="flex justify-end mb-4">
                 <ThemeToggle />
