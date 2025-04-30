@@ -297,3 +297,73 @@ p:last-child {
     display: none;
   }
 }
+
+@layer components {
+  .box {
+    @apply border border-border bg-background;
+  }
+
+  .box-radius-sm {
+    @apply rounded-[var(--box-radius-sm)];
+  }
+
+  .box-radius-md {
+    @apply rounded-[var(--box-radius-md)];
+  }
+
+  .box-radius-lg {
+    @apply rounded-[var(--box-radius-lg)];
+  }
+
+  .box-radius-xl {
+    @apply rounded-[var(--box-radius-xl)];
+  }
+
+  .box-radius-2xl {
+    @apply rounded-[var(--box-radius-2xl)];
+  }
+
+  .box-radius-full {
+    @apply rounded-[var(--box-radius-full)];
+  }
+
+  .box-elevation-0 {
+    @apply shadow-none;
+  }
+
+  .box-elevation-1 {
+    @apply shadow-[var(--box-shadow-sm)];
+  }
+
+  .box-elevation-2 {
+    @apply shadow-[var(--box-shadow-md)];
+  }
+
+  .box-elevation-3 {
+    @apply shadow-[var(--box-shadow-lg)];
+  }
+
+  .box-elevation-4 {
+    @apply shadow-[var(--box-shadow-xl)];
+  }
+
+  .box-padding-sm {
+    @apply p-[var(--box-padding-sm)];
+  }
+
+  .box-padding-md {
+    @apply p-[var(--box-padding-md)];
+  }
+
+  .box-padding-lg {
+    @apply p-[var(--box-padding-lg)];
+  }
+
+  .box-padding-xl {
+    @apply p-[var(--box-padding-xl)];
+  }
+
+  .box-hover {
+    @apply transition-all duration-300 hover:border-border/80 hover:shadow-md;
+  }
+}
