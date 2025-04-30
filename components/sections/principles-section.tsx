@@ -1,0 +1,64 @@
+import { Sparkles } from 'lucide-react';
+import { SectionHeader } from '@/components/section-header';
+
+const principles = [
+  {
+    title: 'Systems > shortcuts',
+    description:
+      'Building robust, maintainable systems that stand the test of time, rather than quick fixes that create technical debt.',
+  },
+  {
+    title: 'Calm > chaos',
+    description:
+      'Prioritizing thoughtful, deliberate development over rushed solutions. Quality emerges from clarity, not urgency.',
+  },
+  {
+    title: 'Truth in function',
+    description:
+      'Code should be honest about what it does. No hidden side effects, no clever tricks at the expense of readability.',
+  },
+  {
+    title: 'Tools are stories',
+    description:
+      'Every piece of software tells a story about its creators. We write code that reflects our values and intentions.',
+  },
+  {
+    title: 'Code as communication',
+    description:
+      "Writing code that speaks clearly to both machines and humans. Documentation is not an afterthought—it's part of the craft.",
+  },
+  {
+    title: 'Legacy by design',
+    description:
+      'Building with the future in mind. Creating systems that others can understand, maintain, and build upon.',
+  },
+];
+
+export function PrinciplesSection() {
+  return (
+    <section id="principles" className="py-12 md:py-16 lg:py-24">
+      <div className="container space-y-6 md:space-y-8">
+        <div className="flex items-center fade-in">
+          <SectionHeader
+            icon={<Sparkles className="h-6 w-6 text-[hsl(var(--vegeta-blue))]" />}
+            title="Principles"
+          />
+        </div>
+        <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {principles.map((principle, index) => (
+            <article
+              key={index}
+              className="fade-in p-6 rounded-lg border border-border bg-card hover:bg-card/80 transition-colors"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <h3 className="text-heading-3 mb-3 text-[hsl(var(--vegeta-blue))]">
+                {principle.title}
+              </h3>
+              <p className="text-muted-foreground">{principle.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
