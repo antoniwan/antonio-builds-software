@@ -22,9 +22,16 @@ export function Footer() {
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col items-center gap-2">
             <div className="flex items-center gap-2">
-              <Copyright className="h-3 w-3 text-muted-foreground" />
               <p className="text-caption text-muted-foreground">
-                {currentYear} Antonio Rodriguez Martinez
+                © {currentYear} ·{' '}
+                <Link
+                  href="https://github.com/antoniwan/antonio-builds-software"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[hsl(var(--vegeta-blue))] hover:underline underline-offset-4"
+                >
+                  Open Source
+                </Link>
               </p>
             </div>
             <div className="flex items-center gap-2 text-[0.7rem] text-muted-foreground/80">
