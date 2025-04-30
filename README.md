@@ -33,11 +33,11 @@ A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing 
 - [Vercel Speed Insights](https://vercel.com/speed-insights)
 - [date-fns](https://date-fns.org/) for date formatting
 
-## Recent Updates (v1.4.0)
+## Recent Updates (v1.5.0)
 
-- Enhanced UI components with improved accessibility features
-- Added new responsive design improvements
-- Improved component documentation and organization
+- Enhanced creative works showcase with improved carousel functionality
+- Added new UI components for better user experience
+- Improved accessibility features across all components
 - Updated project dependencies to latest stable versions
 - Enhanced overall code quality and maintainability
 - Improved component performance and loading times
