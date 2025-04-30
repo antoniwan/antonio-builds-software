@@ -36,7 +36,7 @@ export function ProjectCard({
   const shortDesc = shortDescription || description.split(' ').slice(0, 25).join(' ') + '...';
 
   return (
-    <Card className="project-card border-none shadow-md fade-in dark:border dark:border-border overflow-hidden flex flex-col h-full transition-all duration-300 hover:scale-[1.025] hover:shadow-lg dark:hover:shadow-xl">
+    <Card className="project-card border-none shadow-sm fade-in dark:border dark:border-border overflow-hidden flex flex-col h-full transition-all duration-300 hover:scale-[1.025] hover:shadow-md dark:hover:shadow-lg">
       <div className="relative aspect-video w-full overflow-hidden">
         <Image
           src={imageUrl || '/images/placeholder-project.jpg'}
@@ -50,12 +50,12 @@ export function ProjectCard({
         <CardTitle className="text-xl font-semibold">{title}</CardTitle>
       </CardHeader>
 
-      <div className="px-4 flex flex-wrap gap-2 mb-3">
+      <div className="px-4 flex flex-wrap gap-2">
         {labels.map((label, index) => (
           <Badge
             key={index}
             className={
-              label.color === 'vegeta-blue'
+              label.color === 'blue'
                 ? 'bg-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-dark))]'
                 : label.color === 'gold'
                 ? 'bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold-dark))]'
@@ -69,7 +69,7 @@ export function ProjectCard({
         ))}
       </div>
 
-      <CardContent className="pb-4 flex-grow">
+      <CardContent className="flex-grow">
         <div
           className={`text-body text-muted-foreground overflow-hidden transition-all duration-300 ${
             isExpanded ? 'max-h-[1000px]' : 'max-h-[80px]'
@@ -86,14 +86,14 @@ export function ProjectCard({
         </Button>
       </CardContent>
 
-      <CardFooter className="mt-auto">
+      <CardFooter>
         <Button
           asChild
           variant="outline"
           className="w-full border-primary/20 hover:bg-primary/5 dark:text-foreground"
         >
           <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
-            Visit Project <ExternalLink className="ml-2 h-5 w-5" />
+            Visit Project <ExternalLink className="ml-2" />
           </Link>
         </Button>
       </CardFooter>
