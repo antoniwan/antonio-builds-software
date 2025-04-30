@@ -44,42 +44,48 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6">
           <button
             onClick={() => scrollToSection('about-site')}
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
+            aria-label="Navigate to About Site section"
           >
             <Globe className="h-4 w-4 text-brand-blue" />
             About Site
           </button>
           <button
             onClick={() => scrollToSection('principles')}
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
+            aria-label="Navigate to Principles section"
           >
             <Lightbulb className="h-4 w-4 text-brand-blue" />
             Principles
           </button>
           <button
             onClick={() => scrollToSection('projects')}
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
+            aria-label="Navigate to Projects section"
           >
             <Code className="h-4 w-4 text-brand-blue" />
             Projects
           </button>
           <button
             onClick={() => scrollToSection('creative-works')}
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
+            aria-label="Navigate to Creative Works section"
           >
             <Heart className="h-4 w-4 text-brand-blue" />
             Creative Works
           </button>
           <button
             onClick={() => scrollToSection('about')}
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
+            aria-label="Navigate to About section"
           >
             <User className="h-4 w-4 text-brand-blue" />
             About Me
           </button>
           <button
             onClick={() => scrollToSection('contact')}
-            className="text-body-small text-muted-foreground hover:text-foreground flex items-center gap-1"
+            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 flex items-center gap-1"
+            aria-label="Navigate to Contact section"
           >
             <MessageSquare className="h-4 w-4 text-brand-blue" />
             Contact
@@ -103,42 +109,48 @@ export function Header() {
               <div className="space-y-4 pt-4 border-t">
                 <button
                   onClick={() => handleNavClick('about-site')}
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
+                  aria-label="Navigate to About Site section"
                 >
                   <Globe className="h-5 w-5 text-brand-blue" />
                   About Site
                 </button>
                 <button
                   onClick={() => handleNavClick('principles')}
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
+                  aria-label="Navigate to Principles section"
                 >
                   <Lightbulb className="h-5 w-5 text-brand-blue" />
                   Principles
                 </button>
                 <button
                   onClick={() => handleNavClick('projects')}
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
+                  aria-label="Navigate to Projects section"
                 >
                   <Code className="h-5 w-5 text-brand-blue" />
                   Projects
                 </button>
                 <button
                   onClick={() => handleNavClick('creative-works')}
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
+                  aria-label="Navigate to Creative Works section"
                 >
                   <Heart className="h-5 w-5 text-brand-blue" />
                   Creative Works
                 </button>
                 <button
                   onClick={() => handleNavClick('about')}
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
+                  aria-label="Navigate to About section"
                 >
                   <User className="h-5 w-5 text-brand-blue" />
                   About Me
                 </button>
                 <button
                   onClick={() => handleNavClick('contact')}
-                  className="text-body-large font-medium hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-2 py-1 transition-colors flex items-center gap-2 text-left w-full"
+                  aria-label="Navigate to Contact section"
                 >
                   <MessageSquare className="h-5 w-5 text-brand-blue" />
                   Contact

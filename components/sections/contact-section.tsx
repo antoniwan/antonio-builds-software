@@ -129,10 +129,11 @@ export function ContactSection() {
 
               <Link
                 href="https://www.stronghandssoftheart.com?utm_source=antonio-builds-software&utm_medium=link&utm_campaign=social-links-section"
-                className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
+                className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring transition-colors shadow-sm hover:shadow fade-in"
                 style={{ animationDelay: '1s' }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Strong Hands Soft Heart website"
               >
                 <Building2 className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">SH&SH</span>
@@ -140,10 +141,11 @@ export function ContactSection() {
 
               <Link
                 href="https://patreon.com/antoniwan"
-                className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent transition-colors shadow-sm hover:shadow fade-in"
+                className="flex flex-col items-center p-3 md:p-4 rounded-lg bg-background hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring transition-colors shadow-sm hover:shadow fade-in"
                 style={{ animationDelay: '1.1s' }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Support me on Patreon"
               >
                 <Heart className="h-5 w-5 md:h-6 md:w-6 mb-2 text-brand-blue" />
                 <span className="text-caption font-medium text-center">Support Me</span>
