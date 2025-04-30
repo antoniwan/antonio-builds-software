@@ -38,7 +38,7 @@ export function Header() {
           href="/"
           className="font-medium flex items-center gap-2 hover:text-primary transition-colors"
         >
-          <Code className="h-4 w-4 text-brand-blue" />
+          <Code className="h-4 w-4 text-brand" />
           <span className="font-heading font-semibold">
             <span className="text-primary">Builds</span>
             <span className="text-brand-gold">.Software</span>
@@ -52,7 +52,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
             aria-label="Navigate to About Site section"
           >
-            <Sparkles className="h-4 w-4 text-brand-blue" />
+            <Sparkles className="h-4 w-4 text-brand" />
             About Site
           </button>
           <button
@@ -60,7 +60,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
             aria-label="Navigate to Principles section"
           >
-            <Brain className="h-4 w-4 text-brand-blue" />
+            <Brain className="h-4 w-4 text-brand" />
             Principles
           </button>
           <button
@@ -68,7 +68,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
             aria-label="Navigate to Projects section"
           >
-            <Rocket className="h-4 w-4 text-brand-blue" />
+            <Rocket className="h-4 w-4 text-brand" />
             Projects
           </button>
           <button
@@ -76,7 +76,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
             aria-label="Navigate to Creative Works section"
           >
-            <Palette className="h-4 w-4 text-brand-blue" />
+            <Palette className="h-4 w-4 text-brand" />
             Creative Works
           </button>
           <button
@@ -84,7 +84,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
             aria-label="Navigate to About section"
           >
-            <User className="h-4 w-4 text-brand-blue" />
+            <User className="h-4 w-4 text-brand" />
             About Me
           </button>
           <button
@@ -92,7 +92,7 @@ export function Header() {
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
             aria-label="Navigate to Connect section"
           >
-            <Handshake className="h-4 w-4 text-brand-blue" />
+            <Handshake className="h-4 w-4 text-brand" />
             Connect
           </button>
           <ThemeToggle />
@@ -118,7 +118,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
                   aria-label="Navigate to About Site section"
                 >
-                  <Sparkles className="h-5 w-5 text-brand-blue" />
+                  <Sparkles className="h-5 w-5 text-brand" />
                   About Site
                 </button>
                 <button
@@ -126,7 +126,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
                   aria-label="Navigate to Principles section"
                 >
-                  <Brain className="h-5 w-5 text-brand-blue" />
+                  <Brain className="h-5 w-5 text-brand" />
                   Principles
                 </button>
                 <button
@@ -134,7 +134,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
                   aria-label="Navigate to Projects section"
                 >
-                  <Rocket className="h-5 w-5 text-brand-blue" />
+                  <Rocket className="h-5 w-5 text-brand" />
                   Projects
                 </button>
                 <button
@@ -142,7 +142,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
                   aria-label="Navigate to Creative Works section"
                 >
-                  <Palette className="h-5 w-5 text-brand-blue" />
+                  <Palette className="h-5 w-5 text-brand" />
                   Creative Works
                 </button>
                 <button
@@ -150,7 +150,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
                   aria-label="Navigate to About section"
                 >
-                  <User className="h-5 w-5 text-brand-blue" />
+                  <User className="h-5 w-5 text-brand" />
                   About Me
                 </button>
                 <button
@@ -158,7 +158,7 @@ export function Header() {
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-2 transition-colors duration-200 flex items-center gap-3 text-left w-full"
                   aria-label="Navigate to Connect section"
                 >
-                  <Handshake className="h-5 w-5 text-brand-blue" />
+                  <Handshake className="h-5 w-5 text-brand" />
                   Connect
                 </button>
               </div>

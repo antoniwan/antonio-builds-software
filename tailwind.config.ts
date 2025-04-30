@@ -1,13 +1,11 @@
 import type { Config } from 'tailwindcss';
 
-const config = {
+const config: Config = {
   darkMode: ['class'],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-    '*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   prefix: '',
   theme: {
@@ -20,18 +18,17 @@ const config = {
     },
     extend: {
       fontFamily: {
-        heading: ['var(--font-heading)'],
-        body: ['var(--font-body)'],
+        heading: ['var(--font-heading)', 'system-ui', 'sans-serif'],
+        body: ['var(--font-body)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
+        'body-small': ['0.875rem', { lineHeight: '1.5' }],
+        'body-large': ['1rem', { lineHeight: '1.5' }],
         display: ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
         'heading-1': ['3rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
         'heading-2': ['2.25rem', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
         'heading-3': ['1.875rem', { lineHeight: '1.4', letterSpacing: '-0.01em' }],
         'heading-4': ['1.5rem', { lineHeight: '1.4', letterSpacing: '-0.01em' }],
-        'body-large': ['1.125rem', { lineHeight: '1.6' }],
-        body: ['1rem', { lineHeight: '1.6' }],
-        'body-small': ['0.875rem', { lineHeight: '1.6' }],
         caption: ['0.75rem', { lineHeight: '1.5' }],
       },
       fontWeight: {
@@ -41,11 +38,13 @@ const config = {
         bold: '700',
       },
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        brand: {
+          DEFAULT: '#2563eb', // brand-blue
+          blue: '#2563eb',
+          gold: '#d4a017',
+          muted: 'rgba(37, 99, 235, 0.1)',
+        },
+        // Semantic color system
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -53,10 +52,6 @@ const config = {
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
@@ -66,6 +61,11 @@ const config = {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        border: 'hsl(var(--border))',
+        ring: 'hsl(var(--ring))',
+        input: 'hsl(var(--input))',
         popover: {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
@@ -74,17 +74,9 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        brand: {
-          blue: {
-            DEFAULT: 'hsl(var(--vegeta-blue))',
-            light: 'hsl(var(--vegeta-blue-light))',
-            dark: 'hsl(var(--vegeta-blue-dark))',
-          },
-          gold: {
-            DEFAULT: 'hsl(var(--gold))',
-            light: 'hsl(var(--gold-light))',
-            dark: 'hsl(var(--gold-dark))',
-          },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
         },
       },
       borderRadius: {
@@ -108,7 +100,7 @@ const config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
-} satisfies Config;
+  plugins: [],
+};
 
 export default config;
