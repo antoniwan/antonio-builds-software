@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useScrollToSection } from '@/components/scroll-to-section';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Code, Mail, Star, Trophy } from 'lucide-react';
+import { Code, Mail, Trophy } from 'lucide-react';
 
 export function HeroSection() {
   const scrollToSection = useScrollToSection();
@@ -17,8 +17,8 @@ export function HeroSection() {
             className="space-y-6 md:space-y-8 fade-in text-center md:text-left"
             style={{ animationDelay: '0.1s' }}
           >
-            <Badge className="mb-2 bg-[hsl(var(--gold-light))] text-[hsl(var(--gold-dark))] hover:bg-[hsl(var(--gold-light))]">
-              <Star className="h-3 w-3 mr-1" /> Available for new projects
+            <Badge className="mb-2 bg-muted/80 text-muted-foreground hover:bg-muted text-[13px]">
+              ⚠️ Currently not taking new projects
             </Badge>
             <h1 className="text-display tri-gradient">I build systems. Quietly. Powerfully.</h1>
             <p className="text-body-large text-muted-foreground max-w-[600px] mx-auto md:mx-0">
