@@ -3,5 +3,5 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://antonio.builds.software/sitemap.xml
+Sitemap: https://builds.software/sitemap.xml
 

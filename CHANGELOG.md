@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2024-06-15
+
+### Changed
+
+- Updated canonical URL to https://builds.software
+- Consolidated all SEO-related configurations to use the new canonical URL
+- Updated robots.txt and sitemap configurations
+- Enhanced structured data with new canonical URLs
+- Improved version management by centralizing version number in package.json
+- Updated TypeScript configuration to support JSON imports
+
 ## [2.1.0] - 2024-06-14
 
 ### Added

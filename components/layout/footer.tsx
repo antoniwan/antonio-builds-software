@@ -1,11 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { Metadata } from 'next';
+import { version } from '../../../package.json';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const version = '1.5.0'; // This should match the version in package.json
 
   return (
     <footer

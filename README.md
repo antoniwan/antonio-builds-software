@@ -33,20 +33,21 @@ A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing 
 - [Vercel Speed Insights](https://vercel.com/speed-insights)
 - [date-fns](https://date-fns.org/) for date formatting
 
-## Recent Updates (v2.1.0)
+## Recent Updates (v2.2.0)
 
-- Enhanced build process with critters for CSS optimization
-- Improved static page generation and error handling
-- Updated all dependencies to their latest stable versions
-- Optimized build configuration for better performance
-- Enhanced error handling during static page generation
+- Updated canonical URL to https://builds.software
+- Consolidated all SEO-related configurations
+- Enhanced structured data with new canonical URLs
+- Improved sitemap and robots.txt configurations
+- Centralized version management in package.json
+- Enhanced TypeScript configuration for better JSON support
 
 ## Development
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/antonio-builds-software.git
+   git clone https://github.com/antoniwan/antonio-builds-software.git
    ```
 
 2. Install dependencies:
