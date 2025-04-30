@@ -48,7 +48,7 @@ export function PrinciplesSection() {
           {principles.map((principle, index) => (
             <article
               key={index}
-              className="fade-in p-8 rounded-lg border border-border bg-card hover:bg-card/80 transition-colors"
+              className="box box-radius-lg box-elevation-1 box-padding-lg box-hover fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <h3 className="text-heading-3 text-brand-blue">{principle.title}</h3>
