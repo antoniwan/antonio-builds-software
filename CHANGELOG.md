@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.3] - 2024-06-16
+
+### Added
+- Added new blog section with link to blog.antoniwan.online
+- Enhanced social links section with updated profile URLs
+
+### Changed
+- Updated package dependencies to latest stable versions
+- Regenerated package-lock.json with updated dependencies
+- Enhanced documentation and changelog
+- Improved version management and tracking
+- Updated Bluesky profile URL to antoniwan.online
+- Adjusted social links animation timing for better UX
+- Updated structured data to include new blog URL
+
 ## [2.3.2] - 2024-06-16
 
 ### Changed

@@ -4,7 +4,7 @@ A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing 
 
 ## Features
 
-- Next.js 15.1.0
+- Next.js 15.3.1
 - TypeScript
 - Tailwind CSS
 - Dark mode
@@ -20,24 +20,34 @@ A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing 
 - SEO optimized
 - Optimized build configuration
 - Improved UI/UX with consistent navigation
+- Personal blog integration
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) 15.1.0
+- [Next.js](https://nextjs.org/) 15.3.1
 - [React](https://react.dev/) 19.0.0
-- [TypeScript](https://www.typescriptlang.org/) 5
+- [TypeScript](https://www.typescriptlang.org/) 5.3.3
 - [Tailwind CSS](https://tailwindcss.com/) 3.4.17
 - [Radix UI](https://www.radix-ui.com/) components
 - [Lucide Icons](https://lucide.dev/) 0.482.0
 - [Vercel Analytics](https://vercel.com/analytics)
 - [Vercel Speed Insights](https://vercel.com/speed-insights)
-- [date-fns](https://date-fns.org/) for date formatting
+- [date-fns](https://date-fns.org/) 4.1.0 for date formatting
 
-## Recent Updates (v2.3.2)
+## Recent Updates (v2.3.3)
 
-- Updated package dependencies
-- Regenerated package-lock.json
+### Added
+- New blog section with link to blog.antoniwan.online
+- Enhanced social links section with updated profile URLs
+
+### Changed
+- Updated package dependencies to latest stable versions
+- Regenerated package-lock.json with updated dependencies
 - Enhanced documentation and changelog
+- Improved version management and tracking
+- Updated Bluesky profile URL to antoniwan.online
+- Adjusted social links animation timing for better UX
+- Updated structured data to include new blog URL
 
 ## Development
 
