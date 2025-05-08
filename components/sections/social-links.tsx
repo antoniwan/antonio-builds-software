@@ -1,88 +1,60 @@
 import Link from 'next/link';
 import {
   Github,
-  Mail,
   Linkedin,
   Instagram,
-  MessageCircle,
   FileText,
   Building2,
   Globe,
   BookOpen,
   Heart,
   MessageSquare,
+  Sparkles,
+  Code,
+  Youtube,
 } from 'lucide-react';
-import { CodepenIcon } from '@/components/icons/codepen-icon';
 import { useScrollToSection } from '@/hooks/use-scroll-to-section';
 
 const socialLinks = [
   {
+    href: 'https://antoniwan.online/',
+    icon: Sparkles,
+    label: 'Link Forest',
+    delay: '0.1s',
+    ariaLabel: 'Visit my Link Forest - a fast, privacy-focused link hub',
+  },
+  {
+    href: 'https://www.stronghandssoftheart.com',
+    icon: Building2,
+    label: 'SH&SH',
+    delay: '0.2s',
+    ariaLabel: 'Visit Strong Hands Soft Heart - my core brand and business presence',
+  },
+  {
     href: 'https://www.linkedin.com/in/antoniwan/',
     icon: Linkedin,
     label: 'LinkedIn',
-    delay: '0.1s',
+    delay: '0.3s',
   },
   {
     href: 'https://github.com/antoniwan',
     icon: Github,
     label: 'GitHub',
-    delay: '0.2s',
-  },
-  {
-    href: 'https://www.stronghandssoftheart.com?utm_source=antonio-builds-software&utm_medium=link&utm_campaign=social-links-section',
-    icon: Building2,
-    label: 'SH&SH',
-    delay: '0.3s',
-    ariaLabel: 'Visit Strong Hands Soft Heart website',
-  },
-  {
-    href: 'mailto:antonio@builds.software',
-    icon: Mail,
-    label: 'Email Me',
     delay: '0.4s',
   },
   {
-    href: 'https://wizards777.medium.com',
-    icon: FileText,
-    label: 'Medium',
-    delay: '0.5s',
-  },
-  {
-    href: 'https://bsky.app/profile/antoniwan.bsky.social',
-    icon: Globe,
-    label: 'Bluesky',
-    delay: '0.6s',
-  },
-  {
-    href: 'https://www.instagram.com/antoniwan777/',
-    icon: Instagram,
-    label: 'Instagram',
-    delay: '0.7s',
-  },
-  {
-    href: 'https://www.threads.net/@antoniwan777',
-    icon: MessageCircle,
-    label: 'Threads',
-    delay: '0.8s',
-  },
-  {
     href: 'https://codepen.io/antoniwan',
-    icon: CodepenIcon,
+    icon: Code,
     label: 'CodePen',
-    delay: '0.9s',
+    delay: '0.8s',
+    ariaLabel: 'Explore my creative experiments and UI demos',
   },
   {
     href: 'https://www.goodreads.com/antoniwan',
     icon: BookOpen,
     label: 'Goodreads',
-    delay: '1s',
-  },
-  {
-    href: 'https://patreon.com/antoniwan',
-    icon: Heart,
-    label: 'Support Me',
-    delay: '1.1s',
-    ariaLabel: 'Support me on Patreon',
+    delay: '0.9s',
+    ariaLabel: 'Check out my reading bookshelf and recommendations',
   },
   {
     href: '#message',
@@ -98,15 +70,15 @@ export function SocialLinks() {
   const scrollToSection = useScrollToSection();
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-4">
       {socialLinks.map((link) => (
         <Link
           key={link.href}
           href={link.href}
-          className={`flex flex-col items-center p-4 md:p-4 rounded-lg transition-colors shadow-sm hover:shadow fade-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring active:scale-95 ${
+          className={`flex flex-col items-center p-4 md:p-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md fade-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring active:scale-95 ${
             link.isAction
               ? 'bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold))]/90 text-background'
-              : 'bg-background hover:bg-accent'
+              : 'bg-background hover:bg-accent/50'
           }`}
           style={{ animationDelay: link.delay }}
           target={link.href.startsWith('http') ? '_blank' : undefined}
