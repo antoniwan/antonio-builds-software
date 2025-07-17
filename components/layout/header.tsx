@@ -43,16 +43,6 @@ export function Header() {
           aria-label="Main navigation"
         >
           <button
-            onClick={() => scrollToSection('about-site')}
-            className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
-            aria-label="Navigate to About Site section"
-            role="link"
-            tabIndex={0}
-          >
-            <Sparkles className="h-4 w-4 text-brand" aria-hidden="true" />
-            About Site
-          </button>
-          <button
             onClick={() => scrollToSection('principles')}
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
             aria-label="Navigate to Principles section"
@@ -132,14 +122,6 @@ export function Header() {
                 <ThemeToggle />
               </div>
               <div className="flex flex-col gap-2">
-                <button
-                  onClick={() => handleNavClick('about-site')}
-                  className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
-                  aria-label="Navigate to About Site section"
-                >
-                  <Sparkles className="h-5 w-5 text-brand" />
-                  About Site
-                </button>
                 <button
                   onClick={() => handleNavClick('principles')}
                   className="text-body-large font-medium hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-lg px-4 py-3 transition-colors duration-200 flex items-center gap-3 text-left w-full active:bg-accent/50"
