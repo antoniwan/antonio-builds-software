@@ -8,27 +8,22 @@ const principles = [
       'Building robust, maintainable systems that stand the test of time, rather than quick fixes that create technical debt.',
   },
   {
-    title: 'Calm > chaos',
+    title: 'Thoughtful development',
     description:
-      'Prioritizing thoughtful, deliberate development over rushed solutions. Quality emerges from clarity, not urgency.',
+      'Prioritizing deliberate development over rushed solutions. Quality emerges from clarity, not urgency.',
   },
   {
-    title: 'Truth in function',
+    title: 'Clear code',
     description:
       'Code should be honest about what it does. No hidden side effects, no clever tricks at the expense of readability.',
   },
   {
-    title: 'Tools are stories',
-    description:
-      'Every piece of software tells a story about its creators. We write code that reflects our values and intentions.',
-  },
-  {
     title: 'Code as communication',
     description:
-      "Writing code that speaks clearly to both machines and humans. Documentation is not an afterthought—it's part of the craft.",
+      'Writing code that speaks clearly to both machines and humans. Documentation is part of the development process.',
   },
   {
-    title: 'Legacy by design',
+    title: 'Maintainable design',
     description:
       'Building with the future in mind. Creating systems that others can understand, maintain, and build upon.',
   },

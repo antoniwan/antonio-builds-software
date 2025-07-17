@@ -14,7 +14,7 @@ export function ProjectsSection() {
         <div>
           <SectionHeader
             icon={<Code className="h-6 w-6 text-[hsl(var(--gold))]" />}
-            title="Featured Projects"
+            title="Featured Personal Projects"
           />
         </div>
         <div className="grid gap-10 md:gap-12 md:grid-cols-2 lg:grid-cols-3">

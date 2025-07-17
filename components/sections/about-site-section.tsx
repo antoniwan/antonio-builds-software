@@ -16,10 +16,7 @@ export function AboutSiteSection() {
         </div>
         <div className="text-muted-foreground fade-in space-y-6">
           <p className="text-body">
-            This is my digital workshop — where systems get built, tested, and launched. I
-            specialize in full-stack development, technical program management, and building tools
-            that last. This site reflects my move away from algorithmic platforms toward intentional
-            creation and meaningful digital presence.
+          This is my technical portfolio showcasing my work in full-stack development, technical program management, and software systems.
           </p>
         </div>
       </div>
