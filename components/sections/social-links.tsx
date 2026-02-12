@@ -23,7 +23,7 @@ const socialLinks = [
     isAction: true,
   },
   {
-    href: 'https://notes.stronghandssoftheart.com/',
+    href: 'https://notes.antoniwan.online/',
     icon: FileText,
     label: 'Notes',
     delay: '0.15s',
