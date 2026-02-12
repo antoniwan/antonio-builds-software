@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Code, Menu, User, Sparkles, Rocket, Palette, Brain, Handshake } from 'lucide-react';
+import { Code, Menu, User, Rocket, Palette, Brain, Handshake, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme-toggle';
@@ -42,6 +42,18 @@ export function Header() {
           role="navigation"
           aria-label="Main navigation"
         >
+          <Button asChild size="sm" className="rounded-full">
+            <Link
+              href="https://consulting.stronghandssoftheart.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+              aria-label="Work with me — consulting"
+            >
+              <Briefcase className="h-4 w-4" aria-hidden="true" />
+              Work With Me
+            </Link>
+          </Button>
           <button
             onClick={() => scrollToSection('principles')}
             className="text-body-small text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring rounded-md px-3 py-1.5 flex items-center gap-2 transition-colors duration-200"
@@ -121,6 +133,19 @@ export function Header() {
               <div className="flex justify-end mb-4">
                 <ThemeToggle />
               </div>
+              <Button asChild className="mb-2 rounded-full">
+                <Link
+                  href="https://consulting.stronghandssoftheart.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2"
+                  aria-label="Work with me — consulting"
+                  onClick={() => setIsSheetOpen(false)}
+                >
+                  <Briefcase className="h-5 w-5" />
+                  Work With Me
+                </Link>
+              </Button>
               <div className="flex flex-col gap-2">
                 <button
                   onClick={() => handleNavClick('principles')}

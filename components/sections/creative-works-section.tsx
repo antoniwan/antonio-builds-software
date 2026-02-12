@@ -69,8 +69,7 @@ export function CreativeWorksSection() {
             title="Creative Works"
           />
           <p className="text-body-large text-muted-foreground max-w-[600px] mt-6">
-            Beyond code, I explore ideas through writing, music, and social media. These creative
-            works reflect my journey of growth, leadership, and self-discovery.
+            Writing, music, and experiments. Ideas explored beyond code.
           </p>
         </div>
         <Carousel>

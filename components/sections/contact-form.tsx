@@ -48,8 +48,8 @@ export function ContactForm({ className }: ContactFormProps) {
       <div className="space-y-4">
         <div className="text-left">
           <p className="text-body text-muted-foreground">
-            Whether you&apos;re a founder, team lead, or visionary with a plan — I help you build it
-            right. Clear systems. Clear process. Quiet execution.
+            Founder, product lead, engineering manager, or engineer with a problem around AI,
+            systems, or growth? I help build systems. Clear process. Quiet execution.
           </p>
         </div>
 
@@ -94,11 +94,11 @@ export function ContactForm({ className }: ContactFormProps) {
               className="w-full px-3 py-2 border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
             >
               <option value="">What brings you here?</option>
-              <option value="project">Let's Build Something Together</option>
-              <option value="mentorship">Share Your Wisdom</option>
-              <option value="partnership">Join Forces</option>
-              <option value="consulting">Need a Fresh Perspective</option>
-              <option value="other">Something Else on Your Mind</option>
+              <option value="ai-enablement">AI enablement</option>
+              <option value="systems-architecture">Systems architecture</option>
+              <option value="hands-on-engineering">Hands-on engineering</option>
+              <option value="leadership-advisory">Leadership advisory</option>
+              <option value="other">Other</option>
             </select>
           </div>
 

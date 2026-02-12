@@ -225,19 +225,6 @@ p:last-child {
   }
 }
 
-/* Enhance social link hover effects with hardware acceleration */
-.social-link {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-.social-link:hover {
-  transform: translateY(-3px) translateZ(0);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
 
 /* Ensure icons are properly sized and centered with hardware acceleration */
 .social-icon {

@@ -1,10 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useScrollToSection } from '@/hooks/use-scroll-to-section';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Code, Mail, Trophy } from 'lucide-react';
+import { Code, Briefcase, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -87,10 +88,10 @@ export function HeroSection() {
               }}
             >
               <Badge
-                className="mb-3 bg-muted/80 text-muted-foreground hover:bg-muted text-sm font-medium"
+                className="mb-3 bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 text-sm font-medium"
                 aria-label="Availability status"
               >
-                ⚠️ Currently not taking new projects
+                Open for work
               </Badge>
             </motion.div>
             <motion.h1
@@ -113,8 +114,7 @@ export function HeroSection() {
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              Digital craftsman. Strategic partner. Builder of tools, platforms, and long-term
-              ecosystems.
+              Builder of tools, platforms, and systems. Clear process. Quiet execution.
             </motion.p>
             <motion.div
               className="flex flex-wrap gap-4 justify-center md:justify-start"
@@ -126,21 +126,27 @@ export function HeroSection() {
               }}
             >
               <Button
+                asChild
+                className="rounded-full bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] px-6 py-6 md:py-4 text-base md:text-sm"
+                aria-label="Work with me — consulting"
+              >
+                <Link
+                  href="https://consulting.stronghandssoftheart.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Briefcase className="mr-2 h-5 w-5 md:h-4 md:w-4" aria-hidden="true" />
+                  Work With Me
+                </Link>
+              </Button>
+              <Button
+                variant="outline"
                 onClick={() => scrollToSection('projects')}
-                className="rounded-full bg-primary hover:bg-primary/90 transition-transform duration-300 hover:scale-105 active:scale-95 px-6 py-6 md:py-4 text-base md:text-sm"
+                className="rounded-full border-[hsl(var(--vegeta-blue))] text-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-light))] hover:text-[hsl(var(--vegeta-blue-dark))] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] px-6 py-6 md:py-4 text-base md:text-sm"
                 aria-label="View my projects"
               >
                 <Code className="mr-2 h-5 w-5 md:h-4 md:w-4" aria-hidden="true" />
                 View Projects
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => scrollToSection('message')}
-                className="rounded-full border-[hsl(var(--vegeta-blue))] text-[hsl(var(--vegeta-blue))] hover:bg-[hsl(var(--vegeta-blue-light))] hover:text-[hsl(var(--vegeta-blue-dark))] transition-transform duration-300 hover:scale-105 active:scale-95 px-6 py-6 md:py-4 text-base md:text-sm"
-                aria-label="Contact me for work"
-              >
-                <Mail className="mr-2 h-5 w-5 md:h-4 md:w-4" aria-hidden="true" />
-                Work With Me
               </Button>
             </motion.div>
           </motion.div>

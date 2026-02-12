@@ -3,29 +3,29 @@ import { SectionHeader } from '@/components/section-header';
 
 const principles = [
   {
-    title: 'Systems > shortcuts',
+    title: 'Systems over shortcuts',
     description:
-      'Building robust, maintainable systems that stand the test of time, rather than quick fixes that create technical debt.',
+      'Robust, maintainable systems over quick fixes. Technical debt compounds.',
   },
   {
     title: 'Thoughtful development',
     description:
-      'Prioritizing deliberate development over rushed solutions. Quality emerges from clarity, not urgency.',
+      'Deliberate over rushed. Quality emerges from clarity, not urgency.',
   },
   {
     title: 'Clear code',
     description:
-      'Code should be honest about what it does. No hidden side effects, no clever tricks at the expense of readability.',
+      'Code that does what it says. No hidden side effects, no clever tricks.',
   },
   {
     title: 'Code as communication',
     description:
-      'Writing code that speaks clearly to both machines and humans. Documentation is part of the development process.',
+      'Readable by machines and humans. Documentation is part of the work.',
   },
   {
     title: 'Maintainable design',
     description:
-      'Building with the future in mind. Creating systems that others can understand, maintain, and build upon.',
+      'Built for the future. Systems others can understand, maintain, and extend.',
   },
 ];
 

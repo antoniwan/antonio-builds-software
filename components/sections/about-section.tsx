@@ -17,7 +17,16 @@ export function AboutSection() {
         <div className="text-muted-foreground fade-in space-y-8">
           <div className="space-y-4">
             <p className="text-body">
-              I&apos;m <strong>Antonio</strong>—a Technical Program Manager at Stanley Black & Decker with experience as a Full-Stack Developer, Architect, CTO, and Engineering Manager. I create software, mentorship programs, and creative projects.
+              I&apos;m <strong>Antonio</strong>—Technical Program Manager at Stanley Black & Decker and former CTO. I build tools, platforms, and systems that work for both people and infrastructure. I still write code.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-foreground">How I work</h3>
+            <p className="text-body">
+              Systems over shortcuts. Humans over hype. I listen and map your reality first, design
+              the smallest honest plan, then build, ship, and teach so your team can maintain the
+              work.
             </p>
           </div>
 

@@ -6,7 +6,7 @@ export function SendMessageSection() {
   return (
     <section
       id="message"
-      className="py-20 md:py-28 lg:py-36 bg-gray-50 dark:bg-gray-900 relative scroll-mt-20"
+      className="py-20 md:py-28 lg:py-36 bg-muted/30 dark:bg-muted/20 relative scroll-mt-20"
     >
       <div className="container space-y-10 md:space-y-12">
         <div>

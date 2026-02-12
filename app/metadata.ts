@@ -7,7 +7,7 @@ const defaultMetadata: Metadata = {
     default: 'Antonio Rodriguez Martinez – Digital Craftsman',
     template: '%s | Antonio Rodriguez Martinez',
   },
-  description: 'Building systems with clarity, purpose, and performance.',
+  description: 'Builder of tools, platforms, and systems. Clear process. Quiet execution.',
   keywords: [
     'software development',
     'web development',
@@ -32,7 +32,7 @@ const defaultMetadata: Metadata = {
     url: 'https://builds.software',
     siteName: 'Antonio Rodriguez Martinez',
     title: 'Antonio Rodriguez Martinez – Digital Craftsman',
-    description: 'Building systems with clarity, purpose, and performance.',
+    description: 'Builder of tools, platforms, and systems. Clear process. Quiet execution.',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -45,7 +45,7 @@ const defaultMetadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Antonio Rodriguez Martinez – Digital Craftsman',
-    description: 'Building systems with clarity, purpose, and performance.',
+    description: 'Builder of tools, platforms, and systems. Clear process. Quiet execution.',
     images: ['/images/twitter-image.jpg'],
     creator: '@yourtwitterhandle',
   },
