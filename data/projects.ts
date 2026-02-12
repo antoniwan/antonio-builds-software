@@ -66,8 +66,8 @@ export const projectsData: Project[] = [
     projectUrl: 'https://mia-the-sun-and-the-moon.antoniorodriguez.us',
     labels: [
       { name: 'React', color: 'vegeta-blue' },
-      { name: 'Styled Components', color: 'primary' },
-      { name: 'Bilingual', color: 'gold' },
+      { name: 'AI-Generated Art', color: 'gold' },
+      { name: 'Bilingual', color: 'primary' },
     ],
   },
   {
@@ -87,15 +87,15 @@ export const projectsData: Project[] = [
   {
     title: 'Builds.Software',
     description:
-      "My personal portfolio website, built with Next.js and styled with Tailwind CSS. This project showcases how AI tools can accelerate development while maintaining high quality. Using v0.dev, I generated the initial UI components and layout, which I then refined and customized. The development process was enhanced by Cursor's AI capabilities, helping with code suggestions, debugging, and implementing complex features like the project cards and smooth scrolling. The site features a modern, responsive design with a custom color scheme and animations. It's built with performance in mind, achieving excellent Lighthouse scores while maintaining a beautiful user experience.",
+      "This portfolio site—Next.js, Tailwind—demonstrates AI-augmented development. I used v0 for UI scaffolding, Cursor for code suggestions and debugging, and Copilot for acceleration. AI reduces load without replacing clarity: components stay maintainable, architecture stays deliberate. Built for performance and readability.",
     shortDescription:
-      'A modern portfolio website built with Next.js and AI tools, showcasing how technology can enhance the development process.',
+      'Portfolio built with Next.js and AI tooling (v0, Cursor, Copilot). AI that reduces load, not adds noise.',
     imageUrl: '/images/projects/antonio-builds-software-desktop.avif',
     projectUrl: 'https://builds.software',
     labels: [
       { name: 'Next.js', color: 'vegeta-blue' },
-      { name: 'AI Tools', color: 'gold' },
-      { name: 'Portfolio', color: 'primary' },
+      { name: 'v0', color: 'gold' },
+      { name: 'Cursor', color: 'primary' },
     ],
   },
 ];

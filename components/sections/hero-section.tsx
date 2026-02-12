@@ -114,7 +114,8 @@ export function HeroSection() {
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              Builder of tools, platforms, and systems. Clear process. Quiet execution.
+              Builder of tools, platforms, and systems. AI enablement when it reduces load. Clear
+              process. Quiet execution.
             </motion.p>
             <motion.div
               className="flex flex-wrap gap-4 justify-center md:justify-start"

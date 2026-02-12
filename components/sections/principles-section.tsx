@@ -27,6 +27,11 @@ const principles = [
     description:
       'Built for the future. Systems others can understand, maintain, and extend.',
   },
+  {
+    title: 'AI that reduces load',
+    description:
+      'LLM orchestration and AI workflows that cut cognitive load, not add noise. Deterministic when it matters, augmented when it helps. v0, Cursor, Copilot in the stack.',
+  },
 ];
 
 export function PrinciplesSection() {

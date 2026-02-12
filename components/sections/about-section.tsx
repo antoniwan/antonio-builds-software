@@ -17,7 +17,7 @@ export function AboutSection() {
         <div className="text-muted-foreground fade-in space-y-8">
           <div className="space-y-4">
             <p className="text-body">
-              I&apos;m <strong>Antonio</strong>—Technical Program Manager at Stanley Black & Decker and former CTO. I build tools, platforms, and systems that work for both people and infrastructure. I still write code.
+              I&apos;m <strong>Antonio</strong>—Technical Program Manager at Stanley Black & Decker and former CTO. I build tools, platforms, and systems that work for both people and infrastructure. I ship with LLMs, AI orchestration, and modern tooling (v0, Cursor, Copilot) while keeping clarity and control. I still write code.
             </p>
           </div>
 
@@ -26,7 +26,7 @@ export function AboutSection() {
             <p className="text-body">
               Systems over shortcuts. Humans over hype. I listen and map your reality first, design
               the smallest honest plan, then build, ship, and teach so your team can maintain the
-              work.
+              work. AI and LLM orchestration when it reduces load—not when it adds noise.
             </p>
           </div>
 
@@ -46,6 +46,7 @@ export function AboutSection() {
               Aside from my salaried position, I run <strong>Strong Hands, Soft Heart LLC</strong>, my personal umbrella for creative and entrepreneurial work:
             </p>
             <ul className="list-disc pl-6 space-y-2">
+              <li>AI enablement and LLM orchestration for teams</li>
               <li>Developing artisanal soap boxes and screen-printed apparel prototypes</li>
               <li>Recording metal albums with friends</li>
               <li>Designing mentorship programs for personal development</li>
