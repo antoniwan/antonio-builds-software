@@ -63,7 +63,7 @@ export const projectsData: Project[] = [
     shortDescription:
       'A heartfelt interactive bilingual e-book built for my daughter and nephew with React and AI-generated illustrations she personally directed and curated.',
     imageUrl: '/images/projects/mia-ebook-desktop.avif',
-    projectUrl: 'https://mia-the-sun-and-the-moon.antoniorodriguez.us',
+    projectUrl: 'https://mia-the-sun-and-the-moon-web-book.stronghandssoftheart.com',
     labels: [
       { name: 'React', color: 'vegeta-blue' },
       { name: 'AI-Generated Art', color: 'gold' },
