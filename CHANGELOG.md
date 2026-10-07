@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.0] - 2026-10-07
+
+### Added
+- `/llms.txt` (https://llmstxt.org): the site as markdown for AI agents, built from the same data as the Projects and Creative Works sections, without UTM tags
+- `<link rel="describedby" href="/llms.txt">` in the root layout
+
 ## [2.3.3] - 2024-06-16
 
 ### Added
