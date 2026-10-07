@@ -1,3 +1,5 @@
+> **Retired on October 7, 2026.** builds.software now redirects to [antoniwan.online](https://antoniwan.online), where the principles, background, and projects from this site live on. The company side moved to [Strong Hands, Soft Heart](https://www.stronghandssoftheart.com/consulting). This repository is kept for history and no longer deploys anywhere.
+
 # Portfolio Website
 
 A modern Next.js portfolio website with TypeScript and Tailwind CSS, showcasing creative works and professional experience.
